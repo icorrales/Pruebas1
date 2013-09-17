@@ -12,43 +12,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2db6308-3f41-4005-9793-60d1feb442fb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Andrew.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/AproximacionInferior.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Arista.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAbscisas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAngulos.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DerivadosGraham.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/FunctionsGlobals.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAcciones.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAlgoritmos.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Graham.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IAlgoritmoHullConvex.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IDelegatePaint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Incremental.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Jarvis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Punto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/QuickHull.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/QuickHullNuevo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/Triangulo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/MainActivity.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" afterPath="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/build/source/r/debug/com/example/pruebas1/R.java" afterPath="$PROJECT_DIR$/Pruebas1/build/source/r/debug/com/example/pruebas1/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/build/res/all/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/Pruebas1/build/res/all/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Andrew.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Andrew.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Arista.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Arista.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAbscisas.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAbscisas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAngulos.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAngulos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DerivadosGraham.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DerivadosGraham.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/FunctionsGlobals.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/FunctionsGlobals.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAcciones.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAcciones.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAlgoritmos.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAlgoritmos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Graham.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Graham.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IAlgoritmoHullConvex.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IAlgoritmoHullConvex.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IDelegatePaint.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IDelegatePaint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Incremental.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Incremental.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Jarvis.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Jarvis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Punto.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Punto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/QuickHull.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/QuickHull.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" afterPath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pruebas1.iws" />
@@ -745,6 +734,11 @@
       <created>1377937747869</created>
       <updated>1377937747869</updated>
     </task>
+    <task id="LOCAL-00001" summary="17 Septiembre">
+      <created>1379433648384</created>
+      <updated>1379433648384</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -820,7 +814,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="17 Septiembre" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -834,6 +828,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="17 Septiembre" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
