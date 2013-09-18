@@ -69,6 +69,6 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback {
             canvas.drawCircle((float) next.getX(),(float) next.getY(),1,pcirculo);
 
         }
-        
+
     }
 }
