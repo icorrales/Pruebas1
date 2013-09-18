@@ -12,44 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2db6308-3f41-4005-9793-60d1feb442fb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/gestores/GestorPuntos.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/view/MySurfaceThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/model/Point.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/prueba2.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/build/apk/Pruebas1-debug-unaligned.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Andrew.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/AproximacionInferior.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DerivadosGraham.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/FunctionsGlobals.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Graham.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Incremental.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/Jarvis.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/QuickHull.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/QuickHullNuevo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAcciones.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorAlgoritmos.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAbscisas.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/ComparadorAngulos.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/global/Triangulo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IAlgoritmoHullConvex.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IDelegatePaint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Arista.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/model/Punto.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/build/source/buildConfig/debug/com/example/pruebas1/BuildConfig.java" afterPath="$PROJECT_DIR$/Pruebas1/build/source/buildConfig/debug/com/example/pruebas1/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/view/PanelPuntos.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/view/PanelPuntos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" afterPath="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pruebas1.iws" />
@@ -123,7 +85,17 @@
     <favorites_list name="Pruebas1" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="GestorAcciones.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorAcciones.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.34108528" vertical-offset="348" max-vertical-offset="735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -178,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/MainActivity.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/view/MyThread.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/view/PanelPuntos.java" />
@@ -194,6 +165,7 @@
         <option value="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java" />
         <option value="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorAcciones.java" />
       </list>
     </option>
   </component>
@@ -335,6 +307,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cconvexo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pruebas1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pruebas1Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pruebas1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cconvexo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algoritmos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,7 +627,11 @@
       <created>1379487861228</created>
       <updated>1379487861228</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="17 Septiembre">
+      <created>1379490631470</created>
+      <updated>1379490631470</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -637,14 +647,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2390088" sideWeight="0.20128824" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2390088" sideWeight="0.20128824" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850242" sideWeight="0.49960032" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850242" sideWeight="0.49960032" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.6714976" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940048" sideWeight="0.6714976" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.6714976" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2390088" sideWeight="0.6714976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25179857" sideWeight="0.6714976" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.49960032" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -717,34 +727,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestGraham.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="870" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="0" selection-start="707" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="1029" max-vertical-offset="1620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/interfaces/IDelegatePaint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="0.49612403" vertical-offset="33" max-vertical-offset="435" />
+        <state line="97" column="0" selection-start="707" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="1029" max-vertical-offset="1620">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
@@ -788,7 +777,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/Pruebas1.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="64" selection-start="3147" selection-end="3147" vertical-scroll-proportion="0.31283423" vertical-offset="573" max-vertical-offset="1230" />
+        <state line="46" column="64" selection-start="3147" selection-end="3147" vertical-scroll-proportion="0.31283423" vertical-offset="573" max-vertical-offset="1230">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/build.gradle">
@@ -796,9 +787,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java">
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorAcciones.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="336" selection-end="336" vertical-scroll-proportion="0.02538071" vertical-offset="240" max-vertical-offset="2565">
+        <state line="32" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.34108528" vertical-offset="348" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
