@@ -1,0 +1,231 @@
+package dia.upm.cconvexo.algoritmos;
+
+
+import java.util.Iterator;
+import java.util.List;
+
+import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
+import dia.upm.cconvexo.model.Punto;
+
+public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
+	
+	
+
+	@Override
+	public void nextstep() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public abstract void start(int delay);
+	
+	public final int orientation(Punto A, Punto B, Punto P) {
+		int cp1 = (int) ((B.x-A.x)*(P.y-A.y) - (B.y-A.y)*(P.x-A.x));
+		if (cp1 > 0)
+		{
+			return FunctionsGlobals.POSITIVA;			
+		}
+		else if (cp1<0)
+		{
+			return FunctionsGlobals.NEGATIVA;			
+		}
+		else return FunctionsGlobals.LINEA;
+	}
+
+
+	
+	public final double distance(Punto A, Punto B)
+	{
+		double AB2 = Math.pow((B.x - A.x),2) + Math.pow((B.y - A.y),2);
+		return Math.sqrt(AB2);
+	}
+	
+	
+	/**
+	 * Computes the square of the distance of point C to the segment defined by points AB
+	 * @param A
+	 * @param B
+	 * @param C
+	 * @return
+	 */
+	public final int distance(Punto A, Punto B, Punto C) {
+		int ABx = (int) (B.x-A.x);
+		int ABy = (int) (B.y-A.y);
+		int num = (int) (ABx*(A.y-C.y)-ABy*(A.x-C.x));
+		if (num < 0) num = -num;
+		return num;
+	}
+	
+/*	La funci�n actualizar_min_angulo es la siguiente:
+
+		function actualizar_min_angulo ( pivote, pto, min_angulo) :
+		case orientacion(pivote,pto,min_angulo) of
+		POSITIVA: return true
+		NEGATIVA: return false
+		LINEA: if  distancia(pto,pivote) > distancia(min_angulo,pivote)  then
+		return true
+		else
+		return false
+		endif
+		endcase
+*/
+	
+	public final boolean actualizar_min_angulo(Punto pivote, Punto pto, Punto min_angulo)
+	{
+		boolean resultado = false;
+		switch (orientation(pivote,pto, min_angulo)) {
+		case FunctionsGlobals.POSITIVA:
+			resultado = true;
+			break;
+		case FunctionsGlobals.LINEA:
+		    if (distance(pto, pivote) > distance(min_angulo, pivote))
+		    {
+		    	resultado = true;
+		    }
+		    else
+		    {
+		    	resultado = false;
+		    }
+		    break;
+		default:
+			break;
+		}
+		return resultado;
+	}
+	
+	boolean estaEnTri(Punto A1,Punto A2,Punto A3, Punto P)
+    {   // Decide si un punto P est� dentro del tri�ngulo orientado A1A2A3
+
+        if(orientation(A1,A2,A3)>=0)
+               return orientation(A1, A2, P) >= 0 &&
+               		  orientation(A2, A3, P) >= 0 &&
+               		  orientation(A3, A1, P) >= 0;
+        else   return orientation(A1, A2, P) <= 0 &&
+        			  orientation(A2, A3, P) <= 0 &&
+        			  orientation(A3, A1, P) <= 0;
+
+    }//
+
+	public Punto centroide(Punto punto, Punto punto2, Punto punto3) {
+		// TODO Auto-generated method stub
+		assert punto != null;
+		assert punto2 != null;
+		assert punto3 != null;
+		
+		double coordx = (punto.x + punto2.x + punto3.x) /3;
+		double coordy = (punto.y + punto2.y + punto3.y) /3;
+		
+		Punto centroide = new Punto();
+		centroide.x = coordx;
+		centroide.y = coordy;
+		return centroide;
+	}
+
+	protected Punto siguiente(Punto vertice_derecho, List<Punto> c_convexo) {
+		assert c_convexo.isEmpty() == false && vertice_derecho != null;
+		assert c_convexo.contains(vertice_derecho);
+		
+		int index_v_derecho = c_convexo.indexOf(vertice_derecho); 
+		if ( index_v_derecho == c_convexo.size()-1)		
+		{
+			return c_convexo.get(0);
+		}
+		else
+		{
+			assert c_convexo.get(index_v_derecho + 1) != null;
+			return c_convexo.get(index_v_derecho + 1);
+		}	
+		
+	}
+	
+	protected Punto anterior(Punto vertice_derecho, List<Punto> c_convexo) {
+		assert c_convexo.isEmpty() == false && vertice_derecho != null;
+		assert c_convexo.contains(vertice_derecho);
+		
+		int index_v_derecho = c_convexo.indexOf(vertice_derecho); 
+		if ( index_v_derecho == 0)		
+		{
+			return c_convexo.get(c_convexo.size() -1);
+		}
+		else
+		{
+			assert c_convexo.get(index_v_derecho -1) != null;
+			return c_convexo.get(index_v_derecho -1);
+		}	
+		
+	}
+
+	protected Punto busquedaPuntoMenorOrdenada(List<Punto> listaPuntos) {
+		// TODO Auto-generated method stub
+		Punto ptoInterior = null;
+		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {
+			Punto punto = iterator.next();
+			if (ptoInterior == null)
+			{
+				ptoInterior=punto;
+			}
+			else if (punto.y < ptoInterior.y)
+			{
+				ptoInterior = punto;
+			}			
+		}
+		assert ptoInterior != null;
+		return ptoInterior;
+	}
+	
+	protected Punto busquedaPuntoMayorOrdenada(List<Punto> listaPuntos) {
+		// TODO Auto-generated method stub
+		Punto ptoInterior = null;
+		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {
+			Punto punto = iterator.next();
+			if (ptoInterior == null)
+			{
+				ptoInterior=punto;
+			}
+			else if (punto.y > ptoInterior.y)
+			{
+				ptoInterior = punto;
+			}			
+		}
+		assert ptoInterior != null;
+		return ptoInterior;
+	}
+	
+	protected Punto busquedaPuntoMenorAbscisa(List<Punto> listaPuntos) {
+		// TODO Auto-generated method stub
+		Punto ptoInterior = null;
+		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {
+			Punto punto = iterator.next();
+			if (ptoInterior == null)
+			{
+				ptoInterior=punto;
+			}
+			else if (punto.x < ptoInterior.x)
+			{
+				ptoInterior = punto;
+			}			
+		}
+		assert ptoInterior != null;
+		return ptoInterior;
+	}
+	
+	protected Punto busquedaPuntoMayorAbscisa(List<Punto> listaPuntos) {
+		// TODO Auto-generated method stub
+		Punto ptoInterior = null;
+		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {
+			Punto punto = iterator.next();
+			if (ptoInterior == null)
+			{
+				ptoInterior=punto;
+			}
+			else if (punto.x > ptoInterior.x)
+			{
+				ptoInterior = punto;
+			}			
+		}
+		assert ptoInterior != null;
+		return ptoInterior;
+	}
+
+}
