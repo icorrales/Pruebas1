@@ -42,7 +42,7 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 	pto:= primer punto de c_convexo;
 	repeat
 	if pto != p(i) and pto != p(j) and pto != p(k) then
-	if pto es interior al triángulo formado por p(i),p(j),p(k) then
+	if pto es interior al triangulo formado por p(i),p(j),p(k) then
 	eliminar pto de la lista c_convexo
 	endif
 	endif

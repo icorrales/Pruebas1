@@ -24,13 +24,13 @@ public class Incremental extends AbstractAlgoritmo {
 //	for  i:=2  to  N  do
 //	v_sop_sup := soporte_superior ( c_convexo, vertice_derecho, p(i) );
 //	v_sop_inf := soporte_inferior ( c_convexo, vertice_derecho, p(i) );
-//	(* a continuación se actualiza c_convexo con p(i) *) 
+//	(* a continuacion se actualiza c_convexo con p(i) *)
 //	siguiente de v_sop_inf en c_convexo := p(i);
 //	anterior de p(i) en c_convexo := v_sop_inf;
 //	siguiente de p(i) en c_convexo := v_sop_sup;
 //	anterior de v_sop_sup en c_convexo := p(i);
 //	vertice_derecho := p(i)
-//	(* p(i) es el vértice más a la derecha del nuevo cierre *) 
+//	(* p(i) es el vertice mas a la derecha del nuevo cierre *)
 //	endfor
 	public void start(int delay)
 	{
@@ -52,7 +52,7 @@ public class Incremental extends AbstractAlgoritmo {
 			int indice_v_sop_sup = c_convexo.indexOf(v_sop_sup);
 			
 			// Hay que borrar todos las aristas entre el vertice soporte inferior y el superior, pero
-			// para ello hay q ordenar la lista de tal forma que el soporte superior siempre esté detras del inferior.
+			// para ello hay q ordenar la lista de tal forma que el soporte superior siempre esta detras del inferior.
 			while ( indice_v_sop_inf < indice_v_sop_sup)
 			{
 				Arista arista = new Arista(c_convexo.get(indice_v_sop_inf),c_convexo.get(indice_v_sop_inf +1));
@@ -101,8 +101,8 @@ public Punto soporte_inferior(List<Punto> c_convexo,
 
 
 /*function soporte_superior (cierre, vertice_derecho, pto_exterior) :
-	(* Devuelve el vértice soporte superior del cierre respecto al punto exterior *)
-	(* vertice_derecho es el vértice más a la derecha del cierre *)
+	(* Devuelve el vertice soporte superior del cierre respecto al punto exterior *)
+	(* vertice_derecho es el vertice mas a la derecha del cierre *)
 	if  cierre tiene un solo punto  then
 	return vertice_derecho
 	elseif  cierre tiene dos puntos  then
@@ -112,7 +112,7 @@ public Punto soporte_inferior(List<Punto> c_convexo,
 	else
 	return sig_derecho
 	endif
-	else (* cierre tiene tres o más vértices *) 
+	else (* cierre tiene tres o mas vertices *)
 	v := vertice_derecho;
 	sig_v := siguiente de v en cierre;
 	while  orientacion(pto_exterior, v, sig_v) == POSITIVA  do

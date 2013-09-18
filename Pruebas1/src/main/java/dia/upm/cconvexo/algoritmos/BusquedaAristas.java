@@ -20,11 +20,11 @@ public void start(int delay)
 		
 	}
 
-/*	c_convexo := lista_circ€ular_vacía;
+/*	c_convexo := lista_circular_vacia;
 if N=1 then
 c_convexo := {p(1)};
 else
-aristas := lista_vacía;
+aristas := lista_vacia;
 
 */ 
 
@@ -54,7 +54,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 					       if pto_izq then es_arista:=false endif
 			POSITIVA: pto_izq:=true;
 					     if pto_dcha then es_arista:=false endif
-			LINEA: if p(k) no está en el segmento [p(i),p(j)] then
+			LINEA: if p(k) no esta en el segmento [p(i),p(j)] then
 						es_arista:=false
 					endif
 			end case
@@ -112,7 +112,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 			destino:=punto destino de arista;
 			insertar origen en c_convexo;
 			arista:=arista de la lista aristas cuyo punto origen sea destino
-			until aristas = lista_vacía
+			until aristas = lista_vacia
 			endif 
 			*/
 			if (es_arista)

@@ -26,8 +26,8 @@ public class ComparadorAngulos implements Comparator<Punto> {
 	
 
 	/*
-	   * Esta función que compara básicamente 2 puntos, determinará cuál de ellos
-	   * habrá de ser el que esté en el principio del array.
+	   * Esta funcion que compara basicamente 2 puntos, determinar cual de ellos
+	   * habra de ser el que este en el principio del array.
 	   */
 	  int Comparar(Punto punto1, Punto punto2)
 	  {
@@ -48,8 +48,8 @@ public class ComparadorAngulos implements Comparator<Punto> {
 	      return -1;
 	    else
 	    /*
-	     * Si p2 es COLINEAR con la recta del segmento, enconces estudiamos qué punto
-	     entre p1 y p2 está más cerca a puntos[0]
+	     * Si p2 es COLINEAR con la recta del segmento, enconces estudiamos que punto
+	     entre p1 y p2 esta mas cerca a puntos[0]
 	     */
 	    {
 	      xdist1 = punto1.getX() - this.ptoInterior.getX();
