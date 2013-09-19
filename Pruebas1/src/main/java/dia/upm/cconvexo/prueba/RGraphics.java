@@ -19,6 +19,8 @@
  * 
  */
 
+/*
+
 package dia.upm.cconvexo.prueba;
 
 import java.awt.Color;
@@ -66,8 +68,10 @@ public class RGraphics extends Graphics2D{
 		double x4 = x2-length*Math.cos(angle-arrowAngle);
 		double y4 = y2-length*Math.sin(angle-arrowAngle);
 		drawLine(x2,y2,x4,y4);*/
-	}
-	
+/*	}
+
+
+
 	public void drawArrow(Point a, Point b, double arrowAngle, double length) {
 		drawArrow(a.x,a.y,b.x,b.y,arrowAngle,length);
 	}
@@ -441,3 +445,4 @@ public class RGraphics extends Graphics2D{
 	}
 
 }
+*/

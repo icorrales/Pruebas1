@@ -1,3 +1,5 @@
+/*
+
 package dia.upm.cconvexo.acciones;
 
 import java.awt.Canvas;
@@ -33,3 +35,5 @@ public class InicioAccionesAction {
 	
 
 }
+
+*/

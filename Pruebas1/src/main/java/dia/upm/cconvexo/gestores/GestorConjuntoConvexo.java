@@ -28,6 +28,7 @@ public class GestorConjuntoConvexo {
 		// TODO Auto-generated constructor stub
 		listaListener = new LinkedList<IDelegatePaint>();
 		conjuntoConvexo = new LinkedList<Arista>();
+        listaPuntos = new LinkedList<Punto>();
 		
 	}
 	

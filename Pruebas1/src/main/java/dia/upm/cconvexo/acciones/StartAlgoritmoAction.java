@@ -1,4 +1,4 @@
-package dia.upm.cconvexo.acciones;
+/* package dia.upm.cconvexo.acciones;
 
 import java.awt.event.ActionEvent;
 
@@ -37,3 +37,6 @@ public class StartAlgoritmoAction extends AbstractAction {
 	}
 
 }
+
+
+*/

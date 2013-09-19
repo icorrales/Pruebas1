@@ -1,3 +1,5 @@
+/*
+
 package dia.upm.cconvexo.acciones;
 
 import java.awt.event.ActionEvent;
@@ -32,3 +34,6 @@ public class ListarPuntosAction extends AbstractAction {
 	}
 
 }
+
+
+*/

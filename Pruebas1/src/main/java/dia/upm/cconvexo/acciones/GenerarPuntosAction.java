@@ -1,3 +1,6 @@
+/*
+
+
 package dia.upm.cconvexo.acciones;
 
 import java.awt.Graphics2D;
@@ -75,3 +78,6 @@ public class GenerarPuntosAction extends AbstractAction{
 	
 
 }
+
+
+*/

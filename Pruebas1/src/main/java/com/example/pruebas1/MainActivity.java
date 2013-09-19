@@ -17,9 +17,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Punto;
 
 import com.example.pruebas1.model.Point;
+import com.example.pruebas1.view.PanelPuntosImage;
 
 import java.util.Random;
 
@@ -27,7 +29,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     Button button;
     EditText textoPuntos;
-    SurfaceView imagenDibujo;
+    PanelPuntosImage imagenDibujo;
     ListView listaExpandible;
 
     @Override
@@ -36,8 +38,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button);
         textoPuntos = (EditText) findViewById(R.id.editText);
-        imagenDibujo = (SurfaceView) findViewById(R.id.SurfaceView);
+        imagenDibujo = (PanelPuntosImage) findViewById(R.id.SurfaceView);
         button.setOnClickListener(this);
+
 
 
         final String[] datos =
@@ -70,7 +73,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
 
-    private void dibujaPuntos (Integer numeroPuntos, SurfaceView imagenDibujo)
+    private void dibujaPuntos (Integer numeroPuntos, PanelPuntosImage imagenDibujo)
     {
 
        Random r=new Random();
@@ -81,6 +84,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
            Punto p = new Punto();
            p.setY(r.nextInt(MaxY));
            p.setX(r.nextInt(MaxX));
+           GestorConjuntoConvexo.getInstancia().getListaPuntos().add(p);
 
 
 

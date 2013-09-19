@@ -1,3 +1,5 @@
+/*
+
 package dia.upm.cconvexo.prueba;
 
 import java.awt.BorderLayout;
@@ -43,6 +45,8 @@ import dia.upm.cconvexo.model.Punto;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
+
+/*
 public class NewJPanel extends javax.swing.JPanel implements IDelegatePaint{
 	private Canvas jTextArea1;
 	private JFrame jFrame1;
@@ -54,6 +58,8 @@ public class NewJPanel extends javax.swing.JPanel implements IDelegatePaint{
 	* Auto-generated main method to display this 
 	* JPanel inside a new JFrame.
 	*/
+
+	/*
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		frame.setJMenuBar(new MenuSuperior());
@@ -136,7 +142,11 @@ public class NewJPanel extends javax.swing.JPanel implements IDelegatePaint{
 		if (hull.size() > 0)
 			grafico.drawLine(hull.get(hull.size()-1).getPoint(),hull.get(0).getPoint());
 */
+
+/*
 	}
+
+
 
 	@Override
 	public void borraRecta(Arista a1) {
@@ -204,3 +214,6 @@ public class NewJPanel extends javax.swing.JPanel implements IDelegatePaint{
 	
 
 }
+
+
+*/
