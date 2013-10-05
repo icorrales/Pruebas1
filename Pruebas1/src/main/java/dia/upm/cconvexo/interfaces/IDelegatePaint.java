@@ -16,7 +16,7 @@ public interface IDelegatePaint {
     public void paintPuntos();
 	public void paintPunto(Punto pto);
 	public void paintArista(Arista a1);
-	public void paintArista(Arista a1, Color color);
+	public void paintArista(Arista a1, int color);
 	public void borraRecta(Arista a1);
 	public void borraPuntos();
 	public void borraPuntoSubconjunto(Punto p);

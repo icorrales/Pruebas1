@@ -56,6 +56,10 @@ public abstract class DerivadosGraham extends AbstractAlgoritmo {
 		while (siguiente(v,cierreConvexo) != verticeInicio) {
 			Punto siguiente_V = siguiente(v, cierreConvexo);					
 			Punto sig_sig_V =  siguiente(siguiente_V,cierreConvexo);
+            Arista a1 = new Arista(v,siguiente_V);
+            Arista a2 = new Arista(v,sig_sig_V);
+            GestorConjuntoConvexo.getInstancia().anadeAristaTmp(a1);
+            GestorConjuntoConvexo.getInstancia().anadeAristaTmp(a2);
 			if (orientation(v, siguiente_V, sig_sig_V) == FunctionsGlobals.POSITIVA)
 			{
 				v = siguiente(v, cierreConvexo);
@@ -68,7 +72,9 @@ public abstract class DerivadosGraham extends AbstractAlgoritmo {
 					int indice_v = cierreConvexo.indexOf(v);
 					v = cierreConvexo.get(indice_v-1);
 				}
-			}			
+			}
+            GestorConjuntoConvexo.getInstancia().borraAristaTmp(a1);
+            GestorConjuntoConvexo.getInstancia().borraAristaTmp(a2);
 		}
 	}
 

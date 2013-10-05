@@ -18,9 +18,9 @@ public class GrahamNuevo extends DerivadosGraham {
 		{			
 			if (alineados (listaPuntos))
 			{
-				// pinta los dos vertices m�s alejados.
+				// pinta los dos vertices mas alejados.
 			}
-			else // siempre llegaran aqui siendo 3 o m�s puntos.
+			else // siempre llegaran aqui siendo 3 o mas puntos.
 			{
 //				Punto puntoInterior = centroide(listaPuntos.get(0), listaPuntos.get(1), listaPuntos.get(2));
 				Punto puntoInterior = busquedaPuntoMenorOrdenada(listaPuntos);

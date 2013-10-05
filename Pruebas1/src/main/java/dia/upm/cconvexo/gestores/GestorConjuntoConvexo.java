@@ -1,6 +1,8 @@
 package dia.upm.cconvexo.gestores;
 
 
+import android.graphics.Color;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,11 +18,20 @@ import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 public class GestorConjuntoConvexo {
-	
-	static GestorConjuntoConvexo instancia = null;
+
+    public List<Arista> getSubconjuntoArista() {
+        return subconjuntoArista;
+    }
+
+    public void setSubconjuntoArista(List<Arista> subconjuntoArista) {
+        this.subconjuntoArista = subconjuntoArista;
+    }
+
+    static GestorConjuntoConvexo instancia = null;
 	private List<Punto> listaPuntos = null;
 	private List<Arista> conjuntoConvexo = null;
 	private List<Punto> subconjuntoPuntos = null;
+    private List<Arista>subconjuntoArista = null;
 	private List<IDelegatePaint> listaListener = null;
 	
 	
@@ -29,6 +40,7 @@ public class GestorConjuntoConvexo {
 		listaListener = new LinkedList<IDelegatePaint>();
 		conjuntoConvexo = new LinkedList<Arista>();
         listaPuntos = new LinkedList<Punto>();
+        subconjuntoArista = new LinkedList<Arista>();
 		
 	}
 	
@@ -60,8 +72,8 @@ public class GestorConjuntoConvexo {
 	
 	public void borraListaPuntos()
 	{
-		listaPuntos = null;
-		conjuntoConvexo = new LinkedList<Arista>();
+		listaPuntos.clear();
+		conjuntoConvexo.clear();
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
 			delegate.borraPuntos();
@@ -153,14 +165,36 @@ public class GestorConjuntoConvexo {
 				
 			
 				IDelegatePaint delegate = listaListener.get(i);
-				// delegate.paintArista(a1, Color.RED);
+				  delegate.paintArista(a1, Color.RED);
 			}
 		
-			
+
+
 		}
 		
 		
 	}
 
+    public void anadeAristaTmp(Arista a1)
+    {
+        subconjuntoArista.add(a1);
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintArista(a1);
+        }
+    }
+
+    public void borraAristaTmp(Arista a1)
+    {
+        subconjuntoArista.remove(a1);
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintArista(a1);
+        }
+    }
 
 }

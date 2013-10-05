@@ -20,7 +20,7 @@ public class Andrew extends DerivadosGraham {
 	public void start(int delay) {
 		
 		List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();			
-		if (listaPuntos.size() == 1)
+		if (listaPuntos.size() <= 1)
 		{
 			
 		}
