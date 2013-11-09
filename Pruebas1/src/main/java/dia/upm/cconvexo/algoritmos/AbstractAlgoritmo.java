@@ -11,13 +11,13 @@ public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
 	
 	
 
-	@Override
+	
 	public void nextstep() {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
+	
 	public abstract void start(int delay);
 	
 	public final int orientation(Punto A, Punto B, Punto P) {

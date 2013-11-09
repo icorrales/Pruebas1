@@ -41,7 +41,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 		
 		for (int j = i+1; j < N; j++) {
 			
-			int k = 1;
+			int k = 0;
 			boolean es_arista = true;
 			boolean pto_izq = false;
 			boolean pto_dcha = false;

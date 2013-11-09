@@ -101,13 +101,6 @@ public class Jarvis extends AbstractAlgoritmo {
 		}
 		GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(puntoAnterior,puntoPrimero));
 	}
-
-
-	
-
-
-	
-		
 	
 
 }

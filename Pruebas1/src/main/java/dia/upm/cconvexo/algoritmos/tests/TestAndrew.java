@@ -6,6 +6,7 @@ import java.util.List;
 
 import dia.upm.cconvexo.algoritmos.Andrew;
 import dia.upm.cconvexo.algoritmos.DerivadosGraham;
+import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Punto;
 
 /**
@@ -30,6 +31,9 @@ public class TestAndrew extends TestAbstract {
 		algoritmo = new Andrew();
 		list = new LinkedList<Punto>();
 		initPuntos();
+		// initPuntos20();
+		initCierreConvexoReal();
+		// initCierreConvexoReal20();
 	}
 
 	/* (non-Javadoc)
@@ -41,7 +45,7 @@ public class TestAndrew extends TestAbstract {
 	
 	public void test1() throws Exception
 	{
-				
+	    			
 	}
 	
 	public void test2() throws Exception
@@ -52,6 +56,26 @@ public class TestAndrew extends TestAbstract {
 		List listOrdenada = new LinkedList<Punto>();
 		initListaOrdenada(listOrdenada);
 		assertEquals(list, listOrdenada);
+		
+	}
+	
+	public void test3() throws Exception
+	{
+		List listOrdenada = new LinkedList<Punto>();
+		initListaOrdenada(listOrdenada);
+		algoritmo.ordenarAngularmente(list, list.get(list.size()-1));
+		cierreConvexoReal.clear();
+		cierreConvexoReal.addAll(listOrdenada);
+		super.compruebaCierreConvexo(list);
+		
+	}
+	
+	public void test4() throws Exception
+	{
+		algoritmo.start(0);
+		super.compruebaCierreConvexoPorAristas(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
+		
+		
 	}
 
 	private void initListaOrdenada(List<Punto> list) {
@@ -67,4 +91,6 @@ public class TestAndrew extends TestAbstract {
 		intoDataList(116,-315,list);
 		intoDataList(72,-247,list);																						
 	}
+	
+	
 }

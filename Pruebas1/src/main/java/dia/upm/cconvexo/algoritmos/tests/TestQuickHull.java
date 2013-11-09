@@ -46,4 +46,18 @@ public class TestQuickHull extends TestAbstract {
 		compruebaCierreConvexoPorAristas(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
 	}
 	
+	public void test2() throws Exception
+	{
+		initPuntos20();
+		initCierreConvexoReal20();
+		GestorConjuntoConvexo.getInstancia().borraListaPuntos();
+		GestorConjuntoConvexo.getInstancia().setListaPuntos(list);
+		List<Punto> cierreConvexo = new LinkedList<Punto>();
+		algoritmo.start(0);
+		//List listaCC= GestorConjuntoConvexo.getInstancia().getListaPuntos();
+		//compruebaCierreConvexo(listaCC);
+		List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+		compruebaCierreConvexoPorAristas(listaAristas,cierreConvexoReal20);
+	}
+	
 }
