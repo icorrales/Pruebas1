@@ -3,7 +3,9 @@ package dia.upm.cconvexo.gestores;
 
 
 
-import java.awt.Color;
+//import java.awt.Color;
+import android.graphics.Color;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -172,7 +174,7 @@ public class GestorConjuntoConvexo {
 				
 			
 				IDelegatePaint delegate = listaListener.get(i);
-				  delegate.paintArista(a1, Color.red);
+				  delegate.paintArista(a1, Color.RED);
 			}
 		
 
