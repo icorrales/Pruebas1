@@ -20,12 +20,18 @@ public class Andrew extends DerivadosGraham {
 	public void start(int delay) {
 		
 		List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();			
+		algoritmoAndrew(delay, listaPuntos);
+		
+	}
+
+
+	public void algoritmoAndrew(int delay, List<Punto> listaPuntos) {
 		if (listaPuntos.size() <= 1)
 		{
 			
 		}
 		else
-		{
+		{			
 			List<Punto> listaPuntosCopia = new LinkedList<Punto>(listaPuntos);			
 			Collections.sort(listaPuntosCopia, new ComparadorAbscisas());
 			List<Punto> subconjuntoInferior = new LinkedList<Punto>();
@@ -46,7 +52,6 @@ public class Andrew extends DerivadosGraham {
 			}
 			
 		}
-		
 	}
 
 
@@ -67,7 +72,7 @@ public class Andrew extends DerivadosGraham {
 		assert subconjuntoSuperior != null;
 		Punto pIzquierda = listaPuntosCopia.get(0);
 		Punto pDerecha = listaPuntosCopia.get(listaPuntosCopia.size()-1);
-		for (int i = 1; i < listaPuntosCopia.size() - 2; i++) {
+		for (int i = 1; i < listaPuntosCopia.size() - 1; i++) {
 			int orientation = orientation(pIzquierda, pDerecha, listaPuntosCopia.get(i)); 
 			if (orientation == FunctionsGlobals.POSITIVA)
 			{
@@ -78,7 +83,6 @@ public class Andrew extends DerivadosGraham {
 				subconjuntoInferior.add(listaPuntosCopia.get(i));
 			}		
 		}
-		
 		
 	}
 }

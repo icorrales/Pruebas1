@@ -5,8 +5,6 @@ package dia.upm.cconvexo.interfaces;
 
 //import javax.swing.JComponent;
 
-import android.graphics.Color;
-
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 

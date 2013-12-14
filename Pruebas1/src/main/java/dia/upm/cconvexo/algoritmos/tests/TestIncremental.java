@@ -81,15 +81,15 @@ public class TestIncremental extends TestAbstract {
 	
 	private void initListaOrdenada(List<Punto> list) {
 		// TODO Auto-generated method stub
-		intoDataList(72,-247,list);
-		intoDataList(94,-392,list);
-		intoDataList(116,-315,list);
-		intoDataList(328,-207,list);
-		intoDataList(350,-466,list);		
-		intoDataList(360,-366,list);
-		intoDataList(380,-69,list);
-		intoDataList(428,-492,list);
-		intoDataList(444,-349,list);		
-		intoDataList(496,-73,list);		
+		intoDataList(72,247,list);
+		intoDataList(94,392,list);
+		intoDataList(116,315,list);
+		intoDataList(328,207,list);
+		intoDataList(350,466,list);		
+		intoDataList(360,366,list);
+		intoDataList(380,69,list);
+		intoDataList(428,492,list);
+		intoDataList(444,349,list);		
+		intoDataList(496,73,list);		
 	}
 }

@@ -33,7 +33,7 @@ public class TestAndrew extends TestAbstract {
 		initPuntos();
 		// initPuntos20();
 		initCierreConvexoReal();
-		// initCierreConvexoReal20();
+		//initCierreConvexoReal20();
 	}
 
 	/* (non-Javadoc)
@@ -43,11 +43,7 @@ public class TestAndrew extends TestAbstract {
 		super.tearDown();
 	}
 	
-	public void test1() throws Exception
-	{
-	    			
-	}
-	
+	// Test que revisa que funcione el ordenamiento de la lista.	
 	public void test2() throws Exception
 	{
 		Punto ptoCentrico = algoritmo.centroide(list.get(0), list.get(1), list.get(2));
@@ -55,10 +51,10 @@ public class TestAndrew extends TestAbstract {
 		assertNotNull(list);
 		List listOrdenada = new LinkedList<Punto>();
 		initListaOrdenada(listOrdenada);
-		assertEquals(list, listOrdenada);
-		
+		assertEquals(listOrdenada,list);		
 	}
 	
+	// Test que revisa que el cierre convexo es identico a la lista ordenada angularmente
 	public void test3() throws Exception
 	{
 		List listOrdenada = new LinkedList<Punto>();
@@ -70,26 +66,49 @@ public class TestAndrew extends TestAbstract {
 		
 	}
 	
+	// Test que comprueba el conjunto convexo ordenado de 10 elemenetos.
 	public void test4() throws Exception
 	{
+		GestorConjuntoConvexo.getInstancia().setListaPuntos(this.list);
 		algoritmo.start(0);
 		super.compruebaCierreConvexoPorAristas(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
 		
 		
 	}
+	
+	// Test que comprueba el conjunto convexo por aristas ordenado, de 20 elemenetos.
+		public void test5() throws Exception
+		{
+			initPuntos20();
+			initCierreConvexoReal20();
+			GestorConjuntoConvexo.getInstancia().setListaPuntos(this.list);
+			algoritmo.start(0);
+			super.compruebaCierreConvexoPorAristasGenerico(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo(), this.cierreConvexoReal20);
+			
+			
+		}
 
 	private void initListaOrdenada(List<Punto> list) {
 		// TODO Auto-generated method stub
-		intoDataList(380,-69,list);
-		intoDataList(496,-73,list);
-		intoDataList(444,-349,list);
-		intoDataList(428,-492,list);
-		intoDataList(360,-366,list);
-		intoDataList(350,-466,list);
-		intoDataList(328,-207,list);
-		intoDataList(94,-392,list);
-		intoDataList(116,-315,list);
-		intoDataList(72,-247,list);																						
+		intoDataList(380,69,list);
+		intoDataList(496,73,list);
+		intoDataList(444,349,list);
+		intoDataList(428,492,list);
+		intoDataList(360,366,list);
+		intoDataList(350,466,list);
+		intoDataList(328,207,list);
+		intoDataList(94,392,list);
+		intoDataList(116,315,list);
+		intoDataList(72,247,list);
+		
+		
+		
+		
+		
+		
+		
+				
+																										
 	}
 	
 	

@@ -1,14 +1,16 @@
 package dia.upm.cconvexo.gestores;
 
 
-import android.graphics.Color;
 
+
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
 
 
 
@@ -62,6 +64,7 @@ public class GestorConjuntoConvexo {
 		assert listaPuntos != null;
 		assert listaListener != null;
 		this.listaPuntos = listaPuntos;
+		this.conjuntoConvexo.clear();
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
 			delegate.paintPuntos();
@@ -72,11 +75,12 @@ public class GestorConjuntoConvexo {
 	
 	public void borraListaPuntos()
 	{
-		listaPuntos.clear();
+		listaPuntos = new LinkedList();
 		conjuntoConvexo.clear();
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
 			delegate.borraPuntos();
+            duerme();
 			
 		}
 	}
@@ -91,7 +95,8 @@ public class GestorConjuntoConvexo {
 			conjuntoConvexo.add(a1);
 			for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 				IDelegatePaint delegate = iterator.next();
-				delegate.paintArista(a1);			
+				delegate.paintArista(a1);
+                duerme();
 			}
 		}
 	}
@@ -108,7 +113,8 @@ public class GestorConjuntoConvexo {
 		conjuntoConvexo.remove(a1);
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
-			delegate.borraRecta(a1);			
+			delegate.borraRecta(a1);
+            duerme();
 		}
 		}
 	}
@@ -141,7 +147,8 @@ public class GestorConjuntoConvexo {
 		assert p != null;
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
-			delegate.borraPuntoSubconjunto(p);			
+			delegate.borraPuntoSubconjunto(p);
+
 		}
 	}
 
@@ -165,7 +172,7 @@ public class GestorConjuntoConvexo {
 				
 			
 				IDelegatePaint delegate = listaListener.get(i);
-				  delegate.paintArista(a1, Color.RED);
+				  delegate.paintArista(a1, Color.red);
 			}
 		
 
@@ -194,6 +201,15 @@ public class GestorConjuntoConvexo {
 
             IDelegatePaint delegate = listaListener.get(i);
             delegate.paintArista(a1);
+        }
+    }
+
+    private void duerme() {
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
