@@ -14,9 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 
-
-
-
+import dia.upm.cconvexo.global.Triangulo;
 import dia.upm.cconvexo.interfaces.IDelegatePaint;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
@@ -31,12 +29,35 @@ public class GestorConjuntoConvexo {
         this.subconjuntoArista = subconjuntoArista;
     }
 
+    public void borraSubconjuntoArista()
+    {
+        this.subconjuntoArista.clear();
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintPuntos();
+        }
+
+    }
+
     static GestorConjuntoConvexo instancia = null;
 	private List<Punto> listaPuntos = null;
 	private List<Arista> conjuntoConvexo = null;
 	private List<Punto> subconjuntoPuntos = null;
     private List<Arista>subconjuntoArista = null;
 	private List<IDelegatePaint> listaListener = null;
+    private List<Punto> puntosGeograficos = null;
+
+    public boolean isOrdenaAngularmente() {
+        return ordenaAngularmente;
+    }
+
+    public void setOrdenaAngularmente(boolean ordenaAngularmente) {
+        this.ordenaAngularmente = ordenaAngularmente;
+    }
+
+    private boolean ordenaAngularmente = false;
 	
 	
 	private GestorConjuntoConvexo() {
@@ -45,6 +66,8 @@ public class GestorConjuntoConvexo {
 		conjuntoConvexo = new LinkedList<Arista>();
         listaPuntos = new LinkedList<Punto>();
         subconjuntoArista = new LinkedList<Arista>();
+        puntosGeograficos = new LinkedList<Punto>();
+        subconjuntoPuntos = new LinkedList<Punto>();
 		
 	}
 	
@@ -66,7 +89,7 @@ public class GestorConjuntoConvexo {
 		assert listaPuntos != null;
 		assert listaListener != null;
 		this.listaPuntos = listaPuntos;
-		this.conjuntoConvexo.clear();
+        initGestor();
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
 			delegate.paintPuntos();
@@ -74,17 +97,23 @@ public class GestorConjuntoConvexo {
 		}
 		
 	}
-	
-	public void borraListaPuntos()
+
+    public void initGestor() {
+        this.conjuntoConvexo.clear();
+        this.subconjuntoArista.clear();
+        this.puntosGeograficos.clear();
+        this.ordenaAngularmente = false;
+    }
+
+    public void borraListaPuntos()
 	{
-		listaPuntos = new LinkedList();
+		listaPuntos = new LinkedList<Punto>();
 		conjuntoConvexo.clear();
-		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
-			IDelegatePaint delegate = iterator.next();
-			delegate.borraPuntos();
+        for (IDelegatePaint delegate : listaListener) {
+            delegate.borraPuntos();
             duerme();
-			
-		}
+
+        }
 	}
 	
 	public void anadeArista(Arista a1)
@@ -95,11 +124,10 @@ public class GestorConjuntoConvexo {
 		if ( ! conjuntoConvexo.contains(a1))
 		{
 			conjuntoConvexo.add(a1);
-			for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
-				IDelegatePaint delegate = iterator.next();
-				delegate.paintArista(a1);
-                duerme();
-			}
+            for (IDelegatePaint delegate : listaListener) {
+                delegate.paintArista(a1);
+
+            }
 		}
 	}
 	
@@ -116,7 +144,7 @@ public class GestorConjuntoConvexo {
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
 			delegate.borraRecta(a1);
-            duerme();
+
 		}
 		}
 	}
@@ -160,7 +188,7 @@ public class GestorConjuntoConvexo {
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
 			delegate.paintPuntos();
-			
+
 		}
 		
 	}
@@ -168,8 +196,8 @@ public class GestorConjuntoConvexo {
 	public void pintaCierreConvexo() {
 		// TODO Auto-generated method stub
 		for (Iterator<Arista> iterator = conjuntoConvexo.iterator(); iterator.hasNext();) {
-			Arista a1 = (Arista) iterator.next();
-			
+			Arista a1 = iterator.next();
+
 			for (int i = 0; i < listaListener.size(); i++) {
 				
 			
@@ -215,4 +243,69 @@ public class GestorConjuntoConvexo {
         }
     }
 
+    public List<Punto> getPuntosGeograficos() {
+        return puntosGeograficos;
+    }
+
+    public List<Punto> getSubconjuntoPuntos() {
+        return subconjuntoPuntos;
+    }
+
+    public void anadaPuntoSubconjunto(Punto punto) {
+        assert punto != null;
+        assert subconjuntoPuntos != null;
+        assert ! subconjuntoPuntos.contains(punto);
+        subconjuntoPuntos.add(punto);
+        for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
+            IDelegatePaint delegate = iterator.next();
+            delegate.paintPuntos();
+
+        }
+    }
+
+    public void borraPuntoSubconjunto(Punto punto) {
+        assert punto != null;
+        assert subconjuntoPuntos != null;
+        subconjuntoPuntos.remove(punto);
+        for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
+            IDelegatePaint delegate = iterator.next();
+            delegate.paintPuntos();
+
+        }
+    }
+
+    public void anadeTrianguloTmp(Triangulo t1) {
+        Arista a1 = new Arista(t1.getPunto1(),t1.getPunto2());
+        if ( ! subconjuntoArista.contains(a1)) {
+            subconjuntoArista.add(a1);
+        }
+        Arista a2 = new Arista(t1.getPunto2(),t1.getPunto3());
+        if ( ! subconjuntoArista.contains(a2)) {
+            subconjuntoArista.add(a2);
+        }
+        Arista a3 = new Arista(t1.getPunto1(),t1.getPunto3());
+        if ( ! subconjuntoArista.contains(a3)) {
+            subconjuntoArista.add(a3);
+        }
+
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintArista(a1);
+        }
+    }
+
+    public void borraTrianguloTmp(Triangulo t1) {
+        Arista a1 = new Arista(t1.getPunto1(),t1.getPunto2());
+        subconjuntoArista.remove(a1);
+        subconjuntoArista.remove(new Arista(t1.getPunto2(), t1.getPunto3()));
+        subconjuntoArista.remove(new Arista(t1.getPunto1(), t1.getPunto3()));
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.borraRecta(a1);
+        }
+    }
 }

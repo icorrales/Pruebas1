@@ -39,6 +39,10 @@ public class Andrew extends DerivadosGraham {
 			divideLista(listaPuntosCopia,subconjuntoInferior,subconjuntoSuperior);
 			Punto pIzquierda = listaPuntosCopia.get(0);
 			Punto pDerecha = listaPuntosCopia.get(listaPuntosCopia.size()-1);
+
+            GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(pIzquierda);
+            GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(pDerecha);
+
 			if (subconjuntoSuperior.size() > 0)
 			{
 				scanSubconjunto(delay, subconjuntoSuperior, pIzquierda,

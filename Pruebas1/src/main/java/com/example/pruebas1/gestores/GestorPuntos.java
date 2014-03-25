@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import dia.upm.cconvexo.interfaces.IDelegatePaint;
-import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 /**

@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Pruebas1</string>
+    <string name="app_name">ConvexHull Android</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="action_search">prueba1</string>
+    <string name="action_compose">prueba2</string>
+    <string name="paso_paso">Paso a paso</string>
+    <string name="directo">Directo</string>
+    <string name="retardo">Retardo</string>
+    <string name="tiempoRetardo">Tiempo de retardo</string>
+    <string name="action_list">Lista Puntos</string>
+    <string name="dialog_fire_missiles">valor1</string>
+    <string name="fire">fire1</string>
+    <string name="cancel">cancel</string>
+    <string name="listaPuntos">Lista de Puntos</string>
+    <string name="ok">OK</string>
+    <string name="franjas">Numero Franjas</string>
+
 
 </resources>

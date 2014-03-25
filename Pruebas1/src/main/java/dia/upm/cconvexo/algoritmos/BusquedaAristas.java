@@ -63,11 +63,17 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 			endwhile
 
 			*/
-			
+            Arista aTmp= new Arista();
+            aTmp.setOrigen(listaPuntos.get(i));
+            aTmp.setDestino(listaPuntos.get(j));
+            GestorConjuntoConvexo.getInstancia().anadeAristaTmp(aTmp);
 			while (k != N && es_arista)
 			{
 				if (k != i && k != j)
 				{
+
+
+                    GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(listaPuntos.get(k));
 					switch (orientation(listaPuntos.get(i), listaPuntos.get(j), listaPuntos.get(k)))
 					{
 					case FunctionsGlobals.NEGATIVA: 
@@ -75,6 +81,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 						if (pto_izq == true)
 						{
 							es_arista = false;
+                            GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
 						}
 						break;
 					case FunctionsGlobals.POSITIVA:
@@ -82,12 +89,14 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 						if (pto_dcha == true)
 						{
 							es_arista = false;
+                            GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
 						}
 						break;
 					case FunctionsGlobals.LINEA:
 						break;
 					}
 				}
+                GestorConjuntoConvexo.getInstancia().borraPuntoSubconjunto(listaPuntos.get(k));
 				k++;
 			}
 
@@ -117,10 +126,11 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 			*/
 			if (es_arista)
 			{
+                GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
 				if (pto_izq)
 				{
-					Arista arista = new Arista(listaPuntos.get(i),listaPuntos.get(j));
-					GestorConjuntoConvexo.getInstancia().anadeArista(arista);
+
+					GestorConjuntoConvexo.getInstancia().anadeArista(aTmp);
 				}
 				else if (pto_dcha)
 				{
@@ -135,12 +145,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista2);					
 				}
 			}
-			try {
-				Thread.sleep(delay);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+
 		}
 		
 	}

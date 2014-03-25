@@ -1,35 +1,43 @@
 package com.example.pruebas1;
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.os.Bundle;
 import android.app.Activity;
-import android.os.Handler;
-import android.os.Message;
-import android.renderscript.Mesh;
+import android.app.AlertDialog;
+import android.app.DialogFragment;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.Surface;
-import android.view.SurfaceView;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ExpandableListView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.example.pruebas1.adapters.AlgorithmAdapter;
+import com.example.pruebas1.gestores.GestorConfiguracion;
+import com.example.pruebas1.gestores.GestorPuntos;
+import com.example.pruebas1.view.FireMissilesDialogFragment;
+import com.example.pruebas1.view.PanelPuntos;
+import com.example.pruebas1.view.SettingsActivity;
+import com.example.pruebas1.view.SettingsFrament;
+
+import java.util.List;
+import java.util.Random;
+
 import dia.upm.cconvexo.algoritmos.Andrew;
 import dia.upm.cconvexo.algoritmos.AproximacionInferior;
+import dia.upm.cconvexo.algoritmos.AproximacionSuperior;
 import dia.upm.cconvexo.algoritmos.BusquedaAristas;
-import dia.upm.cconvexo.algoritmos.DerivadosGraham;
 import dia.upm.cconvexo.algoritmos.DivideYVencerasPreord;
 import dia.upm.cconvexo.algoritmos.EliminacionPtosInteriores;
 import dia.upm.cconvexo.algoritmos.GrahamNuevo;
 import dia.upm.cconvexo.algoritmos.Incremental;
+import dia.upm.cconvexo.algoritmos.Jarvis;
+import dia.upm.cconvexo.algoritmos.QuickHullNuevo;
 import dia.upm.cconvexo.gestores.GestorAlgoritmos;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
@@ -37,16 +45,13 @@ import dia.upm.cconvexo.interfaces.IDelegatePaint;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
-import com.example.pruebas1.model.Point;
-import com.example.pruebas1.view.PanelPuntosImage;
-
-import java.util.Random;
-
 public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint{
 
     Button button;
     EditText textoPuntos;
-    PanelPuntosImage imagenDibujo;
+//    PanelPuntosImage imagenDibujo;
+    PanelPuntos imagenDibujo;
+
     Spinner listaExpandible;
 
     @Override
@@ -55,11 +60,13 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button);
         textoPuntos = (EditText) findViewById(R.id.editText);
-        imagenDibujo = (PanelPuntosImage) findViewById(R.id.SurfaceView);
+//        imagenDibujo = (PanelPuntosImage) findViewById(R.id.SurfaceView);
+        imagenDibujo = (PanelPuntos) findViewById(R.id.SurfaceView);
         button.setOnClickListener(this);
 
         // Lista de Algoritmos.
         listaExpandible = (Spinner) findViewById(R.id.expandableListView);
+
 
 
         init();
@@ -78,27 +85,23 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     }
 
     private void init() {
-        GestorAlgoritmos.getInstancia().setAlgoritmo(Andrew.nombre,new Andrew());
-        GestorAlgoritmos.getInstancia().setAlgoritmo(BusquedaAristas.nombre,new BusquedaAristas());
-        GestorAlgoritmos.getInstancia().setAlgoritmo(DivideYVencerasPreord.nombre,new DivideYVencerasPreord());
-        GestorAlgoritmos.getInstancia().setAlgoritmo(EliminacionPtosInteriores.nombre,new EliminacionPtosInteriores());
-        GestorAlgoritmos.getInstancia().setAlgoritmo(GrahamNuevo.nombre,new GrahamNuevo());
-        GestorAlgoritmos.getInstancia().setAlgoritmo(Incremental.nombre,new Incremental());
-        String[] datos = {Andrew.nombre,BusquedaAristas.nombre,DivideYVencerasPreord.nombre,EliminacionPtosInteriores.nombre,GrahamNuevo.nombre,Incremental.nombre};
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,datos);
+        GestorAlgoritmos gestorAlgoritmos=GestorAlgoritmos.getInstancia();
+        //String[] datos = gestorAlgoritmos.getClaves();
+        //String[] datos = {Andrew.nombre,BusquedaAristas.nombre,DivideYVencerasPreord.nombre,EliminacionPtosInteriores.nombre,GrahamNuevo.nombre,Incremental.nombre, Jarvis.nombre,QuickHullNuevo.nombre, AproximacionInferior.nombre, AproximacionSuperior.nombre};
+        ArrayAdapter adapter = new AlgorithmAdapter(this,android.R.layout.simple_list_item_1);
         listaExpandible.setAdapter(adapter);
         listaExpandible.setOnItemSelectedListener(this);
 
-        GestorConjuntoConvexo.getInstancia().addListener(this);
-        Thread myThread = new Thread(new UpdateThread());
-        myThread.start();
+//        GestorConjuntoConvexo.getInstancia().addListener(this);
+//        Thread myThread = new Thread(new UpdateThread());
+//        myThread.start();
     }
 
     public void onClick(View v) {
         // Perform action on click
         String puntos = textoPuntos.getText().toString();
         Integer numeroPuntos;
-        if ( puntos.isEmpty()== false
+        if ( puntos.length() > 0
                 )
         {
           numeroPuntos=  new Integer(puntos);
@@ -113,7 +116,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     }
 
 
-    private void dibujaPuntos (Integer numeroPuntos, PanelPuntosImage imagenDibujo)
+    private void dibujaPuntos (Integer numeroPuntos, PanelPuntos imagenDibujo)
     {
         GestorConjuntoConvexo.getInstancia().borraListaPuntos();
 
@@ -130,23 +133,67 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
 
        }
-       imagenDibujo.invalidate();
+       imagenDibujo.refreshFinal();
         
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+
+            // Inflate the menu items for use in the action bar
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.main_activity_actions, menu);
+            return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){//decide which MenuItem was pressed based on its id
+            case R.id.action_settings:
+               //Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+               //startActivity(intent);//start the PrefsActivity.java
+                settings();
+               break;
+            case R.id.action_list:
+              //  FireMissilesDialogFragment dialog = new  FireMissilesDialogFragment();
+              //  dialog.show( this.getFragmentManager(), "NoticeDialogFragment");
+               showList();
+               break;
+            }
+        return true; //to execute the event here
+        }
+
+    public void settings() {
+        DialogFragment newFragment = new SettingsFrament();
+        newFragment.show(getFragmentManager(), "Settings");
+    }
+
+    private void showList() {
+        List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View convertView = (View) inflater.inflate(R.layout.custom, null);
+        alertDialog.setView(convertView);
+        alertDialog.setTitle("Lista Puntos");
+        ListView lv = (ListView) convertView.findViewById(R.id.listView1);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        for (int i = 0; i < listaPuntos.size(); i++) {
+            Punto punto =  listaPuntos.get(i);
+            adapter.add(punto.toString());
+        }
+
+        lv.setAdapter(adapter);
+        alertDialog.show();
     }
 
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
-        GestorConjuntoConvexo.getInstancia().getConjuntoConvexo().clear();
+        GestorConjuntoConvexo.getInstancia().initGestor();
+
         algoritmo.start(100);
+        imagenDibujo.refreshFinal();
     //  imagenDibujo.invalidate();
     }
 
@@ -157,7 +204,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
     @Override
     public void paintPuntos() {
-       this.updateHandler.sendEmptyMessage(9);
+  //     this.updateHandler.sendEmptyMessage(9);
     }
 
     @Override
@@ -167,19 +214,22 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
     @Override
     public void paintArista(Arista a1) {
-        this.updateHandler.sendEmptyMessage(9);
+ //       this.updateHandler.sendEmptyMessage(9);
+
+        imagenDibujo.refresh();
 
     }
 
     @Override
     public void paintArista(Arista a1, int color) {
-        this.updateHandler.sendEmptyMessage(0);
+ //       this.updateHandler.sendEmptyMessage(0);
+        imagenDibujo.refresh();
 
     }
 
     @Override
     public void borraRecta(Arista a1) {
-
+        imagenDibujo.refresh();
     }
 
     @Override
@@ -192,10 +242,10 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
     }
 
-    public Handler updateHandler = new Handler(){
+//    public Handler updateHandler = new Handler(){
         /** Gets called on every message that is received */
         // @Override
-        public void handleMessage(Message msg) {
+  /*      public void handleMessage(Message msg) {
 
             imagenDibujo.update();
             imagenDibujo.invalidate();
@@ -212,5 +262,5 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
             }
         }
 
-    }
+    } */
 }

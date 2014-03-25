@@ -16,37 +16,18 @@ public abstract class DerivadosGraham extends AbstractAlgoritmo {
 	}
 
 	protected void pintaAristas(int delay, List<Punto> cierreConvexo) {
-		for (int i = 0; i < cierreConvexo.size() -1; i++) {
-			
-			Punto punto2 = (Punto) cierreConvexo.get(i);
-			Punto punto3 = (Punto) cierreConvexo.get(i+1);
-			GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(punto2,punto3));
-			
-		 
-			try {
-				Thread.sleep(delay);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		}
+
+		GestorConjuntoConvexo.getInstancia().getSubconjuntoArista().clear();
 	}
 
 	protected void pintaOrdenacion(int delay, Punto puntoInterior, List<Punto> cierreConvexo) {
 		for (int i = 0; i < cierreConvexo.size(); i++) {
-							
+
 			Punto punto2 = (Punto) cierreConvexo.get(i);
-			GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(puntoInterior,punto2));
-			
-		 
-			try {
-				Thread.sleep(delay);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
+            if (! puntoInterior.equals(punto2))
+            {
+			    GestorConjuntoConvexo.getInstancia().anadeAristaTmp(new Arista(puntoInterior, punto2));
+            }
 		}
 	}
 
@@ -58,17 +39,22 @@ public abstract class DerivadosGraham extends AbstractAlgoritmo {
 			Punto sig_sig_V =  siguiente(siguiente_V,cierreConvexo);
             Arista a1 = new Arista(v,siguiente_V);
             Arista a2 = new Arista(v,sig_sig_V);
+            Arista a3 = new Arista(puntoInterior,siguiente_V);
             GestorConjuntoConvexo.getInstancia().anadeAristaTmp(a1);
             GestorConjuntoConvexo.getInstancia().anadeAristaTmp(a2);
 			if (orientation(v, siguiente_V, sig_sig_V) == FunctionsGlobals.POSITIVA)
 			{
 				v = siguiente(v, cierreConvexo);
+                GestorConjuntoConvexo.getInstancia().anadeArista(a1);
+
 			}
 			else
 			{
 				if (v != verticeInicio)
 				{
 					cierreConvexo.remove(siguiente_V);
+                    GestorConjuntoConvexo.getInstancia().borraArista(a1);
+                    GestorConjuntoConvexo.getInstancia().borraAristaTmp(a3);
 					int indice_v = cierreConvexo.indexOf(v);
 					v = cierreConvexo.get(indice_v-1);
 				}
@@ -76,12 +62,6 @@ public abstract class DerivadosGraham extends AbstractAlgoritmo {
             GestorConjuntoConvexo.getInstancia().borraAristaTmp(a1);
             GestorConjuntoConvexo.getInstancia().borraAristaTmp(a2);
 		}
-	}
-
-	public void ordenarAngularmente(List<Punto> cierreConvexo, Punto puntoInterior) {
-		// TODO Auto-generated method stub
-		Comparator<Punto> comparador = new ComparadorAngulos(puntoInterior);
-		Collections.sort(cierreConvexo,comparador);
 	}
 
 }

@@ -1,9 +1,12 @@
 package dia.upm.cconvexo.algoritmos;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
+import dia.upm.cconvexo.global.Triangulo;
+import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 public class EliminacionPtosInteriores extends AbstractAlgoritmo {
@@ -57,6 +60,9 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 		for (int j = i+1; j < N - 1; j++) {
 			
 			for (int k = 0; k < N; k++) {
+
+                Triangulo triangulo = new Triangulo(cierreConvexo.get(i), cierreConvexo.get(j), cierreConvexo.get(k));
+                super.pinta_triangulo(triangulo);
 				
 				if (this.orientation(cierreConvexo.get(i), cierreConvexo.get(j), cierreConvexo.get(k)) == FunctionsGlobals.LINEA)
 				{
@@ -69,24 +75,37 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 						if (this.estaEnTri(cierreConvexo.get(i), cierreConvexo.get(j), cierreConvexo.get(k), pto))
 						{
 							subconjuntoConvexo.remove(pto);
-							GestorConjuntoConvexo.getInstancia().borrarPuntoSubconjunto(pto);
+							GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(pto);
 						}
 					}					
 				}
-				
+				super.borra_triangulo(triangulo);
 			}
 			
 		}
 		
 	}	
-	
-	}
-	/*
-	(* Ahora hay que ordenar angularmente c_convexo *) 
+
+    /*
+	(* Ahora hay que ordenar angularmente c_convexo *)
 	origen_ordenacion := centroide de tres puntos cualquiera de c_convexo;
 	ordenar ( c_convexo, comparar_angulos(p,q,origen_ordenacion) );
 	endif*/
-		
+
+            Punto centroide = centroide(subconjuntoConvexo.get(0), subconjuntoConvexo.get(1), subconjuntoConvexo.get(2));
+            ordenarAngularmente(subconjuntoConvexo,centroide);
+            for (int i = 0; i < subconjuntoConvexo.size(); i++) {
+                GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(i),subconjuntoConvexo.get(i+1)));
+            }
+
+
+
+    }
+
 	}
+
+
+
+
 
 }

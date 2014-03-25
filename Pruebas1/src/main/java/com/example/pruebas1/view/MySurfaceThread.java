@@ -15,7 +15,7 @@ public class MySurfaceThread extends Thread {
     public MySurfaceThread(SurfaceHolder sh, PanelPuntos view) {
         this.sh = sh;
         this.view = view;
-        run = false;
+
     }
     //Lo utilizaremos para establecer cuando el hilo corra o no.
     public void setRunning(boolean run) {
@@ -23,19 +23,24 @@ public class MySurfaceThread extends Thread {
     }
 
     public void run() {
+        super.run();
 //Instancia a canvas
         Canvas canvas;
 //Mientras la variable run sea true va a pintar contínuamente.
-        while(run) {
+        while(true) {
+
+            if (view.refresh) {
             canvas = null;
+
+
             try {
 //definimos nulo el area en donde pintar
-                canvas = sh.lockCanvas(null);
+                canvas = this.sh.lockCanvas();
 //usamos synchronized para asegurarnos que no halla ningun otro thread usando ese objeto
-                synchronized(sh) {
+
 //Le decimos al surface view que ejecute el metodo onDraw y el cavas para dibujar
-                    view.onDraw(canvas);
-                }
+                    view.doDraw(canvas);
+
             } finally {
 /*En caso de que halla algun error liberamos el canvas
 * para no dejar el surfaceview en un estado inconsistente
@@ -44,6 +49,13 @@ public class MySurfaceThread extends Thread {
 //liberamos el canvas
                     sh.unlockCanvasAndPost(canvas);
             }
+            }
+            try {
+                sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 }

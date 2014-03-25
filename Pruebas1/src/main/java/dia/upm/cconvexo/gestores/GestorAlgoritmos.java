@@ -4,10 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dia.upm.cconvexo.algoritmos.Andrew;
+import dia.upm.cconvexo.algoritmos.AproximacionInferior;
+import dia.upm.cconvexo.algoritmos.AproximacionSuperior;
 import dia.upm.cconvexo.algoritmos.BusquedaAristas;
 import dia.upm.cconvexo.algoritmos.DivideYVencerasPreord;
 import dia.upm.cconvexo.algoritmos.EliminacionPtosInteriores;
 import dia.upm.cconvexo.algoritmos.GrahamNuevo;
+import dia.upm.cconvexo.algoritmos.Incremental;
 import dia.upm.cconvexo.algoritmos.Jarvis;
 import dia.upm.cconvexo.algoritmos.QuickHullNuevo;
 import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
@@ -69,6 +72,9 @@ public class GestorAlgoritmos {
 		mapaAlgoritmos.put(Andrew.nombre, new Andrew());
 		mapaAlgoritmos.put(DivideYVencerasPreord.nombre, new DivideYVencerasPreord());
 		mapaAlgoritmos.put(QuickHullNuevo.nombre, new QuickHullNuevo());
+        mapaAlgoritmos.put(Incremental.nombre, new Incremental());
+        mapaAlgoritmos.put(AproximacionInferior.nombre,new AproximacionInferior());
+        mapaAlgoritmos.put(AproximacionSuperior.nombre,new AproximacionSuperior());
 	}
 
 
@@ -97,4 +103,10 @@ public class GestorAlgoritmos {
 		return mapaAlgoritmos.get(nombre);
 	}
 
+
+    public String[] getClaves() {
+        assert mapaAlgoritmos != null;
+        int numAlgoritmos= mapaAlgoritmos.keySet().size();
+        return mapaAlgoritmos.keySet().toArray(new String[numAlgoritmos]);
+    }
 }

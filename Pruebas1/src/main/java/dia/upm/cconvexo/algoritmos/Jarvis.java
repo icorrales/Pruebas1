@@ -51,7 +51,13 @@ public class Jarvis extends AbstractAlgoritmo {
 		Arista aristaMinima = new Arista();
 		do {
 			hull.add(pivote);
-			
+			if (hull.size() >=2)
+            {
+                Punto origen = aristaMinima.getOrigen();
+                Punto destino = aristaMinima.getDestino();
+                Arista aSubconjunto = new Arista(origen,destino);
+                GestorConjuntoConvexo.getInstancia().anadeArista(aSubconjunto);
+            }
 			Punto min_angulo = pivote;
 			aristaActual.setOrigen(pivote);
 			aristaMinima.setOrigen(pivote);
@@ -61,37 +67,30 @@ public class Jarvis extends AbstractAlgoritmo {
 				if (i.equals(pivote) == false)
 				{
 					aristaActual.setDestino(i);
-					GestorConjuntoConvexo.getInstancia().anadeArista(aristaActual);
-					try {
-						Thread.sleep(delay);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					GestorConjuntoConvexo.getInstancia().anadeAristaTmp(aristaActual);
 					if (actualizar_min_angulo(pivote, i, min_angulo))
 					{
 						
 						if (aristaMinima.getDestino() != null )
 						{
-							GestorConjuntoConvexo.getInstancia().borraArista(aristaMinima);
+							GestorConjuntoConvexo.getInstancia().borraAristaTmp(aristaMinima);
 						}	
 						min_angulo = i;
 						aristaMinima.setDestino(i);
-						
-												
 					}
 					else
 					{
-					  GestorConjuntoConvexo.getInstancia().borraArista(aristaActual);
+					  GestorConjuntoConvexo.getInstancia().borraAristaTmp(aristaActual);
 					}
 				}
 					
 			}
 			pivote = min_angulo;
-		} while (pivote != min_y); 
+		} while (pivote != min_y);
+        GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();
+        GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(hull.get(hull.size() -1),hull.get(0)));
 		
-		
-		Iterator iterator = hull.iterator();
+		/*Iterator iterator = hull.iterator();
 		Punto puntoPrimero = (Punto) iterator.next();
 		Punto puntoAnterior = puntoPrimero;
 		for ( Iterator iterator2 = iterator ; iterator.hasNext();) {
@@ -99,7 +98,7 @@ public class Jarvis extends AbstractAlgoritmo {
 			GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(puntoAnterior,punto));
 			puntoAnterior = punto;		
 		}
-		GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(puntoAnterior,puntoPrimero));
+		GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(puntoAnterior,puntoPrimero));*/
 	}
 	
 

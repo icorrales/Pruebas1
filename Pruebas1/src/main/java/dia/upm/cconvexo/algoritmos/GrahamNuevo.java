@@ -27,9 +27,9 @@ public class GrahamNuevo extends DerivadosGraham {
 				GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(puntoInterior);
 				List<Punto> cierreConvexo = (LinkedList<Punto>)((LinkedList<Punto>) listaPuntos).clone();
 				ordenarAngularmente(cierreConvexo, puntoInterior);
-//				pintaOrdenacion(delay, puntoInterior, cierreConvexo);
+				pintaOrdenacion(delay, puntoInterior, cierreConvexo);
 				scan_graham(puntoInterior, cierreConvexo);
-				pintaAristas(delay, cierreConvexo);
+				GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();
 			}
 		}
 	}

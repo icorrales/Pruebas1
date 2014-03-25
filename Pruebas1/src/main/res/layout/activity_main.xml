@@ -36,7 +36,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/expandableListView"
-                android:fastScrollAlwaysVisible="false"/>
+                android:fastScrollAlwaysVisible="true"
+                />
     </LinearLayout>
 
     <FrameLayout
@@ -45,10 +46,10 @@
             android:layout_below="@id/botonera">
 
 
-        <com.example.pruebas1.view.PanelPuntosImage
+        <com.example.pruebas1.view.PanelPuntos
             android:id="@+id/SurfaceView"
                      android:layout_width="fill_parent"
                      android:layout_height="fill_parent"
-                     android:background="@android:color/white" />
+                     />
     </FrameLayout>
 </RelativeLayout>

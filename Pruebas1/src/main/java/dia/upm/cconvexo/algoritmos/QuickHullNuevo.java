@@ -20,7 +20,8 @@ public final static String nombre = "QuickHull";
 	
 	@Override
 	public void start(int delay) {
-		List<Punto> listaPuntos =GestorConjuntoConvexo.getInstancia().getListaPuntos();
+		List<Punto> listaPuntos = new LinkedList<Punto>();
+        listaPuntos.addAll(GestorConjuntoConvexo.getInstancia().getListaPuntos());
 		assert listaPuntos != null;
 		if (listaPuntos.size() > 1)
 		{
@@ -40,7 +41,8 @@ public final static String nombre = "QuickHull";
 			}
 			Arista arista = new Arista(pMenorAbs,q);
 			GestorConjuntoConvexo.getInstancia().anadeArista(arista);
-			quickhull(listaPuntos,pMenorAbs,q);
+			quickhull(listaPuntos, pMenorAbs, q);
+            GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();
 		}
 		
 	}
@@ -49,26 +51,45 @@ public final static String nombre = "QuickHull";
 		assert listaPuntos != null;
 		assert menorAbs != null && q != null;
 		Punto h = menorAbs;
+        Triangulo tMayor = null;
 		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {
+
 			Punto punto = iterator.next();
+            if ( ! (punto.equals(h) || (punto.equals(q)) || punto.equals(menorAbs)))
+            {
 			Triangulo t1 = new Triangulo(punto,menorAbs,q);
+            pinta_triangulo(t1);
 			Triangulo t2 = new Triangulo(h,menorAbs,q);
+            pinta_triangulo(t2);
 			if (t1.area()>t2.area())
 			{
 				h= punto;
+                tMayor = t1;
+                borra_triangulo(t2);
 			}
 			else if (t1.area() == t2.area())
 			{
 				if (orientation(menorAbs, h, punto) == FunctionsGlobals.POSITIVA)
 				{
-					h=punto;					
+					h=punto;
+                    borra_triangulo(t2);
 				}
-			}			
+                else
+                {
+                    borra_triangulo(t1);
+                }
+			}
+            else
+            {
+                borra_triangulo(t1);
+            }
+            }
 		}
 		if (h == menorAbs) { // Todos los p(i) están en la recta {p,q} 
 			
 				Arista arista = new Arista(menorAbs,q);
 				GestorConjuntoConvexo.getInstancia().anadeArista(arista);
+
 		}
 		else 
 			{	
@@ -95,7 +116,8 @@ public final static String nombre = "QuickHull";
 		
 	}
 
-	private int area(Punto punto, Punto menorAbs, Punto q) {
+
+    private int area(Punto punto, Punto menorAbs, Punto q) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

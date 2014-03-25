@@ -9,6 +9,8 @@ import dia.upm.cconvexo.model.Punto;
 
 public class AproximacionSuperior extends AproximacionGeneral {
 
+    public final static String nombre = "AproxSuperior";
+
 	public List<Punto> calculaMuestra2(List<Punto> listPuntos) {
 		// TODO Auto-generated method stub
 		Punto x_max = GestorFranjas.getInstancia().getPuntoMax();

@@ -1,9 +1,14 @@
 package dia.upm.cconvexo.algoritmos;
 
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
+import dia.upm.cconvexo.global.ComparadorAngulos;
+import dia.upm.cconvexo.global.Triangulo;
 import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
 import dia.upm.cconvexo.model.Punto;
 
@@ -228,4 +233,29 @@ public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
 		return ptoInterior;
 	}
 
+    protected void pinta_triangulo(Triangulo t1) {
+        assert t1 != null;
+        assert t1.getPunto1() != null ;
+        assert t1.getPunto2() != null ;
+        assert t1.getPunto3() != null ;
+
+        GestorConjuntoConvexo.getInstancia().anadeTrianguloTmp(t1);
+
+    }
+
+    protected void borra_triangulo(Triangulo t1) {
+        assert t1 != null;
+        assert t1.getPunto1() != null ;
+        assert t1.getPunto2() != null ;
+        assert t1.getPunto3() != null ;
+
+        GestorConjuntoConvexo.getInstancia().borraTrianguloTmp(t1);
+
+    }
+
+    public void ordenarAngularmente(List<Punto> cierreConvexo, Punto puntoInterior) {
+        // TODO Auto-generated method stub
+        Comparator<Punto> comparador = new ComparadorAngulos(puntoInterior);
+        Collections.sort(cierreConvexo, comparador);
+    }
 }

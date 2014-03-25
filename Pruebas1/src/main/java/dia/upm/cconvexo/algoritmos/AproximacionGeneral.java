@@ -1,5 +1,7 @@
 package dia.upm.cconvexo.algoritmos;
 
+import com.example.pruebas1.gestores.GestorConfiguracion;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -20,8 +22,13 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
 		// TODO Auto-generated method stub
 		List<Punto> listPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
 		GestorFranjas.getInstancia().reset();
+        k_franjas= GestorConfiguracion.getInstancia().getFranjas();
 		assert listPuntos != null;
 		assert k_franjas != 0;
+        if (k_franjas == 0)
+        {
+            this.k_franjas = 5;
+        }
 		Punto x_min = this.busquedaPuntoMenorAbscisa(listPuntos);
 		Punto x_max = this.busquedaPuntoMayorAbscisa(listPuntos);
 		GestorFranjas.getInstancia().setPuntoMin(x_min);
@@ -33,6 +40,7 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
 		// calcular cierre convexo de Andrew.
 		Andrew algoritmo = new Andrew();
 		algoritmo.algoritmoAndrew(0,muestraordenada);
+        GestorFranjas.getInstancia().reset();
 		
 	}
 

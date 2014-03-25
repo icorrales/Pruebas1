@@ -129,4 +129,7 @@ public class GestorFranjas {
 		return anchoFranja;
 	}
 
+    public boolean isactivate() {
+        return listaFranjas != null && listaFranjas.size() > 0;
+    }
 }
