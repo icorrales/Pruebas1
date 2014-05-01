@@ -5,6 +5,7 @@ package dia.upm.cconvexo.gestores;
 
 //import java.awt.Color;
 import android.graphics.Color;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -103,6 +104,7 @@ public class GestorConjuntoConvexo {
         this.subconjuntoArista.clear();
         this.puntosGeograficos.clear();
         this.ordenaAngularmente = false;
+        this.subconjuntoPuntos.clear();
     }
 
     public void borraListaPuntos()
@@ -307,5 +309,15 @@ public class GestorConjuntoConvexo {
             IDelegatePaint delegate = listaListener.get(i);
             delegate.borraRecta(a1);
         }
+    }
+
+    public void borraArista(int indice_v_sop_inf) {
+        Log.d(GestorConjuntoConvexo.class.getName() + " borraArista ", "Inicio borraArista: " + indice_v_sop_inf  );
+        Arista arista = getConjuntoConvexo().get(indice_v_sop_inf);
+        Log.d(GestorConjuntoConvexo.class.getName() + " borraArista ", "Arista: " + arista.toString() );
+        Log.d(GestorConjuntoConvexo.class.getName() + " borraArista ", "CH antes: " + getConjuntoConvexo().toString());
+        borraArista(arista);
+        Log.d(GestorConjuntoConvexo.class.getName() + " borraArista ", "CH despues: " + getConjuntoConvexo().toString());
+
     }
 }

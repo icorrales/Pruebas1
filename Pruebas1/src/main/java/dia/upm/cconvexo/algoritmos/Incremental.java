@@ -58,35 +58,49 @@ public class Incremental extends AbstractAlgoritmo {
 			int copia_indice_v_sop_inf = indice_v_sop_inf; 
 			int indice_v_sop_sup = c_convexo.indexOf(v_sop_sup);
             GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(punto);
-            GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(v_sop_inf, punto));
-            GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(punto, v_sop_sup));
 
             // Hay que borrar todos las aristas entre el vertice soporte inferior y el superior, pero
 			// para ello hay q ordenar la lista de tal forma que el soporte superior siempre esta detras del inferior.
 			while ( indice_v_sop_inf < indice_v_sop_sup)
 			{
+                Log.d(nombre,"Indice Soporte inferior:" + indice_v_sop_inf);
+                Log.d(nombre,"Indice Soporte superior:" + indice_v_sop_sup);
+                Log.d(nombre,"CH " + c_convexo.toString());
 
-                Arista arista = new Arista(c_convexo.get(indice_v_sop_inf),c_convexo.get(indice_v_sop_inf +1));
-                GestorConjuntoConvexo.getInstancia().borraArista(arista);
+                indice_v_sop_inf++;
 
-                if ( indice_v_sop_inf +1 != indice_v_sop_sup)
+
+
+                if ( indice_v_sop_inf != indice_v_sop_sup)
 				{
                     //Arista aristaInversa = new Arista(c_convexo.get(indice_v_sop_inf+1),c_convexo.get(indice_v_sop_inf));
                     //GestorConjuntoConvexo.getInstancia().borraArista(aristaInversa);
-					c_convexo.remove(indice_v_sop_inf + 1);
+                    GestorConjuntoConvexo.getInstancia().borraArista(indice_v_sop_inf);
+					c_convexo.remove(indice_v_sop_inf);
 				}
-                Log.d(nombre,"Borramos arista:" + arista.toString());
+                Log.d(nombre,"Borramos arista:");
                 Log.d(nombre,"Tamaño Gestor Conjunto Convexo:" + GestorConjuntoConvexo.getInstancia().getConjuntoConvexo().size());
                 Log.d(nombre,"Tamaño Gestor Conjunto Convexo:" + c_convexo.size());
 
-                indice_v_sop_inf++;
+
 			}
 			
 			c_convexo.add(copia_indice_v_sop_inf+1, punto);
-			GestorConjuntoConvexo.getInstancia().borrarPuntoSubconjunto(punto);
+
+            if ( c_convexo.size() < 3)
+            {
+                GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(v_sop_inf, punto));
+            }
+            else
+            {
+                GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(v_sop_inf, punto));
+                GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(punto, v_sop_sup));
+            }
+
+            GestorConjuntoConvexo.getInstancia().borrarPuntoSubconjunto(punto);
 			Log.d(nombre,"Gestor Conjunto Convexo:" + GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
             Log.d(nombre,"cierre Convexo:" + c_convexo);
-			vertice_derecho = punto;			
+			vertice_derecho = punto;
 		}
 		
 		
@@ -125,7 +139,7 @@ public Punto soporte_inferior(List<Punto> c_convexo,
     {
 
         Punto siguiente_v_der = siguiente(vertice_derecho, c_convexo);
-        if (orientation(punto, vertice_derecho, siguiente_v_der)== FunctionsGlobals.NEGATIVA)
+        if (orientation( punto,vertice_derecho, siguiente_v_der)== FunctionsGlobals.NEGATIVA)
         {
             return vertice_derecho;
         }
@@ -137,13 +151,13 @@ public Punto soporte_inferior(List<Punto> c_convexo,
     }
     else {// c_convexo.size >2
         Punto v = vertice_derecho;
-        Punto siguiente_v = null;
-        siguiente_v=anterior(vertice_derecho, c_convexo);
+        Punto anterior_v = null;
+        anterior_v=anterior(vertice_derecho, c_convexo);
 
-        while (orientation(punto, siguiente_v,v) == FunctionsGlobals.POSITIVA)
+        while (orientation(punto,anterior_v,v) != FunctionsGlobals.POSITIVA)
         {
-            v = siguiente_v;
-            siguiente_v=anterior(vertice_derecho, c_convexo);
+            v = anterior_v;
+            anterior_v=anterior(v, c_convexo);
 
         }
 
@@ -190,7 +204,7 @@ private Punto funcion_soporte (List<Punto> c_convexo, Punto vertice_derecho,
 	{
 		
 		Punto siguiente_v_der = siguiente(vertice_derecho, c_convexo);		
-		if (orientation(punto, vertice_derecho, siguiente_v_der)== ejeGiro)
+		if (orientation(punto,vertice_derecho, siguiente_v_der)== ejeGiro)
 		{
 			return vertice_derecho;
 		}
@@ -205,10 +219,10 @@ private Punto funcion_soporte (List<Punto> c_convexo, Punto vertice_derecho,
         Punto siguiente_v = null;
         siguiente_v=siguiente(vertice_derecho, c_convexo);
 
-        while (orientation(punto, v, siguiente_v) == FunctionsGlobals.POSITIVA)
+        while (orientation( punto,v, siguiente_v) != FunctionsGlobals.POSITIVA)
 		{
 			v = siguiente_v;
-            siguiente_v=siguiente(vertice_derecho, c_convexo);
+            siguiente_v=siguiente(v, c_convexo);
 
 		}
 		return v;

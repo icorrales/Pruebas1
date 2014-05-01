@@ -1,5 +1,7 @@
 package dia.upm.cconvexo.algoritmos;
 
+import android.util.Log;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,16 +16,19 @@ public class AproximacionInferior extends AproximacionGeneral {
 
 	public List<Punto> calculaMuestra(List<Punto> listPuntos) {
 		// TODO Auto-generated method stub
-		Punto x_max = GestorFranjas.getInstancia().getPuntoMax();
+        Log.d(AproximacionInferior.class.getName(), "Inicio calculaMuestra");
+
+        Punto x_max = GestorFranjas.getInstancia().getPuntoMax();
 		Punto x_min = GestorFranjas.getInstancia().getPuntoMin();
 		assert listPuntos != null;
 		assert x_max != null && x_min != null;
 		int franja = 0;
 		List<Punto> muestra = new LinkedList<Punto>();
-		
+        Log.d(AproximacionInferior.class.getName(), "Inicio escogeMaximosFranjas");
 		escogeMaximosFranjas(listPuntos);
+        Log.d(AproximacionInferior.class.getName(), "Fin escogeMaximosFranjas");
 		mezclaFranjas(muestra);
-		
+        Log.d(AproximacionInferior.class.getName(), "Fin calculaMuestra " + muestra.toString());
 		return muestra;
 	}
 
@@ -52,18 +57,13 @@ public class AproximacionInferior extends AproximacionGeneral {
 				}
 			}
 		}
+        muestra.add(0,GestorFranjas.getInstancia().getPuntoMin());
+        muestra.add(muestra.size(),GestorFranjas.getInstancia().getPuntoMax());
 	}
 
 	public AproximacionInferior()
 	{
 		
 	}
-
-	
-	
-	
-
-	
-	
 
 }

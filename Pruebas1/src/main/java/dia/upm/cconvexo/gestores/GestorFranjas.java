@@ -1,5 +1,7 @@
 package dia.upm.cconvexo.gestores;
 
+import android.util.Log;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class GestorFranjas {
 	private static GestorFranjas instancia = null;
 	Punto puntoMin = null;
 	Punto puntoMax = null;
-	int numeroFranjas = 0;
+	int numeroFranjas = 5;
 	List<List<Punto>> listaFranjas = null;
 	
 	public Punto getPuntoMin() {
@@ -37,6 +39,7 @@ public class GestorFranjas {
 		assert numeroFranjas > 0;
 		this.numeroFranjas = numeroFranjas;
 		int indice = 0;
+        this.listaFranjas.clear();
 		while (indice < numeroFranjas)
 		{
 			this.listaFranjas.add(indice, new LinkedList<Punto>());
@@ -58,17 +61,24 @@ public class GestorFranjas {
 	{
 		assert puntoMin != null;
 		assert this.numeroFranjas > 0;
+
+        Log.d(GestorFranjas.class.getName() + "- getFranja", "Inicio getFranja p" + punto.toString());
 		
 		int franja = 0;
 		if (punto.equals(puntoMin))
 		{
+            Log.d(GestorFranjas.class.getName() + "- getFranja", "franja 0" + puntoMin.toString() + " " + punto.toString());
 			franja = 0;
 		}
 		else
 		{
 			// Para obtener la franja donde tiene que ir el punto
+            Log.d(GestorFranjas.class.getName() + "- getFranja", " franja " + punto.getX() + " - " + this.puntoMin.getX()+ "/" + this.anchoFranja());
 			franja = (int) Math.floor((punto.getX()-this.puntoMin.getX())/this.anchoFranja());			
 		}
+
+        if (franja >= this.numeroFranjas) { franja = this.numeroFranjas -1; }
+        Log.d(GestorFranjas.class.getName() + "- getFranja", "franja " + franja);
 		assert franja >= 0;
 		return franja;
 	}
@@ -88,7 +98,7 @@ public class GestorFranjas {
 	public void reset() {
 		// TODO Auto-generated method stub
 		this.listaFranjas.clear();
-		this.numeroFranjas = 0;
+//		this.numeroFranjas = 0;
 		this.puntoMax = null;
 		this.puntoMin = null;
 	}

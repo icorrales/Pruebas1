@@ -1,5 +1,7 @@
 package dia.upm.cconvexo.algoritmos;
 
+import android.util.Log;
+
 import com.example.pruebas1.gestores.GestorConfiguracion;
 
 import java.util.Iterator;
@@ -20,9 +22,11 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
 	@Override
 	public void start(int delay) {
 		// TODO Auto-generated method stub
-		List<Punto> listPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
+        Log.d(AproximacionGeneral.class.getName(), "Inicio Start Aproximacion General");
+        List<Punto> listPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
 		GestorFranjas.getInstancia().reset();
         k_franjas= GestorConfiguracion.getInstancia().getFranjas();
+        Log.d(AproximacionGeneral.class.getName(), "Obtener k franjas " + k_franjas );
 		assert listPuntos != null;
 		assert k_franjas != 0;
         if (k_franjas == 0)
@@ -30,16 +34,21 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
             this.k_franjas = 5;
         }
 		Punto x_min = this.busquedaPuntoMenorAbscisa(listPuntos);
+        Log.d(AproximacionGeneral.class.getName(), "Obtener menor abscisa : " + x_min.toString());
 		Punto x_max = this.busquedaPuntoMayorAbscisa(listPuntos);
+        Log.d(AproximacionGeneral.class.getName(), "Obtener mayor abscisa : " + x_max.toString());
 		GestorFranjas.getInstancia().setPuntoMin(x_min);
 		GestorFranjas.getInstancia().setPuntoMax(x_max);
 		GestorFranjas.getInstancia().setNumeroFranjas(k_franjas);
 		double anchura_franja = Math.floor((x_max.getX() - x_min.getX()) / this.k_franjas);
 		// dibuja_franjas (anchura_franja)
 		List<Punto> muestraordenada = this.calculaMuestra(listPuntos);
+        Log.d(AproximacionGeneral.class.getName(), "Fin calcula muestra");
 		// calcular cierre convexo de Andrew.
 		Andrew algoritmo = new Andrew();
+        Log.d(AproximacionGeneral.class.getName(), "Inicio Ordenar Muestra");
 		algoritmo.algoritmoAndrew(0,muestraordenada);
+        Log.d(AproximacionGeneral.class.getName(), "Fin Ordena Muestra");
         GestorFranjas.getInstancia().reset();
 		
 	}
@@ -57,10 +66,14 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
 	protected void escogeMaximosFranjas(List<Punto> listPuntos) {
 		int franja;
 		// Se Introducen los puntos en las franjas atendiendo a su posición.
+        Log.d(AproximacionGeneral.class.getName() + "escogeMaximosFranjas" , "Inicio EscogeMaximoFranjas");
 		for (Iterator<Punto> iterator = listPuntos.iterator(); iterator.hasNext();) {
 			Punto punto =  iterator.next();
+            Log.d(AproximacionGeneral.class.getName() + "escogeMaximosFranjas" , "Punto" + punto.toString());
 			franja = GestorFranjas.getInstancia().getFranja(punto);
+            Log.d(AproximacionGeneral.class.getName() + "escogeMaximosFranjas" , "Franja" + franja);
 			List<Punto> listFranja = GestorFranjas.getInstancia().getListaFranjas().get(franja);
+            Log.d(AproximacionGeneral.class.getName() + "escogeMaximosFranjas" , "Lista Franja" + listFranja.toString());
 			// Ahora revisamos si el punto es de los que hay que mirar en la franja. Al final nos quedamos con solo dos puntos por franja
 			if (listFranja.isEmpty())
 			{
@@ -78,6 +91,7 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
 				{
 					listFranja.set(1, punto);
 				}
+                Log.d(AproximacionGeneral.class.getName() + "escogeMaximosFranjas" , "Fin escogeMaximosFranjas Franja" + franja);
 			}
 			
 		}

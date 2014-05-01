@@ -1,5 +1,7 @@
 package dia.upm.cconvexo.algoritmos;
 
+import android.util.Log;
+
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,13 +21,16 @@ public final static String nombre = "DivideYVencerasPreord";
     	
 	
 	public void start(int delay) {
-		
+
+        Log.d("DivideYVencerasPreord","Inicio Start ");
 		List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
 		assert listaPuntos != null && listaPuntos.size() > 0;
 		List<Punto> listaPuntosCopia = new LinkedList<Punto>(listaPuntos);
 		Collections.sort(listaPuntosCopia,new ComparadorAbscisas());
 		List<Punto> cierreConvexo = new LinkedList<Punto> ();
+        Log.d("DivideYVencerasPreord","Inicio dyv");
 		divideyvenceras(listaPuntosCopia,cierreConvexo);
+        Log.d("DivideYVencerasPreord","cierre convexo:" + GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
 		GestorConjuntoConvexo.getInstancia().pintaCierreConvexo();
 	}
 
@@ -67,6 +72,8 @@ public final static String nombre = "DivideYVencerasPreord";
 		Punto supDcha = arista2.getOrigen();				
 		anadePuntosCierre(cierreDcho, cierreConvexo, infDcho, supDcha);
 		anadePuntosCierre(cierreIzq, cierreConvexo, supIzda, infIzda);
+        Log.d("DivideYVencerasPreord","Anade arista " + arista1.toString());
+        Log.d("DivideYVencerasPreord","Anade arista " + arista2.toString());
 		GestorConjuntoConvexo.getInstancia().anadeArista(arista1);
 		GestorConjuntoConvexo.getInstancia().anadeArista(arista2);
 		borraAristasCierre(cierreDcho, infDcho, supDcha);
@@ -80,9 +87,11 @@ public final static String nombre = "DivideYVencerasPreord";
 		while (vertice != infDcho)
 		{
 			Arista a1 = new Arista(vertice,siguiente(vertice, cierreDcho));
+            Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
 			GestorConjuntoConvexo.getInstancia().borraArista(a1);
-//			a1 = new Arista(siguiente(vertice, cierreDcho),vertice);
-//			GestorConjuntoConvexo.getInstancia().borraArista(a1);
+            //Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
+			//a1 = new Arista(siguiente(vertice, cierreDcho),vertice);
+			//GestorConjuntoConvexo.getInstancia().borraArista(a1);
 			vertice = siguiente(vertice, cierreDcho);
 		}
 	}

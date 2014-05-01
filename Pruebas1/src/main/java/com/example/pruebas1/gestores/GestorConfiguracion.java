@@ -20,6 +20,7 @@ public class GestorConfiguracion {
     private int franjas;
 
     public int getTipoEjecucion() {
+        Log.d(this.getClass().getName(),"getTipoEjecucion" + tipoEjecucion);
         return tipoEjecucion;
     }
 
@@ -29,6 +30,10 @@ public class GestorConfiguracion {
     }
 
     public int getSeconds() {
+
+
+
+        Log.d(this.getClass().getName(),"getSeconds" + seconds);
         return seconds;
     }
 

@@ -1,17 +1,25 @@
 package com.example.pruebas1.view;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Toast;
 
+import com.example.pruebas1.MainActivity;
 import com.example.pruebas1.R;
+import com.example.pruebas1.adapters.OnSwipeTouchListener;
 import com.example.pruebas1.gestores.GestorConfiguracion;
 
 import java.util.List;
+import java.util.Objects;
 
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.gestores.GestorFranjas;
@@ -22,37 +30,96 @@ import dia.upm.cconvexo.model.Punto;
 /**
  * Created by ivan on 17/09/13.
  */
-public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, IDelegatePaint
-{
+public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, IDelegatePaint, View.OnTouchListener {
 
 
     public MySurfaceThread thread;
     boolean refresh = false;
+    public boolean new_step = true;
+    public Object syncToken = "TOKEN";
+    Thread disconnectCallback = new Thread() {
+        @Override
+        public void run() {
+            try {
+                synchronized (disconnectCallback)
+                {
+                    disconnectCallback.wait();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    };
+    public AlertDialog dialog;
 
     public PanelPuntos(Context context)
     {
         super(context);
-        this.getHolder().addCallback(this);
-        thread = new MySurfaceThread(getHolder(), this);
-        setFocusable(true);
-        GestorConjuntoConvexo.getInstancia().addListener(this);
+        init();
 
     };
 
     public PanelPuntos(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.getHolder().addCallback(this);
-        thread = new MySurfaceThread(getHolder(), this);
-        setFocusable(true);
-        GestorConjuntoConvexo.getInstancia().addListener(this);
+        init();
     }
 
     public PanelPuntos(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        init();
+    }
+
+    public void init() {
         this.getHolder().addCallback(this);
         thread = new MySurfaceThread(getHolder(), this);
         setFocusable(true);
         GestorConjuntoConvexo.getInstancia().addListener(this);
+        this.setOnTouchListener(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+                synchronized (dialog)
+                {
+                    dialog.notify();
+                }
+            }
+        });
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User cancelled the dialog
+                GestorConfiguracion.getInstancia().setTipoEjecucion(R.string.directo);
+                synchronized (dialog)
+                {
+                    dialog.notify();
+                }
+            }
+        });
+        dialog = builder.create();
+
+        /*this.setOnTouchListener(new OnSwipeTouchListener(getContext()) {
+            public void onSwipeTop() {
+                Toast.makeText(getContext(), "top", Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeRight() {
+                Toast.makeText(getContext(), "right", Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeLeft() {
+                Toast.makeText(getContext(), "left", Toast.LENGTH_SHORT).show();
+                synchronized (disconnectCallback) { disconnectCallback.notify(); }
+
+
+            }
+            public void onSwipeBottom() {
+                Toast.makeText(getContext(), "bottom", Toast.LENGTH_SHORT).show();
+            }
+
+            public boolean onTouch(View v, MotionEvent event) {
+                return gestureDetector.onTouchEvent(event);
+            }
+        });*/
+
+
     }
 
     @Override
@@ -149,6 +216,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         }
 
         refresh = false;
+        new_step = false;
 
     }
 
@@ -201,20 +269,34 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
 
     public void refresh() {
 
-        if (GestorConfiguracion.getInstancia().getTipoEjecucion() == R.string.directo) { refresh = false; }
-        else
-        {
+        if (GestorConfiguracion.getInstancia().getTipoEjecucion() == R.string.directo) {
+            refresh = false; sleepProcess();}
+        else if  (GestorConfiguracion.getInstancia().getTipoEjecucion() == R.string.retardo) { refresh = true; sleepProcess();}
+        else {
+
+            new_step = false;
+
+            try {
+                synchronized (dialog)
+                {
+                dialog.wait();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             refresh = true;
+            sleepProcess();
+
         }
-        sleepProcess();
+
     }
 
     public void sleepProcess() {
         int delay = GestorConfiguracion.getInstancia().getSeconds();
-
         while (refresh) {
         try {
-            Thread.sleep(delay * 100);
+            Thread.sleep(delay * 10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -225,5 +307,13 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
     {
         refresh = true;
         sleepProcess();
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+        Toast.makeText(getContext(), event.getX() + "-" + event.getY(),Toast.LENGTH_SHORT ).show();
+
+        return true;
     }
 }

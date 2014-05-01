@@ -94,9 +94,10 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 
             Punto centroide = centroide(subconjuntoConvexo.get(0), subconjuntoConvexo.get(1), subconjuntoConvexo.get(2));
             ordenarAngularmente(subconjuntoConvexo,centroide);
-            for (int i = 0; i < subconjuntoConvexo.size(); i++) {
+            for (int i = 0; i < subconjuntoConvexo.size() - 1; i++) {
                 GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(i),subconjuntoConvexo.get(i+1)));
             }
+            GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(subconjuntoConvexo.size() -1 ),subconjuntoConvexo.get(0)));
 
 
 
