@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.NumberPicker;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 
 /**

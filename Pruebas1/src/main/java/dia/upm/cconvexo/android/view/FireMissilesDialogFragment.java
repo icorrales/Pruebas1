@@ -6,7 +6,7 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
 
 import java.util.List;
 

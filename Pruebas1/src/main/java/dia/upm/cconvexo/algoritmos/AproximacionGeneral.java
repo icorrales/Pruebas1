@@ -2,7 +2,7 @@ package dia.upm.cconvexo.algoritmos;
 
 import android.util.Log;
 
-import com.example.pruebas1.gestores.GestorConfiguracion;
+import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 
 import java.util.Iterator;
 import java.util.List;

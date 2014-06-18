@@ -16,8 +16,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
-import com.example.pruebas1.R;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.adapters.AlgorithmAdapter;
 
 import dia.upm.cconvexo.android.view.PanelPuntos;
@@ -110,13 +110,14 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         GestorConjuntoConvexo.getInstancia().borraListaPuntos();
 
        Random r=new Random();
-       int MaxY = imagenDibujo.getHeight();
-       int MaxX = imagenDibujo.getWidth();
+       int MaxY = imagenDibujo.getHeight() -10;
+       int MaxX = imagenDibujo.getWidth() -10;
        for (int i=0; i<numeroPuntos ; i++)
        {
            Punto p = new Punto();
-           p.setY(r.nextInt(MaxY));
-           p.setX(r.nextInt(MaxX));
+
+           p.setY(r.nextInt(MaxY)+5);
+           p.setX(r.nextInt(MaxX)+5);
            GestorConjuntoConvexo.getInstancia().getListaPuntos().add(p);
 
 

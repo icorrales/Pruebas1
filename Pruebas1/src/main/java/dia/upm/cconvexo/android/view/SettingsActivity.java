@@ -4,7 +4,7 @@ import android.app.ActionBar;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
 
 
 public class SettingsActivity extends PreferenceActivity {

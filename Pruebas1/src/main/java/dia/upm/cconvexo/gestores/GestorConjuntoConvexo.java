@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.global.Triangulo;
 import dia.upm.cconvexo.interfaces.IDelegatePaint;
 import dia.upm.cconvexo.model.Arista;
@@ -318,6 +319,30 @@ public class GestorConjuntoConvexo {
         Log.d(GestorConjuntoConvexo.class.getName() + " borraArista ", "CH antes: " + getConjuntoConvexo().toString());
         borraArista(arista);
         Log.d(GestorConjuntoConvexo.class.getName() + " borraArista ", "CH despues: " + getConjuntoConvexo().toString());
+
+    }
+
+    public void actualizaCierre(List<Punto> c_convexo) {
+        assert c_convexo != null;
+        if (c_convexo.size() > 1)
+        {
+            this.borraSubconjuntoArista();
+            this.getConjuntoConvexo().clear();
+
+            for (int i = 0; i +1 < c_convexo.size(); i++) {
+                Punto p1 = c_convexo.get(i);
+                Punto p2 = c_convexo.get(i+1);
+                this.getConjuntoConvexo().add(new Arista(p1,p2));
+            }
+            this.getConjuntoConvexo().add(new Arista(c_convexo.get(c_convexo.size()-1),c_convexo.get(0)));
+        }
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintPuntos();
+        }
+
 
     }
 }

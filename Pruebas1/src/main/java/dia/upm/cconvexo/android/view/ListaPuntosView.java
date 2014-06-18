@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
 
 import java.util.ArrayList;
 

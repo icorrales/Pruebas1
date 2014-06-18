@@ -2,7 +2,7 @@ package dia.upm.cconvexo.android.gestores;
 
 import android.util.Log;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
 
 /**
  * Created by ivan on 22/03/14.

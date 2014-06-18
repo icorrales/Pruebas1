@@ -10,10 +10,12 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.support.v4.view.GestureDetectorCompat;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
+import dia.upm.cconvexo.android.adapters.ConvexHullGestureListener;
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 
 import java.util.List;
@@ -34,6 +36,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
     boolean refresh = false;
     public boolean new_step = true;
     public Object syncToken = "TOKEN";
+    private GestureDetectorCompat mDetector;
     Thread disconnectCallback = new Thread() {
         @Override
         public void run() {
@@ -68,10 +71,12 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
 
     public void init() {
         this.getHolder().addCallback(this);
+        mDetector = new GestureDetectorCompat(this.getContext(),new ConvexHullGestureListener(this));
         thread = new MySurfaceThread(getHolder(), this);
         setFocusable(true);
         GestorConjuntoConvexo.getInstancia().addListener(this);
-        this.setOnTouchListener(this);
+//        this.setOnTouchListener(this);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -311,6 +316,14 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
 
         Toast.makeText(getContext(), event.getX() + "-" + event.getY(),Toast.LENGTH_SHORT ).show();
 
+
         return true;
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
 }

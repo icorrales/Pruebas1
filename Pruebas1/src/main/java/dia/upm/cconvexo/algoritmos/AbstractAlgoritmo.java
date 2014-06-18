@@ -1,6 +1,8 @@
 package dia.upm.cconvexo.algoritmos;
 
 
+import android.util.Log;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -26,6 +28,8 @@ public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
 	public abstract void start(int delay);
 	
 	public final int orientation(Punto A, Punto B, Punto P) {
+
+
 		int cp1 = (int) ((B.x-A.x)*(P.y-A.y) - (B.y-A.y)*(P.x-A.x));
 		if (cp1 > 0)
 		{
@@ -38,8 +42,45 @@ public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
 		else return FunctionsGlobals.LINEA;
 	}
 
+    public int orientation2(Punto A, Punto B, Punto P)
+    {
+//        det = CLng(p2.Y) * CLng(p3.X) + CLng(p1.Y) * CLng(p2.X) + CLng(p1.X) * CLng(p3.Y)
+        int det = (int) ((B.getY()*P.getX()) + (A.getY()*B.getX()) + (A.getY()*P.getY()));
+//        deter = CLng(p1.X) * CLng(p2.Y) + CLng(p2.X) * CLng(p3.Y) + CLng(p1.Y) * CLng(p3.X) - det
+        int det2 = (int) ((A.getX()*B.getY())+(B.getX()*P.getY())+ (A.getY()*P.getX()));
+        int cp1 = det2 - det;
+        int functionResult = FunctionsGlobals.LINEA;
+        functionResult = getOrientation(cp1, functionResult);
+        return  functionResult;
+    }
 
-	
+    public int getOrientation(int cp1, int functionResult) {
+        if (cp1 > 0)
+        {
+            functionResult = FunctionsGlobals.POSITIVA;
+        }
+        else if (cp1<0)
+        {
+            functionResult = FunctionsGlobals.NEGATIVA;
+        }
+        else if (cp1 == 0 ) {functionResult = FunctionsGlobals.LINEA;}
+        Log.d("Orientacion Incremental", "La funcion resultado es " + functionResult);
+        return functionResult;
+    }
+
+    public int orientation3(Punto A, Punto B, Punto P)
+    {
+        Punto A1 = A;
+        Punto A2 = B;
+        Punto A3 = P;
+        int cp1 = (int) ((A1.x - A3.x) * ((-A2.y) - (-A3.y)) - ((-A1.y) - (-A3.y)) * (A2.x - A3.x));
+        int functionResult = FunctionsGlobals.LINEA;
+        functionResult = getOrientation(cp1, functionResult);
+        return  functionResult;
+
+
+
+    }
 	public final double distance(Punto A, Punto B)
 	{
 		double AB2 = Math.pow((B.x - A.x),2) + Math.pow((B.y - A.y),2);

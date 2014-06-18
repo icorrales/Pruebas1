@@ -30,6 +30,7 @@ public class MySurfaceThread extends Thread{
         assert view != null;
 
 
+/*
         view.setOnTouchListener(new OnSwipeTouchListener(view.getContext()) {
             public void onSwipeTop() {
                 Toast.makeText(view.getContext(), "top", Toast.LENGTH_SHORT).show();
@@ -55,7 +56,8 @@ public class MySurfaceThread extends Thread{
             public boolean onTouch(View v, MotionEvent event) {
                 return gestureDetector.onTouchEvent(event);
             }});
-    
+*/
+
 
     }
 

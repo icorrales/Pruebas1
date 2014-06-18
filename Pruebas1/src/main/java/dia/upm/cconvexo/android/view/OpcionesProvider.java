@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 
-import com.example.pruebas1.R;
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 
 /**
