@@ -43,10 +43,11 @@
     <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_below="@id/botonera">
+            android:layout_below="@id/botonera"
+            android:padding="5dp">
 
 
-        <com.example.pruebas1.view.PanelPuntos
+        <dia.upm.cconvexo.android.view.PanelPuntos
             android:id="@+id/SurfaceView"
                      android:layout_width="fill_parent"
                      android:layout_height="fill_parent"

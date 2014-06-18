@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_action_share"
         android:title="@string/action_search"
         android:showAsAction="ifRoom"
-        android:actionProviderClass="com.example.pruebas1.view.OpcionesProvider"/>
+        android:actionProviderClass="dia.upm.cconvexo.android.view.OpcionesProvider"/>
 
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
