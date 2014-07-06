@@ -12,7 +12,9 @@ repositories {
     mavenCentral()
 }
 
-dependencies {}
+dependencies {
+    compile 'com.android.support:support-v4:+'
+}
 
 android {
     compileSdkVersion 19
@@ -21,5 +23,25 @@ android {
     defaultConfig {
         minSdkVersion 7
         targetSdkVersion 16
+    }
+
+    signingConfigs {
+        debug {
+
+        }
+
+        release {
+            storeFile file('keystores/release-keystore.jks')
+            storePassword "icorrales"
+            keyAlias "release-prueba1"
+            keyPassword "icorrales"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+
+        }
     }
 }
