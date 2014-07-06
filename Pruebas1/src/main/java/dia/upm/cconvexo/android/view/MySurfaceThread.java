@@ -95,6 +95,7 @@ public class MySurfaceThread extends Thread{
 //liberamos el canvas
                         sh.unlockCanvasAndPost(canvas);
                 }
+
             }
 
 /*
@@ -105,6 +106,7 @@ public class MySurfaceThread extends Thread{
                 view.new_step = true;
             }
 */
+
             try {
                 Thread.sleep(GestorConfiguracion.getInstancia().getSeconds() * 10);
             } catch (InterruptedException e) {

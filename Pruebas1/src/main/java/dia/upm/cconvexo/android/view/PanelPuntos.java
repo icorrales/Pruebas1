@@ -6,7 +6,10 @@ import android.content.DialogInterface;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -218,7 +221,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         }
 
         refresh = false;
-        new_step = false;
+
 
     }
 
@@ -272,27 +275,35 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
     public void refresh() {
 
         if (GestorConfiguracion.getInstancia().getTipoEjecucion() == R.string.directo) {
-            refresh = false; sleepProcess();}
+            refresh = false;}
         else if  (GestorConfiguracion.getInstancia().getTipoEjecucion() == R.string.retardo) { refresh = true; sleepProcess();}
         else {
-
             new_step = false;
 
-            try {
-                synchronized (dialog)
-                {
-                dialog.wait();
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
+
 
             refresh = true;
-            sleepProcess();
+
+
+            int delay = GestorConfiguracion.getInstancia().getSeconds();
+            while (!new_step) {
+                try {
+                    Thread.sleep(delay * 10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+
+
 
         }
 
     }
+
+
 
     public void sleepProcess() {
         int delay = GestorConfiguracion.getInstancia().getSeconds();
@@ -326,4 +337,25 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         return super.onTouchEvent(event);
     }
 
+    public RefreshHandler mRedrawHandler = new RefreshHandler();
+
+    class RefreshHandler extends Handler {
+
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.obj == "OK")
+            {
+                PanelPuntos.this.dialog.show();
+                PanelPuntos.this.refresh = true;
+                PanelPuntos.this.new_step = false;
+            }
+        }
+
+        public void sleep(long delayMillis) {
+            this.removeMessages(0);
+            Message msg = obtainMessage(0);
+            msg.obj = "OK";
+            sendMessage(msg);
+        }
+    };
 }

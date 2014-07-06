@@ -20,6 +20,7 @@ import android.widget.Spinner;
 import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.adapters.AlgorithmAdapter;
 
+import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 import dia.upm.cconvexo.android.view.PanelPuntos;
 import dia.upm.cconvexo.android.view.SettingsFrament;
 
@@ -179,12 +180,22 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
+        final IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
         GestorConjuntoConvexo.getInstancia().initGestor();
 
-        algoritmo.start(100);
-        imagenDibujo.refreshFinal();
-    //  imagenDibujo.invalidate();
+        Thread newThread = new Thread() {
+                @Override
+                public void run() {
+                    algoritmo.start(100);
+                    imagenDibujo.refreshFinal();
+                }
+            };
+            newThread.start();
+
+
+
+
+
     }
 
     @Override

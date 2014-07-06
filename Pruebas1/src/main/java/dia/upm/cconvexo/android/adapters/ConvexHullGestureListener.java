@@ -56,6 +56,7 @@ public class ConvexHullGestureListener extends GestureDetector.SimpleOnGestureLi
     @Override
     public void onLongPress(MotionEvent e) {
         this.WriteEvent(e,"LongPress");
+        ((PanelPuntos) this.vista).new_step = true;
     }
 
     @Override
@@ -69,7 +70,7 @@ public class ConvexHullGestureListener extends GestureDetector.SimpleOnGestureLi
         assert event != null;
         assert nameEvent != null;
         Log.d(ConvexHullGestureListener.class.getName(), nameEvent);
-        Toast.makeText(vista.getContext(), nameEvent, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(vista.getContext(), nameEvent, Toast.LENGTH_SHORT).show();
 
 
         return true;
