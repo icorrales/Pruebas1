@@ -29,36 +29,6 @@ public class MySurfaceThread extends Thread{
     private void init() {
         assert view != null;
 
-
-/*
-        view.setOnTouchListener(new OnSwipeTouchListener(view.getContext()) {
-            public void onSwipeTop() {
-                Toast.makeText(view.getContext(), "top", Toast.LENGTH_SHORT).show();
-            }
-
-            public void onSwipeRight() {
-                Toast.makeText(view.getContext(), "right", Toast.LENGTH_SHORT).show();
-            }
-
-            public void onSwipeLeft() {
-                Toast.makeText(view.getContext(), "left", Toast.LENGTH_SHORT).show();
-                synchronized (view.disconnectCallback) {
-                    view.disconnectCallback.notify();
-                }
-
-
-            }
-
-            public void onSwipeBottom() {
-                Toast.makeText(view.getContext(), "bottom", Toast.LENGTH_SHORT).show();
-            }
-
-            public boolean onTouch(View v, MotionEvent event) {
-                return gestureDetector.onTouchEvent(event);
-            }});
-*/
-
-
     }
 
 

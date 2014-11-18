@@ -19,6 +19,17 @@ public class GestorConfiguracion {
     private int seconds = 5;
     private int franjas;
 
+    public boolean isRunning() {
+        return running;
+    }
+
+    public void setRunning(boolean running)
+    {
+        this.running = running;
+    }
+
+    private boolean running = false;
+
     public int getTipoEjecucion() {
         Log.d(this.getClass().getName(),"getTipoEjecucion" + tipoEjecucion);
         return tipoEjecucion;

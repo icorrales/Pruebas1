@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
@@ -47,21 +48,25 @@ public class Jarvis extends AbstractAlgoritmo {
 		List<Punto> hull = new LinkedList<Punto>();
 		Punto min_y = this.busquedaPuntoMenorOrdenada(list);
 		Punto pivote = min_y;
+        GestorMensajes.getInstancia().addMessage("Buscando Menor Ordenada");
+        GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(min_y);
 		Arista aristaActual = new Arista();
 		Arista aristaMinima = new Arista();
 		do {
 			hull.add(pivote);
+            GestorMensajes.getInstancia().addMessage("Cambiando de Pivote");
 			if (hull.size() >=2)
             {
                 Punto origen = aristaMinima.getOrigen();
                 Punto destino = aristaMinima.getDestino();
                 Arista aSubconjunto = new Arista(origen,destino);
                 GestorConjuntoConvexo.getInstancia().anadeArista(aSubconjunto);
+                GestorMensajes.getInstancia().addMessage("Añadiendo arista al Cierre Convexo");
             }
 			Punto min_angulo = pivote;
 			aristaActual.setOrigen(pivote);
 			aristaMinima.setOrigen(pivote);
-			
+            GestorMensajes.getInstancia().addMessage("Buscando Arista");
 			for (Iterator<Punto> iterator = list.iterator(); iterator.hasNext();) {
 				Punto i = (Punto) iterator.next();
 				if (i.equals(pivote) == false)
@@ -77,6 +82,7 @@ public class Jarvis extends AbstractAlgoritmo {
 						}	
 						min_angulo = i;
 						aristaMinima.setDestino(i);
+                        GestorConjuntoConvexo.getInstancia().anadeAristaTmp(aristaMinima);
 					}
 					else
 					{
@@ -85,11 +91,13 @@ public class Jarvis extends AbstractAlgoritmo {
 				}
 					
 			}
+            GestorConjuntoConvexo.getInstancia().borraPuntoSubconjunto(pivote);
+            GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(min_angulo);
 			pivote = min_angulo;
 		} while (pivote != min_y);
         GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();
         GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(hull.get(hull.size() -1),hull.get(0)));
-		
+        GestorMensajes.getInstancia().addMessage("Finalizado el cierre convexo");
 		/*Iterator iterator = hull.iterator();
 		Punto puntoPrimero = (Punto) iterator.next();
 		Punto puntoAnterior = puntoPrimero;

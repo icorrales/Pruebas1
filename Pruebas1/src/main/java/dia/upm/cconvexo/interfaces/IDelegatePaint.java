@@ -18,4 +18,5 @@ public interface IDelegatePaint {
 	public void borraRecta(Arista a1);
 	public void borraPuntos();
 	public void borraPuntoSubconjunto(Punto p);
+    public void mensajeDescripcion(String s);
 }

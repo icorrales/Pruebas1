@@ -4,8 +4,10 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.ComparadorAbscisas;
+import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 public class Andrew extends DerivadosGraham {
@@ -39,18 +41,23 @@ public class Andrew extends DerivadosGraham {
 			divideLista(listaPuntosCopia,subconjuntoInferior,subconjuntoSuperior);
 			Punto pIzquierda = listaPuntosCopia.get(0);
 			Punto pDerecha = listaPuntosCopia.get(listaPuntosCopia.size()-1);
-
+            GestorMensajes.getInstancia().addMessage("Ordenamos La lista");
             GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(pIzquierda);
+
             GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(pDerecha);
+            GestorMensajes.getInstancia().addMessage("dividimos los puntos");
+            GestorConjuntoConvexo.getInstancia().anadeAristaTmp(new Arista(pIzquierda, pDerecha));
 
 			if (subconjuntoSuperior.size() > 0)
 			{
+                GestorMensajes.getInstancia().addMessage("Scan de graham subconjunto superior");
 				scanSubconjunto(delay, subconjuntoSuperior, pIzquierda,
 						pDerecha);
 			}
 			
 			if (subconjuntoInferior.size() > 0)
 			{
+                GestorMensajes.getInstancia().addMessage("Scan de graham subconjunto inferior");
 				scanSubconjunto(delay, subconjuntoInferior, 
 						pDerecha,pIzquierda);
 			}

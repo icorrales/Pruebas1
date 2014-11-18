@@ -23,6 +23,10 @@ import dia.upm.cconvexo.model.Punto;
 
 public class GestorConjuntoConvexo {
 
+
+
+    private Punto selected = null;
+
     public List<Arista> getSubconjuntoArista() {
         return subconjuntoArista;
     }
@@ -33,12 +37,19 @@ public class GestorConjuntoConvexo {
 
     public void borraSubconjuntoArista()
     {
+        borraSubconjuntoArista(false);
+    }
+
+    public void borraSubconjuntoArista(boolean refresh)
+    {
         this.subconjuntoArista.clear();
         for (int i = 0; i < listaListener.size(); i++) {
 
-
+            if ( refresh)
+            {
             IDelegatePaint delegate = listaListener.get(i);
             delegate.paintPuntos();
+            }
         }
 
     }
@@ -106,6 +117,7 @@ public class GestorConjuntoConvexo {
         this.puntosGeograficos.clear();
         this.ordenaAngularmente = false;
         this.subconjuntoPuntos.clear();
+        this.setSelected(null);
     }
 
     public void borraListaPuntos()
@@ -115,7 +127,6 @@ public class GestorConjuntoConvexo {
         for (IDelegatePaint delegate : listaListener) {
             delegate.borraPuntos();
             duerme();
-
         }
 	}
 	
@@ -128,6 +139,7 @@ public class GestorConjuntoConvexo {
 		{
 			conjuntoConvexo.add(a1);
             for (IDelegatePaint delegate : listaListener) {
+                delegate.mensajeDescripcion(R.string.textAddArista + a1.toString());
                 delegate.paintArista(a1);
 
             }
@@ -146,8 +158,8 @@ public class GestorConjuntoConvexo {
 		conjuntoConvexo.remove(a1);
 		for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
 			IDelegatePaint delegate = iterator.next();
+            delegate.mensajeDescripcion(R.string.textDeleteArista + a1.toString());
 			delegate.borraRecta(a1);
-
 		}
 		}
 	}
@@ -173,6 +185,10 @@ public class GestorConjuntoConvexo {
 	{
 		assert lista != null;
 		subconjuntoPuntos = lista;
+        for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
+            IDelegatePaint delegate = iterator.next();
+            delegate.paintPuntos();
+        }
 	}
 	
 	public void borrarPuntoSubconjunto(Punto p)
@@ -228,14 +244,21 @@ public class GestorConjuntoConvexo {
 
     public void borraAristaTmp(Arista a1)
     {
+        borraAristaTmp(a1,false);
+    }
+
+    public void borraAristaTmp(Arista a1,boolean refresh)
+    {
         subconjuntoArista.remove(a1);
-        for (int i = 0; i < listaListener.size(); i++) {
-
-
-            IDelegatePaint delegate = listaListener.get(i);
-            delegate.paintArista(a1);
+        if (refresh)
+        {
+            for (int i = 0; i < listaListener.size(); i++) {
+                IDelegatePaint delegate = listaListener.get(i);
+                delegate.paintArista(a1);
+            }
         }
     }
+
 
     private void duerme() {
 
@@ -272,10 +295,16 @@ public class GestorConjuntoConvexo {
         subconjuntoPuntos.remove(punto);
         for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
             IDelegatePaint delegate = iterator.next();
-            delegate.paintPuntos();
+//            delegate.paintPuntos();
 
         }
     }
+
+    public void borraSubconjuntoPuntos() {
+        this.subconjuntoPuntos.clear();
+
+    }
+
 
     public void anadeTrianguloTmp(Triangulo t1) {
         Arista a1 = new Arista(t1.getPunto1(),t1.getPunto2());
@@ -308,7 +337,7 @@ public class GestorConjuntoConvexo {
 
 
             IDelegatePaint delegate = listaListener.get(i);
-            delegate.borraRecta(a1);
+//            delegate.borraRecta(a1);
         }
     }
 
@@ -327,6 +356,7 @@ public class GestorConjuntoConvexo {
         if (c_convexo.size() > 1)
         {
             this.borraSubconjuntoArista();
+            this.subconjuntoPuntos.clear();
             this.getConjuntoConvexo().clear();
 
             for (int i = 0; i +1 < c_convexo.size(); i++) {
@@ -345,4 +375,34 @@ public class GestorConjuntoConvexo {
 
 
     }
+
+
+    /**
+     * Method isClose : test if one point is near to some other point that is in the point list.
+     * @param p Punto to test
+     * @return true if the punto p is near of one point that is in the list point.
+     */
+    public boolean isClose(Punto p) {
+        boolean isClose = false;
+        for (Punto p1 : listaPuntos) {
+            if (p1.isClose(p))
+            {
+                isClose = true;
+                selected = p1;
+            }
+
+        }
+        return  isClose;
+
+
+    }
+
+    public Punto getSelected() {
+        return selected;
+    }
+
+    public void setSelected(Punto selected) {
+        this.selected = selected;
+    }
+
 }

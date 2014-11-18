@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.Triangulo;
 import dia.upm.cconvexo.model.Arista;
@@ -39,6 +41,7 @@ public final static String nombre = "QuickHull";
 				}
 				
 			}
+            GestorMensajes.getInstancia().addMessage("Elegida primera arista del CC");
 			Arista arista = new Arista(pMenorAbs,q);
 			GestorConjuntoConvexo.getInstancia().anadeArista(arista);
 			quickhull(listaPuntos, pMenorAbs, q);
@@ -51,7 +54,6 @@ public final static String nombre = "QuickHull";
 		assert listaPuntos != null;
 		assert menorAbs != null && q != null;
 		Punto h = menorAbs;
-        Triangulo tMayor = null;
 		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {
 
 			Punto punto = iterator.next();
@@ -64,7 +66,7 @@ public final static String nombre = "QuickHull";
 			if (t1.area()>t2.area())
 			{
 				h= punto;
-                tMayor = t1;
+                GestorMensajes.getInstancia().addMessage("Es triángulo mayor");
                 borra_triangulo(t2);
 			}
 			else if (t1.area() == t2.area())
@@ -72,6 +74,7 @@ public final static String nombre = "QuickHull";
 				if (orientation(menorAbs, h, punto) == FunctionsGlobals.POSITIVA)
 				{
 					h=punto;
+                    GestorMensajes.getInstancia().addMessage("Es triángulo mayor");
                     borra_triangulo(t2);
 				}
                 else

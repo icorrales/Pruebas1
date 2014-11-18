@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.Triangulo;
 import dia.upm.cconvexo.model.Arista;
@@ -69,14 +70,18 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 					
 				}
 				for (int k2 = 0; k2 < subconjuntoConvexo.size(); k2++) {
+
 					Punto pto = subconjuntoConvexo.get(k2);
+
 					if (pto != cierreConvexo.get(i) && pto != cierreConvexo.get(j) && pto != cierreConvexo.get(k))
 					{
 						if (this.estaEnTri(cierreConvexo.get(i), cierreConvexo.get(j), cierreConvexo.get(k), pto))
 						{
+                            GestorMensajes.getInstancia().addMessage("Punto Interior al triangulo");
 							subconjuntoConvexo.remove(pto);
-							GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(pto);
+                            GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(pto);
 						}
+
 					}					
 				}
 				super.borra_triangulo(triangulo);

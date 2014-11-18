@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.ComparadorAbscisas;
 import dia.upm.cconvexo.model.Arista;
@@ -39,6 +40,8 @@ public final static String nombre = "DivideYVencerasPreord";
 		// TODO Auto-generated method stub
 		if (listaPuntosCopia.size() == 1)
 		{
+            GestorMensajes.getInstancia().addMessage("Punto Unico.Cierre Encontrado");
+            GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(null);
 			cierreConvexo.add(listaPuntosCopia.get(0));
 		}
 		else
@@ -53,8 +56,14 @@ public final static String nombre = "DivideYVencerasPreord";
 		int mitad = Math.abs(listaPuntosCopia.size()/2);
 		List<Punto> cierreIzq = new LinkedList<Punto> ();
 		List<Punto> cierreDcho = new LinkedList<Punto> ();
-		divideyvenceras(listaPuntosCopia.subList(0, mitad), cierreIzq);
-		divideyvenceras(listaPuntosCopia.subList(mitad, listaPuntosCopia.size()), cierreDcho);
+        List<Punto> listIzda = listaPuntosCopia.subList(0, mitad);
+        GestorMensajes.getInstancia().addMessage("Buscamos Cierre Izqda");
+        GestorConjuntoConvexo.getInstancia().setSubconjuntoPuntos(listIzda);
+		divideyvenceras(listIzda, cierreIzq);
+        List<Punto> listDcha = listaPuntosCopia.subList(mitad, listaPuntosCopia.size());
+        GestorMensajes.getInstancia().addMessage("Buscamos Cierre Dcha");
+        GestorConjuntoConvexo.getInstancia().setSubconjuntoPuntos(listDcha);
+		divideyvenceras(listDcha, cierreDcho);
 		mezclar(cierreIzq,cierreDcho,cierreConvexo);
 	}
 
@@ -74,7 +83,9 @@ public final static String nombre = "DivideYVencerasPreord";
 		anadePuntosCierre(cierreIzq, cierreConvexo, supIzda, infIzda);
         Log.d("DivideYVencerasPreord","Anade arista " + arista1.toString());
         Log.d("DivideYVencerasPreord","Anade arista " + arista2.toString());
+        GestorMensajes.getInstancia().addMessage("Anadimos Soporte Inferior");
 		GestorConjuntoConvexo.getInstancia().anadeArista(arista1);
+        GestorMensajes.getInstancia().addMessage("Anadimos Soporte Superior");
 		GestorConjuntoConvexo.getInstancia().anadeArista(arista2);
 		borraAristasCierre(cierreDcho, infDcho, supDcha);
 		borraAristasCierre(cierreIzq, supIzda, infIzda);					

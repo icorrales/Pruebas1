@@ -3,6 +3,7 @@ package dia.upm.cconvexo.android;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DialogFragment;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,12 +16,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ZoomControls;
 
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.adapters.AlgorithmAdapter;
 
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.android.view.PanelPuntos;
 import dia.upm.cconvexo.android.view.SettingsFrament;
 
@@ -31,10 +38,11 @@ import dia.upm.cconvexo.gestores.GestorAlgoritmos;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
 import dia.upm.cconvexo.interfaces.IDelegatePaint;
+import dia.upm.cconvexo.interfaces.IMessage;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
-public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint{
+public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint, IMessage {
 
     Button button;
     EditText textoPuntos;
@@ -42,6 +50,10 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     PanelPuntos imagenDibujo;
 
     Spinner listaExpandible;
+    TextView descriptionText;
+    ZoomControls zoomControls;
+    Camera mCamera = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +61,33 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button);
         textoPuntos = (EditText) findViewById(R.id.editText);
-//        imagenDibujo = (PanelPuntosImage) findViewById(R.id.SurfaceView);
         imagenDibujo = (PanelPuntos) findViewById(R.id.SurfaceView);
+
         button.setOnClickListener(this);
 
         // Lista de Algoritmos.
         listaExpandible = (Spinner) findViewById(R.id.expandableListView);
+        descriptionText = (TextView) findViewById(R.id.descriptionText);
+        zoomControls = (ZoomControls) findViewById(R.id.zoomControl2);
+        zoomControls.setVisibility(View.INVISIBLE);
+        zoomControls.setOnZoomInClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                zoomCamera(false);
+
+            }
+        });
+        zoomControls.setOnZoomOutClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                zoomCamera(true);
+            }
+        });
 
 
 
@@ -74,6 +106,34 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
     }
 
+    /**
+     * Enables zoom feature in native camera .  Called from listener of the view
+     * used for zoom in  and zoom out.
+     *
+     *
+     * @param zoomInOrOut  "false" for zoom in and "true" for zoom out
+     */
+    public void zoomCamera(boolean zoomInOrOut) {
+        if(mCamera!=null) {
+            android.hardware.Camera.Parameters parameter = mCamera.getParameters();
+
+            if(parameter.isZoomSupported()) {
+                int MAX_ZOOM = parameter.getMaxZoom();
+                int currnetZoom = parameter.getZoom();
+                if(zoomInOrOut && (currnetZoom <MAX_ZOOM && currnetZoom >=0)) {
+                    parameter.setZoom(++currnetZoom);
+                }
+                else if(!zoomInOrOut && (currnetZoom <=MAX_ZOOM && currnetZoom >0)) {
+                    parameter.setZoom(--currnetZoom);
+                }
+            }
+            else
+                Toast.makeText(this, "Zoom Not Avaliable", Toast.LENGTH_LONG).show();
+
+            mCamera.setParameters(parameter);
+        }
+    }
+
     private void init() {
         GestorAlgoritmos gestorAlgoritmos=GestorAlgoritmos.getInstancia();
         //String[] datos = gestorAlgoritmos.getClaves();
@@ -82,9 +142,8 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         listaExpandible.setAdapter(adapter);
         listaExpandible.setOnItemSelectedListener(this);
 
-//        GestorConjuntoConvexo.getInstancia().addListener(this);
-//        Thread myThread = new Thread(new UpdateThread());
-//        myThread.start();
+
+
     }
 
     public void onClick(View v) {
@@ -180,19 +239,27 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        final IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
-        GestorConjuntoConvexo.getInstancia().initGestor();
 
-        Thread newThread = new Thread() {
+        if (GestorConfiguracion.getInstancia().isRunning() == false)
+        {
+            final IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
+            GestorConjuntoConvexo.getInstancia().initGestor();
+            GestorConfiguracion.getInstancia().setRunning(true);
+            GestorMensajes.getInstancia().getHistoricoMensajes().clear();
+
+            Thread newThread = new Thread() {
                 @Override
                 public void run() {
+
                     algoritmo.start(100);
+                    GestorConfiguracion.getInstancia().setRunning(false);
                     imagenDibujo.refreshFinal();
+
                 }
             };
             newThread.start();
 
-
+        }
 
 
 
@@ -241,6 +308,19 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     @Override
     public void borraPuntoSubconjunto(Punto p) {
 
+    }
+
+    @Override
+    public void mensajeDescripcion(String texto) {
+
+        descriptionText.setText(texto);
+
+    }
+
+    @Override
+    public void showMessage(String s) {
+        Crouton crouton = Crouton.makeText(this,s, Style.INFO);
+        crouton.show();
     }
 
 //    public Handler updateHandler = new Handler(){

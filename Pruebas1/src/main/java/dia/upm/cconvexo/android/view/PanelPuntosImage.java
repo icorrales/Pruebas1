@@ -123,6 +123,11 @@ public class PanelPuntosImage extends ImageView implements IDelegatePaint {
 
     }
 
+    @Override
+    public void mensajeDescripcion(String s) {
+
+    }
+
     private int x=0;
     public void update() {
         if(x < 200)

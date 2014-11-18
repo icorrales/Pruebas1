@@ -8,7 +8,8 @@ import dia.upm.cconvexo.interfaces.IDelegatePaint;
 import dia.upm.cconvexo.model.Punto;
 
 /**
- * Created by ivan on 17/09/13.
+ * Class to implement a puntos manager.
+ * It is implemented with a Singlenton Pattern
  */
 public class GestorPuntos {
 
@@ -18,7 +19,20 @@ public class GestorPuntos {
     private List<Punto> subconjuntoPuntos = null;
     private List<IDelegatePaint> listaListener = null;
 
+    public Punto getSelected() {
+        return selected;
+    }
 
+    public void setSelected(Punto selected) {
+        this.selected = selected;
+    }
+
+    private Punto selected;
+
+
+    /**
+     * Private constructo for GestorPuntos
+     */
     private GestorPuntos() {
         // TODO Auto-generated constructor stub
         listaListener = new LinkedList<IDelegatePaint>();
@@ -26,6 +40,10 @@ public class GestorPuntos {
 
     }
 
+    /**
+     * Method to implement Singlenton pattern in a manager.
+     * @return GestorPuntos instance.
+     */
     public static GestorPuntos getInstancia ()
     {
         if (instancia == null)
@@ -36,23 +54,48 @@ public class GestorPuntos {
         return instancia;
     }
 
+    /**
+     * Get currect point list
+     * @return
+     */
     public List<Punto> getListaPuntos() {
         return listaPuntos;
     }
 
+    /**
+     * Set listaPuntos as the new point list to manage.
+     * @param listaPuntos
+     */
     public void setListaPuntos(List<Punto> listaPuntos) {
         assert listaPuntos != null;
         assert listaListener != null;
         this.listaPuntos = listaPuntos;
+
+        pintaPuntos();
+
+    }
+
+    private void pintaPuntos() {
         for (Iterator<IDelegatePaint> iterator = listaListener.iterator(); iterator.hasNext();) {
             IDelegatePaint delegate = iterator.next();
             delegate.paintPuntos();
 
         }
-
     }
 
 
 
+    /**
+     * Method to test that there are one point selected and that should be painted over the canvas.
+     */
+    public void setSelected() {
 
+        pintaPuntos();
+    }
+
+    public void addPunto(Punto p) {
+        assert p != null;
+        listaPuntos.add(p);
+        pintaPuntos();
+    }
 }

@@ -17,6 +17,11 @@
     <string name="listaPuntos">Lista de Puntos</string>
     <string name="ok">OK</string>
     <string name="franjas">Numero Franjas</string>
+    <string name="puntosLabel">Nº Puntos</string>
+    <string name="textAddArista">Añade arista</string>
+    <string name="textDeleteArista">Borra Arista</string>
+    <string name="method">Método: </string>
+    <string name="nextStep">Siguiente Paso</string>
 
 
 </resources>

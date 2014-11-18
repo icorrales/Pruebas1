@@ -3,6 +3,7 @@ package dia.upm.cconvexo.algoritmos;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
@@ -63,6 +64,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 			endwhile
 
 			*/
+
             Arista aTmp= new Arista();
             aTmp.setOrigen(listaPuntos.get(i));
             aTmp.setDestino(listaPuntos.get(j));
@@ -81,7 +83,8 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 						if (pto_izq == true)
 						{
 							es_arista = false;
-                            GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
+                            GestorMensajes.getInstancia().addMessage("No es arista");
+                            GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp, true);
 						}
 						break;
 					case FunctionsGlobals.POSITIVA:
@@ -89,7 +92,8 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 						if (pto_dcha == true)
 						{
 							es_arista = false;
-                            GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
+                            GestorMensajes.getInstancia().addMessage("No es arista");
+                            GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp,true);
 						}
 						break;
 					case FunctionsGlobals.LINEA:
@@ -129,18 +133,20 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
                 GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
 				if (pto_izq)
 				{
-
+                    GestorMensajes.getInstancia().addMessage("Es arista :" + aTmp.toString());
 					GestorConjuntoConvexo.getInstancia().anadeArista(aTmp);
 				}
 				else if (pto_dcha)
 				{
 					Arista arista = new Arista(listaPuntos.get(j),listaPuntos.get(i));
+                    GestorMensajes.getInstancia().addMessage("Es arista :" + arista.toString());
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista);
 				}
 				else
 				{
 					Arista arista1 = new Arista(listaPuntos.get(i),listaPuntos.get(j));
 					Arista arista2 = new Arista(listaPuntos.get(j),listaPuntos.get(i));
+                    GestorMensajes.getInstancia().addMessage("Son aristas :" + arista1.toString() + " y " + arista2.toString());
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista1);
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista2);					
 				}
