@@ -13,7 +13,7 @@ import dia.upm.cconvexo.model.Punto;
 
 public class QuickHullNuevo extends AbstractAlgoritmo {
 	
-public final static String nombre = "QuickHull";
+public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.quickhull);
 	
 	public QuickHullNuevo()
 	{
@@ -41,7 +41,7 @@ public final static String nombre = "QuickHull";
 				}
 				
 			}
-            GestorMensajes.getInstancia().addMessage("Elegida primera arista del CC");
+            GestorMensajes.getInstancia().addMessage(R.string.quickhull_c_1);
 			Arista arista = new Arista(pMenorAbs,q);
 			GestorConjuntoConvexo.getInstancia().anadeArista(arista);
 			quickhull(listaPuntos, pMenorAbs, q);
@@ -66,7 +66,7 @@ public final static String nombre = "QuickHull";
 			if (t1.area()>t2.area())
 			{
 				h= punto;
-                GestorMensajes.getInstancia().addMessage("Es triángulo mayor");
+                GestorMensajes.getInstancia().addMessage(R.string.quickhull_c_2);
                 borra_triangulo(t2);
 			}
 			else if (t1.area() == t2.area())
@@ -74,7 +74,7 @@ public final static String nombre = "QuickHull";
 				if (orientation(menorAbs, h, punto) == FunctionsGlobals.POSITIVA)
 				{
 					h=punto;
-                    GestorMensajes.getInstancia().addMessage("Es triángulo mayor");
+                    GestorMensajes.getInstancia().addMessage(R.string.quickhull_c_2);
                     borra_triangulo(t2);
 				}
                 else
@@ -117,12 +117,6 @@ public final static String nombre = "QuickHull";
 		
 		
 		
-	}
-
-
-    private int area(Punto punto, Punto menorAbs, Punto q) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 }

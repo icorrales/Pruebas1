@@ -6,12 +6,14 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorFranjas;
 import dia.upm.cconvexo.model.Punto;
 
 public class AproximacionSuperior extends AproximacionGeneral {
 
-    public final static String nombre = "AproxSuperior";
+    public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.aproxSuperior);
 
 //	public List<Punto> calculaMuestra2(List<Punto> listPuntos) {
 //		// TODO Auto-generated method stub

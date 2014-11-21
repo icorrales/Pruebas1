@@ -320,7 +320,14 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         int delay = GestorConfiguracion.getInstancia().getSeconds();
         while (refresh) {
         try {
-            Thread.sleep(delay * 300);
+            if (GestorMensajes.getInstancia().getHistoricoMensajes().size() == 0)
+            {
+                Thread.sleep(delay * 50);
+            }
+            else
+            {
+                Thread.sleep(delay * 300);
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -332,7 +339,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         if ( GestorConfiguracion.getInstancia().isRunning())
         {
             GestorMensajes.getInstancia().getHistoricoMensajes().clear();
-            GestorMensajes.getInstancia().addMessage("Fin del cierre convexo");
+            GestorMensajes.getInstancia().addMessage(R.string.cc_c_1);
             mhandler.sendEmptyMessage(0);
         }
         GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();

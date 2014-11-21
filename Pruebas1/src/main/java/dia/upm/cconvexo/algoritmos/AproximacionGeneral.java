@@ -2,6 +2,7 @@ package dia.upm.cconvexo.algoritmos;
 
 import android.util.Log;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 
 import java.util.Iterator;
@@ -41,10 +42,8 @@ public abstract class AproximacionGeneral extends AbstractAlgoritmo {
 		GestorFranjas.getInstancia().setPuntoMin(x_min);
 		GestorFranjas.getInstancia().setPuntoMax(x_max);
 		GestorFranjas.getInstancia().setNumeroFranjas(k_franjas);
-		double anchura_franja = Math.floor((x_max.getX() - x_min.getX()) / this.k_franjas);
-		// dibuja_franjas (anchura_franja)
 		List<Punto> muestraordenada = this.calculaMuestra(listPuntos);
-        GestorMensajes.getInstancia().addMessage("Puntos máximos y mínimos");
+        GestorMensajes.getInstancia().addMessage(R.string.aprox_c_1);
         GestorConjuntoConvexo.getInstancia().setSubconjuntoPuntos(muestraordenada);
         Log.d(AproximacionGeneral.class.getName(), "Fin calcula muestra");
 		// calcular cierre convexo de Andrew.

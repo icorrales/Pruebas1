@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Arista;
@@ -13,7 +14,7 @@ import dia.upm.cconvexo.model.Punto;
 
 public class Jarvis extends AbstractAlgoritmo {
 	
-	public final static String nombre = "Jarvis";
+	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.jarvis);
 	
 	public Jarvis()
 	{
@@ -48,25 +49,25 @@ public class Jarvis extends AbstractAlgoritmo {
 		List<Punto> hull = new LinkedList<Punto>();
 		Punto min_y = this.busquedaPuntoMenorOrdenada(list);
 		Punto pivote = min_y;
-        GestorMensajes.getInstancia().addMessage("Buscando Menor Ordenada");
+        GestorMensajes.getInstancia().addMessage(R.string.jarvis_c_1);
         GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(min_y);
 		Arista aristaActual = new Arista();
 		Arista aristaMinima = new Arista();
 		do {
 			hull.add(pivote);
-            GestorMensajes.getInstancia().addMessage("Cambiando de Pivote");
+            GestorMensajes.getInstancia().addMessage(R.string.jarvis_c_2);
 			if (hull.size() >=2)
             {
                 Punto origen = aristaMinima.getOrigen();
                 Punto destino = aristaMinima.getDestino();
                 Arista aSubconjunto = new Arista(origen,destino);
                 GestorConjuntoConvexo.getInstancia().anadeArista(aSubconjunto);
-                GestorMensajes.getInstancia().addMessage("Añadiendo arista al Cierre Convexo");
+                GestorMensajes.getInstancia().addMessage(R.string.jarvis_c_3);
             }
 			Punto min_angulo = pivote;
 			aristaActual.setOrigen(pivote);
 			aristaMinima.setOrigen(pivote);
-            GestorMensajes.getInstancia().addMessage("Buscando Arista");
+            GestorMensajes.getInstancia().addMessage(R.string.jarvis_c_4);
 			for (Iterator<Punto> iterator = list.iterator(); iterator.hasNext();) {
 				Punto i = (Punto) iterator.next();
 				if (i.equals(pivote) == false)
@@ -96,8 +97,8 @@ public class Jarvis extends AbstractAlgoritmo {
 			pivote = min_angulo;
 		} while (pivote != min_y);
         GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();
-        GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(hull.get(hull.size() -1),hull.get(0)));
-        GestorMensajes.getInstancia().addMessage("Finalizado el cierre convexo");
+        GestorMensajes.getInstancia().addMessage(R.string.jarvis_c_5);
+        GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(hull.get(hull.size() - 1), hull.get(0)));
 		/*Iterator iterator = hull.iterator();
 		Punto puntoPrimero = (Punto) iterator.next();
 		Punto puntoAnterior = puntoPrimero;

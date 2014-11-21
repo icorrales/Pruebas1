@@ -3,6 +3,7 @@ package dia.upm.cconvexo.algoritmos;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Arista;
@@ -10,7 +11,7 @@ import dia.upm.cconvexo.model.Punto;
 
 public class GrahamNuevo extends DerivadosGraham {
 	
-	public final static String nombre = "Graham";
+	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.graham);
 	
 	@SuppressWarnings("unchecked")
 	public void start(int delay) {
@@ -27,17 +28,17 @@ public class GrahamNuevo extends DerivadosGraham {
 //				Punto puntoInterior = centroide(listaPuntos.get(0), listaPuntos.get(1), listaPuntos.get(2));
 				Punto puntoInterior = busquedaPuntoMenorOrdenada(listaPuntos);
 				GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(puntoInterior);
-                GestorMensajes.getInstancia().addMessage("Elegimos punto interior");
+                GestorMensajes.getInstancia().addMessage(R.string.graham_c_4);
 				List<Punto> cierreConvexo = (LinkedList<Punto>)((LinkedList<Punto>) listaPuntos).clone();
 
                 ordenarAngularmente(cierreConvexo, puntoInterior);
-                GestorMensajes.getInstancia().addMessage("Ordenacion a través del punto interior");
+                GestorMensajes.getInstancia().addMessage(R.string.graham_c_5);
                 pintaOrdenacion(delay, puntoInterior, cierreConvexo);
 				scan_graham(puntoInterior, cierreConvexo);
                 List<Arista> conjuntoConvexo = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
                 Punto pfinal = conjuntoConvexo.get(conjuntoConvexo.size() -1 ).getDestino();
                 Arista arista_final = new Arista(puntoInterior, pfinal);
-                GestorMensajes.getInstancia().addMessage("Añadir arista final");
+                GestorMensajes.getInstancia().addMessage(R.string.graham_c_6);
                 GestorConjuntoConvexo.getInstancia().anadeArista(arista_final);
 				GestorConjuntoConvexo.getInstancia().borraSubconjuntoArista();
 			}

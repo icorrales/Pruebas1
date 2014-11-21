@@ -1,11 +1,13 @@
 package dia.upm.cconvexo.algoritmos;
 
+import android.content.res.Resources;
 import android.util.Log;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.ComparadorAbscisas;
@@ -14,11 +16,14 @@ import dia.upm.cconvexo.model.Punto;
 
 public class DivideYVencerasPreord extends AbstractAlgoritmo {
 	
-public final static String nombre = "DivideYVencerasPreord";
-	
-	public DivideYVencerasPreord() {
+public final static String nombre =  GestorMensajes.getInstancia().getResourceString(R.string.dyvalgorithm);
+
+
+
+    public DivideYVencerasPreord() {
 		// TODO Auto-generated constructor stub
-	}
+
+    }
     	
 	
 	public void start(int delay) {
@@ -40,7 +45,7 @@ public final static String nombre = "DivideYVencerasPreord";
 		// TODO Auto-generated method stub
 		if (listaPuntosCopia.size() == 1)
 		{
-            GestorMensajes.getInstancia().addMessage("Punto Unico.Cierre Encontrado");
+            GestorMensajes.getInstancia().addMessage(R.string.dyv_c_5);
             GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(null);
 			cierreConvexo.add(listaPuntosCopia.get(0));
 		}
@@ -57,11 +62,11 @@ public final static String nombre = "DivideYVencerasPreord";
 		List<Punto> cierreIzq = new LinkedList<Punto> ();
 		List<Punto> cierreDcho = new LinkedList<Punto> ();
         List<Punto> listIzda = listaPuntosCopia.subList(0, mitad);
-        GestorMensajes.getInstancia().addMessage("Buscamos Cierre Izqda");
+        GestorMensajes.getInstancia().addMessage(R.string.dyv_c_1);
         GestorConjuntoConvexo.getInstancia().setSubconjuntoPuntos(listIzda);
 		divideyvenceras(listIzda, cierreIzq);
         List<Punto> listDcha = listaPuntosCopia.subList(mitad, listaPuntosCopia.size());
-        GestorMensajes.getInstancia().addMessage("Buscamos Cierre Dcha");
+        GestorMensajes.getInstancia().addMessage(R.string.dyv_c_2);
         GestorConjuntoConvexo.getInstancia().setSubconjuntoPuntos(listDcha);
 		divideyvenceras(listDcha, cierreDcho);
 		mezclar(cierreIzq,cierreDcho,cierreConvexo);
@@ -83,9 +88,9 @@ public final static String nombre = "DivideYVencerasPreord";
 		anadePuntosCierre(cierreIzq, cierreConvexo, supIzda, infIzda);
         Log.d("DivideYVencerasPreord","Anade arista " + arista1.toString());
         Log.d("DivideYVencerasPreord","Anade arista " + arista2.toString());
-        GestorMensajes.getInstancia().addMessage("Anadimos Soporte Inferior");
+        GestorMensajes.getInstancia().addMessage(R.string.dyv_c_3);
 		GestorConjuntoConvexo.getInstancia().anadeArista(arista1);
-        GestorMensajes.getInstancia().addMessage("Anadimos Soporte Superior");
+        GestorMensajes.getInstancia().addMessage(R.string.dyv_c_4);
 		GestorConjuntoConvexo.getInstancia().anadeArista(arista2);
 		borraAristasCierre(cierreDcho, infDcho, supDcha);
 		borraAristasCierre(cierreIzq, supIzda, infIzda);					

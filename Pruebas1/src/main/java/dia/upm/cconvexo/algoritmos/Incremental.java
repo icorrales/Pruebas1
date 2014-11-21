@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.ComparadorAbscisas;
@@ -16,7 +17,7 @@ import dia.upm.cconvexo.model.Punto;
 public class Incremental extends AbstractAlgoritmo {
 
 	
-	public final static String nombre = "Incremental";
+	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.incremental);
 	
 	
 //	ordenar ( {p(1),...,p(N)} , abs_crec_ord_crec(p,q) );
@@ -45,12 +46,12 @@ public class Incremental extends AbstractAlgoritmo {
 		assert vertice_derecho != null;
 		List<Punto> c_convexo = new LinkedList<Punto>();
 		c_convexo.add(vertice_derecho);
-        GestorMensajes.getInstancia().addMessage("Ordenamos Lista por abscisas");
+        GestorMensajes.getInstancia().addMessage(R.string.incremental_c_1);
         GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(vertice_derecho);
 		for (Iterator iterator2=iterator;iterator2.hasNext();) {
 			
 			Punto punto = (Punto) iterator2.next();
-            GestorMensajes.getInstancia().addMessage("Nuevo Punto");
+            GestorMensajes.getInstancia().addMessage(R.string.incremental_c_2);
             GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(punto);
 			Punto v_sop_sup = soporte_superior(c_convexo,vertice_derecho,punto);
 			Punto v_sop_inf = soporte_inferior(c_convexo,vertice_derecho,punto);
@@ -63,9 +64,17 @@ public class Incremental extends AbstractAlgoritmo {
 			int copia_indice_v_sop_inf = indice_v_sop_inf; 
 			int indice_v_sop_sup = c_convexo.indexOf(v_sop_sup);
 
+            // Caso del principio cuando el soporte superior es el primer valor.
+
+
+            if (indice_v_sop_sup == 0 && c_convexo.size() > 2)
+            {
+                indice_v_sop_sup = c_convexo.size();
+            }
 
             // Hay que borrar todos las aristas entre el vertice soporte inferior y el superior, pero
 			// para ello hay q ordenar la lista de tal forma que el soporte superior siempre esta detras del inferior.
+
 			while ( indice_v_sop_inf < indice_v_sop_sup)
 			{
                 Log.d(nombre,"Indice Soporte inferior:" + indice_v_sop_inf);
@@ -94,20 +103,20 @@ public class Incremental extends AbstractAlgoritmo {
 
             if ( c_convexo.size() < 3)
             {
-                GestorMensajes.getInstancia().addMessage("Anadimos Soporte Inferior");
+                GestorMensajes.getInstancia().addMessage(R.string.incremental_c_3);
                 GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(v_sop_inf, punto));
             }
             else
             {
-                GestorMensajes.getInstancia().addMessage("Anadimos Soporte Inferior");
+                GestorMensajes.getInstancia().addMessage(R.string.incremental_c_3);
                 GestorConjuntoConvexo.getInstancia().anadeAristaTmp(new Arista(v_sop_inf, punto));
-                GestorMensajes.getInstancia().addMessage("Anadimos Soporte Superior");
+                GestorMensajes.getInstancia().addMessage(R.string.incremental_c_4);
                 GestorConjuntoConvexo.getInstancia().anadeAristaTmp(new Arista(punto, v_sop_sup));
             }
 
             if (c_convexo.size() > 1)
             {
-                GestorMensajes.getInstancia().addMessage("Actualizamos Cierre");
+                GestorMensajes.getInstancia().addMessage(R.string.incremental_c_5);
                 GestorConjuntoConvexo.getInstancia().actualizaCierre(c_convexo);
             }
 

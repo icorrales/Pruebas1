@@ -3,6 +3,7 @@ package dia.upm.cconvexo.algoritmos;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.model.Arista;
@@ -10,7 +11,7 @@ import dia.upm.cconvexo.model.Punto;
 
 public class BusquedaAristas extends AbstractAlgoritmo {
 
-	public final static String nombre = "BusAristas";
+	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.busqAristas);;
 	
 public void start(int delay)
 {
@@ -83,7 +84,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 						if (pto_izq == true)
 						{
 							es_arista = false;
-                            GestorMensajes.getInstancia().addMessage("No es arista");
+                            GestorMensajes.getInstancia().addMessage(R.string.busqueda_c_1);
                             GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp, true);
 						}
 						break;
@@ -92,7 +93,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 						if (pto_dcha == true)
 						{
 							es_arista = false;
-                            GestorMensajes.getInstancia().addMessage("No es arista");
+                            GestorMensajes.getInstancia().addMessage(R.string.busqueda_c_1);
                             GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp,true);
 						}
 						break;
@@ -133,20 +134,20 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
                 GestorConjuntoConvexo.getInstancia().borraAristaTmp(aTmp);
 				if (pto_izq)
 				{
-                    GestorMensajes.getInstancia().addMessage("Es arista :" + aTmp.toString());
+                    GestorMensajes.getInstancia().addMessage(R.string.busqueda_c_2);
 					GestorConjuntoConvexo.getInstancia().anadeArista(aTmp);
 				}
 				else if (pto_dcha)
 				{
 					Arista arista = new Arista(listaPuntos.get(j),listaPuntos.get(i));
-                    GestorMensajes.getInstancia().addMessage("Es arista :" + arista.toString());
+                    GestorMensajes.getInstancia().addMessage(R.string.busqueda_c_2);
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista);
 				}
 				else
 				{
 					Arista arista1 = new Arista(listaPuntos.get(i),listaPuntos.get(j));
 					Arista arista2 = new Arista(listaPuntos.get(j),listaPuntos.get(i));
-                    GestorMensajes.getInstancia().addMessage("Son aristas :" + arista1.toString() + " y " + arista2.toString());
+                    GestorMensajes.getInstancia().addMessage(R.string.busqueda_c_3);
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista1);
 					GestorConjuntoConvexo.getInstancia().anadeArista(arista2);					
 				}

@@ -9,7 +9,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/botonera"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp">
+            android:orientation="horizontal">
 
 <!--        <TextView
                 android:layout_width="wrap_content"
@@ -19,26 +19,35 @@
                 android:id="@+id/textView"/> -->
 
         <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
                 android:inputType="numberSigned"
                 android:ems="5"
                 android:id="@+id/editText"
                 android:hint="@string/puntosLabel"/>
 
-        <Button
+        <ImageButton
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="draw"
+                android:text="@string/add"
+                android:src="@drawable/ic_content_add_circle"
                 android:id="@+id/button"/>
 
         <Spinner
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/expandableListView"
                 android:fastScrollAlwaysVisible="true"
                 />
+        <ImageButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            android:src="@drawable/ic_alert_error"
+            android:id="@+id/buttonInfo"/>
+
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"

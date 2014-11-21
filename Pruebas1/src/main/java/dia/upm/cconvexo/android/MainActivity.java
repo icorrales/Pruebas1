@@ -3,6 +3,7 @@ package dia.upm.cconvexo.android;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DialogFragment;
+import android.gesture.GestureOverlayView;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -44,7 +45,7 @@ import dia.upm.cconvexo.model.Punto;
 
 public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint, IMessage {
 
-    Button button;
+    ImageButton button;
     EditText textoPuntos;
 //    PanelPuntosImage imagenDibujo;
     PanelPuntos imagenDibujo;
@@ -59,7 +60,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = (Button) findViewById(R.id.button);
+        button = (ImageButton) findViewById(R.id.button);
         textoPuntos = (EditText) findViewById(R.id.editText);
         imagenDibujo = (PanelPuntos) findViewById(R.id.SurfaceView);
 
@@ -88,21 +89,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
                 zoomCamera(true);
             }
         });
-
-
-
         init();
-
-
-
-
-
-
-//        ArrayAdapter<String> adaptador;
-//        adaptador = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_list_item_1, datos);
-//        listaExpandible = (ListView) findViewById(R.id.expandableListView);
-//        listaExpandible.setAdapter(adaptador);
 
     }
 
@@ -135,6 +122,8 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     }
 
     private void init() {
+        // Este mensaje debe ser el primero ya que debemos pasarle el contexto.
+        GestorMensajes.getInstancia().setC(getApplicationContext());
         GestorAlgoritmos gestorAlgoritmos=GestorAlgoritmos.getInstancia();
         //String[] datos = gestorAlgoritmos.getClaves();
         //String[] datos = {Andrew.nombre,BusquedaAristas.nombre,DivideYVencerasPreord.nombre,EliminacionPtosInteriores.nombre,GrahamNuevo.nombre,Incremental.nombre, Jarvis.nombre,QuickHullNuevo.nombre, AproximacionInferior.nombre, AproximacionSuperior.nombre};

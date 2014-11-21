@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.Triangulo;
@@ -12,7 +13,7 @@ import dia.upm.cconvexo.model.Punto;
 
 public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 	
-	public final static String nombre = "PtosInteriores";
+	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.eliminacionPtosInteriores);;
 
 	public EliminacionPtosInteriores() {
 		// TODO Auto-generated constructor stub
@@ -77,7 +78,7 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 					{
 						if (this.estaEnTri(cierreConvexo.get(i), cierreConvexo.get(j), cierreConvexo.get(k), pto))
 						{
-                            GestorMensajes.getInstancia().addMessage("Punto Interior al triangulo");
+                            GestorMensajes.getInstancia().addMessage(R.string.ptoInterior_c_1);
 							subconjuntoConvexo.remove(pto);
                             GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(pto);
 						}
@@ -97,6 +98,8 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 	ordenar ( c_convexo, comparar_angulos(p,q,origen_ordenacion) );
 	endif*/
 
+            GestorMensajes.getInstancia().addMessage(R.string.ptoInterior_c_2);
+            GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(null);
             Punto centroide = centroide(subconjuntoConvexo.get(0), subconjuntoConvexo.get(1), subconjuntoConvexo.get(2));
             ordenarAngularmente(subconjuntoConvexo,centroide);
             for (int i = 0; i < subconjuntoConvexo.size() - 1; i++) {

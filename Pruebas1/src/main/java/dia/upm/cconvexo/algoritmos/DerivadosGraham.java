@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.ComparadorAngulos;
@@ -46,13 +47,13 @@ public abstract class DerivadosGraham extends AbstractAlgoritmo {
 			if (orientation(v, siguiente_V, sig_sig_V) == FunctionsGlobals.POSITIVA)
 			{
 				v = siguiente(v, cierreConvexo);
-                GestorMensajes.getInstancia().addMessage("Giro a la izquierda -> continuar");
+                GestorMensajes.getInstancia().addMessage(R.string.graham_c_1);
                 GestorConjuntoConvexo.getInstancia().anadeArista(a1);
 
 			}
 			else
 			{
-                GestorMensajes.getInstancia().addMessage("No es giro a la izquierda -> retroceder");
+                GestorMensajes.getInstancia().addMessage(R.string.graham_c_2);
 				if (v != verticeInicio)
 				{
 					cierreConvexo.remove(siguiente_V);
