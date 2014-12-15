@@ -58,6 +58,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_below="@id/botonera"
+            android:id="@+id/framePanel"
             android:padding="5dp">
 
 
@@ -66,10 +67,6 @@
                      android:layout_width="fill_parent"
                      android:layout_height="fill_parent"
                      />
-        <ZoomControls
-            android:id="@+id/zoomControl2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+
     </FrameLayout>
 </RelativeLayout>

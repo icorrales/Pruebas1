@@ -15,6 +15,7 @@ public class AproximacionSuperior extends AproximacionGeneral {
 
     public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.aproxSuperior);
 
+
 //	public List<Punto> calculaMuestra2(List<Punto> listPuntos) {
 //		// TODO Auto-generated method stub
 //		Punto x_max = GestorFranjas.getInstancia().getPuntoMax();
@@ -146,7 +147,7 @@ public class AproximacionSuperior extends AproximacionGeneral {
 
 	public AproximacionSuperior()
 	{
-		
+        footnote = "sdfootnote146anc";
 	}
 
 	

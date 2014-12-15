@@ -64,18 +64,13 @@ public class ConvexHullGestureListener extends GestureDetector.SimpleOnGestureLi
             p.setY(y);
             if (selected == null)
             {
-                if (GestorConjuntoConvexo.getInstancia().isClose(p) == false)
-                {
                     GestorConjuntoConvexo.getInstancia().getListaPuntos().add(p);
                     GestorConjuntoConvexo.getInstancia().setSelected(null);
-                }
+
             } else {
-                if (GestorConjuntoConvexo.getInstancia().isClose(p) == false)
-                {
                     GestorConjuntoConvexo.getInstancia().getListaPuntos().remove(selected);
                     GestorConjuntoConvexo.getInstancia().getListaPuntos().add(p);
                     GestorConjuntoConvexo.getInstancia().setSelected(null);
-                }
             }
         }
 
@@ -117,6 +112,11 @@ public class ConvexHullGestureListener extends GestureDetector.SimpleOnGestureLi
                 GestorConjuntoConvexo.getInstancia().setSelected(null);
             }
             // else ya se ha seleccionado el selected
+            else {
+            Context c = this.vista.getContext();
+            p = GestorConjuntoConvexo.getInstancia().getSelected();
+            Crouton.makeText((Activity) c, c.getString(R.string.punto) + "(" + p.getX() +"," + p.getY() + ")", Style.INFO).show();
+            }
 
         }
 
@@ -126,10 +126,7 @@ public class ConvexHullGestureListener extends GestureDetector.SimpleOnGestureLi
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         this.WriteEvent(e1,"Fling" + e1.toString() + " " + e2.toString());
         boolean result = false;
-        if (GestorConfiguracion.getInstancia().isRunning())
-        {
-            chooseMovement(e1, e2, velocityX, velocityY);
-        }
+        chooseMovement(e1, e2, velocityX, velocityY);
         return result;
     }
 
@@ -169,28 +166,43 @@ public class ConvexHullGestureListener extends GestureDetector.SimpleOnGestureLi
 
     public void onSwipeRight() {
 
-    }
+          }
 
     public void onSwipeLeft() {
+
+        if (GestorConfiguracion.getInstancia().isRunning() == false)
+        {
+            Punto selected = GestorConjuntoConvexo.getInstancia().getSelected();
+            if ( selected != null)
+            {
+                GestorConjuntoConvexo.getInstancia().borraPunto(selected);
+                GestorConjuntoConvexo.getInstancia().setSelected(null);
+            }
+        }
 
     }
 
     public void onSwipeTop() {
-        assert GestorConfiguracion.getInstancia().isRunning();
-        GestorConfiguracion.getInstancia().setTipoEjecucion(R.string.directo);
-        Context c = this.vista.getContext();
-        Crouton.makeText((Activity) c, c.getString(R.string.method) + c.getString(R.string.directo), Style.INFO).show();
-//        Toast.makeText(c, c.getString(R.string.method) + c.getString(R.string.directo),Toast.LENGTH_SHORT ).show();
-        ((PanelPuntos) this.vista).new_step = true;
+        if (GestorConfiguracion.getInstancia().isRunning())
+        {
+
+            GestorConfiguracion.getInstancia().setTipoEjecucion(R.string.directo);
+            Context c = this.vista.getContext();
+            Crouton.makeText((Activity) c, c.getString(R.string.method) + c.getString(R.string.directo), Style.INFO).show();
+    //        Toast.makeText(c, c.getString(R.string.method) + c.getString(R.string.directo),Toast.LENGTH_SHORT ).show();
+            ((PanelPuntos) this.vista).new_step = true;
+        }
     }
 
     public void onSwipeBottom() {
-        GestorConfiguracion.getInstancia().setTipoEjecucion(R.string.retardo);
-        Context c = this.vista.getContext();
-        Crouton.makeText((Activity) c, c.getString(R.string.method) + c.getString(R.string.retardo), Style.INFO).show();
-//        Toast.makeText(c, c.getString(R.string.method) + c.getString(R.string.retardo),Toast.LENGTH_SHORT ).show();
-        ((PanelPuntos) this.vista).new_step = true;
-
+        if (GestorConfiguracion.getInstancia().isRunning())
+        {
+            GestorConfiguracion.getInstancia().setTipoEjecucion(R.string.retardo);
+            Context c = this.vista.getContext();
+            Crouton.makeText((Activity) c, c.getString(R.string.method) + c.getString(R.string.retardo), Style.INFO).show();
+    //        Toast.makeText(c, c.getString(R.string.method) + c.getString(R.string.retardo),Toast.LENGTH_SHORT ).show();
+            ((PanelPuntos) this.vista).new_step = true;
+        }
     }
 
     public boolean WriteEvent( MotionEvent event,String nameEvent) {

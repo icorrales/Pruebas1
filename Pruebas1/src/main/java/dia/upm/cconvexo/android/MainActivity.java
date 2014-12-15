@@ -3,17 +3,25 @@ package dia.upm.cconvexo.android;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DialogFragment;
+import android.content.Context;
+import android.content.Intent;
 import android.gesture.GestureOverlayView;
 import android.hardware.Camera;
+import android.location.Address;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -29,6 +37,9 @@ import dia.upm.cconvexo.android.adapters.AlgorithmAdapter;
 
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 import dia.upm.cconvexo.android.gestores.GestorMensajes;
+
+import dia.upm.cconvexo.android.view.HelpFragment;
+
 import dia.upm.cconvexo.android.view.PanelPuntos;
 import dia.upm.cconvexo.android.view.SettingsFrament;
 
@@ -43,7 +54,7 @@ import dia.upm.cconvexo.interfaces.IMessage;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
-public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint, IMessage {
+public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint {
 
     ImageButton button;
     EditText textoPuntos;
@@ -51,9 +62,12 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     PanelPuntos imagenDibujo;
 
     Spinner listaExpandible;
-    TextView descriptionText;
     ZoomControls zoomControls;
     Camera mCamera = null;
+    private FrameLayout frame;
+    private Intent descriptionIntent;
+    private ImageButton algDescription;
+    final Context context = this;
 
 
     @Override
@@ -63,14 +77,33 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         button = (ImageButton) findViewById(R.id.button);
         textoPuntos = (EditText) findViewById(R.id.editText);
         imagenDibujo = (PanelPuntos) findViewById(R.id.SurfaceView);
+        frame = (FrameLayout) findViewById(R.id.framePanel);
+        algDescription = (ImageButton) findViewById(R.id.buttonInfo);
+        algDescription.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(context, DescriptionwebviewActivity.class);
+                startActivity(intent);
+            }
+
+        });
         button.setOnClickListener(this);
 
         // Lista de Algoritmos.
         listaExpandible = (Spinner) findViewById(R.id.expandableListView);
-        descriptionText = (TextView) findViewById(R.id.descriptionText);
-        zoomControls = (ZoomControls) findViewById(R.id.zoomControl2);
+//        descriptionText = (TextView) findViewById(R.id.descriptionText);
+
+        initZoom();
+        init();
+
+    }
+
+    private void initZoom() {
+        zoomControls = new ZoomControls(this);
         zoomControls.setVisibility(View.INVISIBLE);
+        zoomControls.setIsZoomInEnabled(true);
+        zoomControls.setIsZoomOutEnabled(true);
         zoomControls.setOnZoomInClickListener(new View.OnClickListener() {
 
             @Override
@@ -89,8 +122,6 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
                 zoomCamera(true);
             }
         });
-        init();
-
     }
 
     /**
@@ -130,6 +161,8 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         ArrayAdapter adapter = new AlgorithmAdapter(this,android.R.layout.simple_list_item_1);
         listaExpandible.setAdapter(adapter);
         listaExpandible.setOnItemSelectedListener(this);
+        descriptionIntent = new Intent(getApplicationContext(),DescriptionwebviewActivity.class);
+
 
 
 
@@ -172,7 +205,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
 
 
        }
-       imagenDibujo.refreshFinal();
+       imagenDibujo.refreshPuntos();
         
     }
 
@@ -198,9 +231,21 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
               //  dialog.show( this.getFragmentManager(), "NoticeDialogFragment");
                showList();
                break;
+            case R.id.action_help:
+                //  FireMissilesDialogFragment dialog = new  FireMissilesDialogFragment();
+                //  dialog.show( this.getFragmentManager(), "NoticeDialogFragment");
+                showHelp();
+                break;
             }
         return true; //to execute the event here
         }
+
+    private void showHelp() {
+        Intent intent = new Intent(context,HelpWebViewActivity.class);
+        startActivity(intent);
+
+
+    }
 
     public void settings() {
         DialogFragment newFragment = new SettingsFrament();
@@ -229,17 +274,16 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
+        final IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
+
         if (GestorConfiguracion.getInstancia().isRunning() == false)
         {
-            final IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
-            GestorConjuntoConvexo.getInstancia().initGestor();
-            GestorConfiguracion.getInstancia().setRunning(true);
-            GestorMensajes.getInstancia().getHistoricoMensajes().clear();
 
+            GestorConfiguracion.getInstancia().setRunning(true);
             Thread newThread = new Thread() {
                 @Override
                 public void run() {
-
+                    algoritmo.init();
                     algoritmo.start(100);
                     GestorConfiguracion.getInstancia().setRunning(false);
                     imagenDibujo.refreshFinal();
@@ -247,7 +291,6 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
                 }
             };
             newThread.start();
-
         }
 
 
@@ -302,35 +345,37 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     @Override
     public void mensajeDescripcion(String texto) {
 
-        descriptionText.setText(texto);
+        // descriptionText.setText(texto);
+
+
+    }
+
+
+    private View.OnClickListener webViewAction = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+//                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
+//                startActivity(browserIntent);
+//                webView.loadUrl("file:///android_asset/teoria.html");
+                startActivity(descriptionIntent);
+            }
+
+    };
+
+    @Override
+    public void onPause()
+    {
+        Log.d(MainActivity.class.getName(),"Pasamos a la pausa");
+        super.onPause();
+        imagenDibujo.thread.setRunning(false);
 
     }
 
     @Override
-    public void showMessage(String s) {
-        Crouton crouton = Crouton.makeText(this,s, Style.INFO);
-        crouton.show();
+    public void onResume()
+    {
+        super.onResume();
+        Log.d(MainActivity.class.getName(),"Volvemos al Main");
+
     }
-
-//    public Handler updateHandler = new Handler(){
-        /** Gets called on every message that is received */
-        // @Override
-  /*      public void handleMessage(Message msg) {
-
-            imagenDibujo.update();
-            imagenDibujo.invalidate();
-            super.handleMessage(msg);
-        }
-    };
-
-    public class UpdateThread implements Runnable {
-
-        @Override
-        public void run() {
-            while(true){
-                MainActivity.this.updateHandler.sendEmptyMessage(0);
-            }
-        }
-
-    } */
 }

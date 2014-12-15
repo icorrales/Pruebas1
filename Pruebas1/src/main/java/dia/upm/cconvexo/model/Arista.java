@@ -52,7 +52,10 @@ public class Arista {
 		return a.getOrigen().equals(this.origen) && a.getDestino().equals(this.destino) ;
 		
 	}
-	
 
 
+    public boolean contains(Punto p) {
+        assert p != null;
+        return origen.equals(p)  || destino.equals(p);
+    }
 }

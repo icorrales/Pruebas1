@@ -14,9 +14,11 @@ import dia.upm.cconvexo.model.Punto;
 public class Andrew extends DerivadosGraham {
 
 	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.andrew);
+
 	
 	public Andrew() {
 		// TODO Auto-generated constructor stub
+        footnote = "sdfootnote106anc";
 	}
     	
 	

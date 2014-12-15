@@ -42,7 +42,7 @@ public class MySurfaceThread extends Thread{
 //Instancia a canvas
         Canvas canvas;
 //Mientras la variable run sea true va a pintar contínuamente.
-        while(true) {
+        while(this.run) {
 
             if (view.refresh) {
                 canvas = null;
@@ -68,14 +68,6 @@ public class MySurfaceThread extends Thread{
 
             }
 
-/*
-            if (view.new_step == false)
-            {
-                
-                view.dialog.show();
-                view.new_step = true;
-            }
-*/
 
             try {
                 Thread.sleep(GestorConfiguracion.getInstancia().getSeconds() * 10);
@@ -85,28 +77,5 @@ public class MySurfaceThread extends Thread{
 
         }
     }
-
-/*
-    public void onSwipeTop() {
-        Toast.makeText(view.getContext(), "top", Toast.LENGTH_SHORT).show();
-    }
-    public void onSwipeRight() {
-        Toast.makeText(view.getContext(), "right", Toast.LENGTH_SHORT).show();
-    }
-    public void onSwipeLeft() {
-        Toast.makeText(view.getContext(), "left", Toast.LENGTH_SHORT).show();
-        view.refresh = true;
-
-
-    }
-    public void onSwipeBottom() {
-        Toast.makeText(view.getContext(), "bottom", Toast.LENGTH_SHORT).show();
-    }
-
-    public boolean onTouch(View v, MotionEvent event) {
-        return gestureDetector.onTouchEvent(event);
-    }
-
-*/
 }
 

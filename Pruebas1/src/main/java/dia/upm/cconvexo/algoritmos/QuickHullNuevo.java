@@ -13,11 +13,12 @@ import dia.upm.cconvexo.model.Punto;
 
 public class QuickHullNuevo extends AbstractAlgoritmo {
 	
-public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.quickhull);
+    public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.quickhull);
+
 	
 	public QuickHullNuevo()
 	{
-		
+        footnote = "sdfootnote76anc";
 	}
 	
 	@Override

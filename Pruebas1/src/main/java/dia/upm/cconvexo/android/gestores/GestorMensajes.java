@@ -81,9 +81,11 @@ public class GestorMensajes {
      */
     public void addMessage(int id)
     {
-        assert c != null;
-        String message = c.getString(id);
-        addMessage(message);
+        if ( c != null)
+        {
+            String message = c.getString(id);
+            addMessage(message);
+        }
     }
 
 
@@ -132,8 +134,17 @@ public class GestorMensajes {
 
 
     public String getResourceString(int id){
-        assert c != null && id != 0;
-        return c.getString(id);
+
+        if ( c == null )
+        {
+            return "";
+        }
+        else
+        {
+            return c.getString(id);
+        }
+
+
 
     }
 

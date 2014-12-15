@@ -15,10 +15,11 @@ import dia.upm.cconvexo.model.Punto;
 public class Jarvis extends AbstractAlgoritmo {
 	
 	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.jarvis);
-	
+
+
 	public Jarvis()
 	{
-		
+        footnote = "sdfootnote66anc";
 	}
 	
 

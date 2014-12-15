@@ -19,6 +19,7 @@ import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.global.Triangulo;
 import dia.upm.cconvexo.interfaces.IDelegatePaint;
 import dia.upm.cconvexo.model.Arista;
+import dia.upm.cconvexo.model.Circle;
 import dia.upm.cconvexo.model.Punto;
 
 public class GestorConjuntoConvexo {
@@ -26,6 +27,9 @@ public class GestorConjuntoConvexo {
 
 
     private Punto selected = null;
+    private List<Punto> conjuntoConvexoPuntos;
+    private Circle circleTmp = null;
+    private Circle MEC = null;
 
     public List<Arista> getSubconjuntoArista() {
         return subconjuntoArista;
@@ -112,12 +116,19 @@ public class GestorConjuntoConvexo {
 	}
 
     public void initGestor() {
+        this.setSelected(null);
+        initCC();
+    }
+
+    public void initCC() {
         this.conjuntoConvexo.clear();
         this.subconjuntoArista.clear();
         this.puntosGeograficos.clear();
         this.ordenaAngularmente = false;
         this.subconjuntoPuntos.clear();
-        this.setSelected(null);
+        this.circleTmp = null;
+        this.MEC = null;
+
     }
 
     public void borraListaPuntos()
@@ -223,12 +234,7 @@ public class GestorConjuntoConvexo {
 				IDelegatePaint delegate = listaListener.get(i);
 				  delegate.paintArista(a1, Color.RED);
 			}
-		
-
-
 		}
-		
-		
 	}
 
     public void anadeAristaTmp(Arista a1)
@@ -384,6 +390,7 @@ public class GestorConjuntoConvexo {
      */
     public boolean isClose(Punto p) {
         boolean isClose = false;
+
         for (Punto p1 : listaPuntos) {
             if (p1.isClose(p))
             {
@@ -405,4 +412,60 @@ public class GestorConjuntoConvexo {
         this.selected = selected;
     }
 
+    public List<Punto> getConjuntoConvexoPuntos() {
+
+        List<Punto> conjuntoConvexoPuntos = new LinkedList<Punto>();
+        for (Iterator<Arista> iterator = conjuntoConvexo.iterator(); iterator.hasNext(); ) {
+            Arista next = iterator.next();
+            if (conjuntoConvexoPuntos.contains(next.getOrigen()) == false)
+            {
+                conjuntoConvexoPuntos.add(next.getOrigen());
+            }
+
+            if (conjuntoConvexoPuntos.contains(next.getDestino()) == false)
+            {
+                conjuntoConvexoPuntos.add(next.getDestino());
+            }
+
+        }
+
+        return conjuntoConvexoPuntos;
+    }
+
+
+    public void setCircleTmp(Circle circle) {
+        circleTmp = circle;
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintPuntos();
+        }
+
+    }
+
+    public void setMEC(Circle circle) {
+        MEC = circle;
+        for (int i = 0; i < listaListener.size(); i++) {
+
+
+            IDelegatePaint delegate = listaListener.get(i);
+            delegate.paintPuntos();
+        }
+
+    }
+
+    public Circle getCircleTmp() {
+        return circleTmp;
+    }
+
+    public Circle getMEC() {
+        return MEC;
+    }
+
+
+    public void borraPunto(Punto selected) {
+        assert selected != null;
+        listaPuntos.remove(selected);
+    }
 }

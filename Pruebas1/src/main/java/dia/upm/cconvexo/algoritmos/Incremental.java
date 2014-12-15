@@ -18,7 +18,13 @@ public class Incremental extends AbstractAlgoritmo {
 
 	
 	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.incremental);
-	
+
+
+    public Incremental()
+    {
+        footnote = "sdfootnote86anc";
+    }
+
 	
 //	ordenar ( {p(1),...,p(N)} , abs_crec_ord_crec(p,q) );
 //	(* ordena los p(i) de menor a mayor abscisa *) 

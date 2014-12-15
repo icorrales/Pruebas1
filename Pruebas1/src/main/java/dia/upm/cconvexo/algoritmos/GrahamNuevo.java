@@ -12,7 +12,12 @@ import dia.upm.cconvexo.model.Punto;
 public class GrahamNuevo extends DerivadosGraham {
 	
 	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.graham);
-	
+
+    public GrahamNuevo()
+    {
+        footnote = "sdfootnote96anc";
+    }
+
 	@SuppressWarnings("unchecked")
 	public void start(int delay) {
 		// TODO Auto-generated method stub

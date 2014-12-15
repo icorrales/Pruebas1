@@ -88,6 +88,6 @@ public class TestAproximacionSuperior extends TestAbstract {
 		//List listaCC= GestorConjuntoConvexo.getInstancia().getListaPuntos();
 		//compruebaCierreConvexo(listaCC);
 		List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
-		compruebaCierreConvexoPorAristasGenerico(listaAristas,cierreConvexoReal20);
+//		compruebaCierreConvexoPorAristasGenerico(listaAristas,cierreConvexoReal20);
 	}
 }

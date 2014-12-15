@@ -16,6 +16,8 @@ public class AproximacionInferior extends AproximacionGeneral {
 
     public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.aproxInferior);
 
+
+
 	public List<Punto> calculaMuestra(List<Punto> listPuntos) {
 		// TODO Auto-generated method stub
         Log.d(AproximacionInferior.class.getName(), "Inicio calculaMuestra");
@@ -65,7 +67,7 @@ public class AproximacionInferior extends AproximacionGeneral {
 
 	public AproximacionInferior()
 	{
-		
+        footnote = "sdfootnote136anc";
 	}
 
 }

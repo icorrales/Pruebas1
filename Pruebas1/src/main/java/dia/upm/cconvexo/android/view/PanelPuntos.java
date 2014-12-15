@@ -35,6 +35,7 @@ import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.gestores.GestorFranjas;
 import dia.upm.cconvexo.interfaces.IDelegatePaint;
 import dia.upm.cconvexo.model.Arista;
+import dia.upm.cconvexo.model.Circle;
 import dia.upm.cconvexo.model.Punto;
 
 /**
@@ -88,7 +89,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
     public void init() {
         this.getHolder().addCallback(this);
         mDetector = new GestureDetectorCompat(this.getContext(),new ConvexHullGestureListener(this));
-        thread = new MySurfaceThread(getHolder(), this);
+
         setFocusable(true);
         GestorConjuntoConvexo.getInstancia().addListener(this);
 //        this.setOnTouchListener(this);
@@ -115,8 +116,12 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
 
-     //   thread.setRunning(true);
+        thread = new MySurfaceThread(getHolder(), this);
+        thread.setRunning(true);
         thread.start();
+        refresh = true;
+        sleepProcess();
+
      //   thread.setRunning(false);
     }
     @Override
@@ -140,6 +145,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
 
     public void doDraw(Canvas canvas)
     {
+
         canvas.drawColor(Color.WHITE);
 
         Paint pcirculo = new Paint();
@@ -215,6 +221,24 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
             canvas.drawCircle((float) punto.getX(),(float) punto.getY(),10.0f,pcirculo);
 
         }
+
+
+        pcirculo.setColor(Color.RED);
+        pcirculo.setStyle(Paint.Style.STROKE);
+
+        if ( GestorConjuntoConvexo.getInstancia().getCircleTmp() != null)
+        {
+            Circle circleTmp = GestorConjuntoConvexo.getInstancia().getCircleTmp();
+            canvas.drawCircle((float)circleTmp.centro.getX(),(float)circleTmp.centro.getY(),(float)circleTmp.radius,pcirculo);
+        }
+
+        pcirculo.setColor(Color.BLUE);
+        if ( GestorConjuntoConvexo.getInstancia().getMEC() != null)
+        {
+            Circle mec = GestorConjuntoConvexo.getInstancia().getMEC();
+            canvas.drawCircle((float)mec.centro.getX(),(float)mec.centro.getY(),(float)mec.radius,pcirculo);
+        }
+
 
 
 
@@ -320,19 +344,36 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         int delay = GestorConfiguracion.getInstancia().getSeconds();
         while (refresh) {
         try {
-            if (GestorMensajes.getInstancia().getHistoricoMensajes().size() == 0)
+            if (GestorConfiguracion.getInstancia().isRunning())
             {
-                Thread.sleep(delay * 50);
+
+                if (GestorMensajes.getInstancia().getHistoricoMensajes().size() == 0)
+                {
+                    Thread.sleep(delay * 50);
+                }
+                else
+                {
+                    Thread.sleep(delay * 300);
+                }
             }
             else
             {
-                Thread.sleep(delay * 300);
+                Thread.sleep(delay * 10);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         }
     }
+
+    public void refreshPuntos() {
+
+        GestorConjuntoConvexo.getInstancia().initCC();
+        GestorMensajes.getInstancia().getHistoricoMensajes().clear();
+        refresh = true;
+        sleepProcess();
+    }
+
 
     public void refreshFinal()
     {
@@ -352,8 +393,6 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
     public boolean onTouch(View v, MotionEvent event) {
 
         Toast.makeText(getContext(), event.getX() + "-" + event.getY(),Toast.LENGTH_SHORT ).show();
-
-
         return true;
     }
 
@@ -369,7 +408,7 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
         {
 
             touchEvent = this.mDetector.onTouchEvent(event);
-            this.refreshFinal();
+            this.refreshPuntos();
         }
         else
         {
@@ -380,6 +419,9 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
 
         Log.d(PanelPuntos.class.getName(), "Return touch event: " + touchEvent);
         return touchEvent;
+
     }
+
+
 
 }

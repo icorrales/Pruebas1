@@ -12,6 +12,7 @@ import dia.upm.cconvexo.algoritmos.EliminacionPtosInteriores;
 import dia.upm.cconvexo.algoritmos.GrahamNuevo;
 import dia.upm.cconvexo.algoritmos.Incremental;
 import dia.upm.cconvexo.algoritmos.Jarvis;
+import dia.upm.cconvexo.algoritmos.MEC;
 import dia.upm.cconvexo.algoritmos.QuickHullNuevo;
 import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
 
@@ -26,12 +27,12 @@ public class GestorAlgoritmos {
 	private Map<String, IAlgoritmoHullConvex> mapaAlgoritmos = null;
 	private int executiontype = TEDIRECTA;
 	private int delay = DEFAULTDELAY;
-	
-	
 
 
+    private String algSelected;
 
-	public int getExecutiontype() {
+
+    public int getExecutiontype() {
 		return executiontype;
 	}
 
@@ -75,6 +76,7 @@ public class GestorAlgoritmos {
         mapaAlgoritmos.put(Incremental.nombre, new Incremental());
         mapaAlgoritmos.put(AproximacionInferior.nombre,new AproximacionInferior());
         mapaAlgoritmos.put(AproximacionSuperior.nombre,new AproximacionSuperior());
+        mapaAlgoritmos.put(MEC.nombre, new MEC());
 	}
 
 
@@ -100,6 +102,7 @@ public class GestorAlgoritmos {
 	public IAlgoritmoHullConvex getAlgoritmo(String nombre)
 	{
 		assert mapaAlgoritmos.containsKey(nombre);
+        algSelected = nombre;
 		return mapaAlgoritmos.get(nombre);
 	}
 
@@ -109,4 +112,16 @@ public class GestorAlgoritmos {
         int numAlgoritmos= mapaAlgoritmos.keySet().size();
         return mapaAlgoritmos.keySet().toArray(new String[numAlgoritmos]);
     }
+
+
+    public String getAlgSelected() {
+        return algSelected;
+    }
+
+    public void setAlgSelected(String algSelected) {
+        assert algSelected.isEmpty() == false && this.mapaAlgoritmos.containsKey(algSelected);
+        this.algSelected = algSelected;
+    }
+
+
 }

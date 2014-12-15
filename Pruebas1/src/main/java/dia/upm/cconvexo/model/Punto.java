@@ -11,7 +11,12 @@ public class Punto  extends Point {
 
 	public double x;
 	public double y;
-    private static final double MAX_DISTANCE = 5;
+    private static final double MAX_DISTANCE = 20;
+
+    public Punto(double centerx, double centery) {
+        this.x = centerx;
+        this.y = centery;
+    }
 
     /**
      * Setter for field x
@@ -131,9 +136,11 @@ public class Punto  extends Point {
         return isClose;
     }
 
-    private double distance(Punto p) {
+    public double distance(Punto p) {
         assert p != null;
         double distance = Math.hypot((this.getX() - p.getX()), (this.getY() - p.getY()));
         return distance;
     }
+
+
 }

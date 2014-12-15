@@ -28,6 +28,8 @@ public class ComparadorAngulos implements Comparator<Punto> {
 	/*
 	   * Esta funcion que compara basicamente 2 puntos, determinar cual de ellos
 	   * habra de ser el que este en el principio del array.
+	   * -1 punto1 < punto2
+	   * 1 punto1 > punto2
 	   */
 	  int Comparar(Punto punto1, Punto punto2)
 	  {
@@ -36,21 +38,20 @@ public class ComparadorAngulos implements Comparator<Punto> {
 	    double ydist1;
 	    double xdist2;
 	    double ydist2;
+        int valorRetorno;
 
 	    /*
 	     * Estudia si p2 esta a la IZQUIERDA o a la DERECHA de la recta del segmento
 	     que forman los puntos: puntos[0] y p1
 	     */
 	    cara = FunctionsGlobals.A_que_Lado(ptoInterior, punto1, punto2);
-	    if (cara == FunctionsGlobals.IZQUIERDA)
-	      return 1;
-	    else if (cara == FunctionsGlobals.DERECHA)
-	      return -1;
-	    else
+	    if (cara == FunctionsGlobals.IZQUIERDA) { valorRetorno = 1; }
+	    else if (cara == FunctionsGlobals.DERECHA) { valorRetorno = -1; }
 	    /*
 	     * Si p2 es COLINEAR con la recta del segmento, enconces estudiamos que punto
 	     entre p1 y p2 esta mas cerca a puntos[0]
 	     */
+	    else
 	    {
 	      xdist1 = punto1.getX() - this.ptoInterior.getX();
 	      ydist1 = punto1.getY() - this.ptoInterior.getY();
@@ -59,13 +60,10 @@ public class ComparadorAngulos implements Comparator<Punto> {
 
 	      if ((xdist1 * xdist1 + ydist1 * ydist1) <
 	          (xdist2 * xdist2 + ydist2 * ydist2))
-	        return -1;
-	      else
-	        return 1;
+          {valorRetorno = -1;}
+	      else { valorRetorno = 1;};
 	    }
+        return valorRetorno;
 	  }
 
-	  
-	  
-	  
 }

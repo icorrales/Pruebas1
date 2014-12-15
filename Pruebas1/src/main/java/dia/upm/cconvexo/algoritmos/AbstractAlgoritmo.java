@@ -8,6 +8,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import dia.upm.cconvexo.android.gestores.GestorMensajes;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 import dia.upm.cconvexo.global.ComparadorAngulos;
 import dia.upm.cconvexo.global.Triangulo;
@@ -15,14 +16,28 @@ import dia.upm.cconvexo.interfaces.IAlgoritmoHullConvex;
 import dia.upm.cconvexo.model.Punto;
 
 public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
-	
-	
 
-	
+    protected String footnote;
+
 	public void nextstep() {
 		// TODO Auto-generated method stub
 
 	}
+
+    public String getfootNote()
+    {
+        return this.footnote;
+    }
+
+    /*
+      Method to init any algorithm
+     */
+    public void init()
+    {
+        GestorConjuntoConvexo.getInstancia().initGestor();
+        GestorMensajes.getInstancia().getHistoricoMensajes().clear();
+
+    }
 
 	
 	public abstract void start(int delay);
@@ -202,7 +217,7 @@ public abstract class AbstractAlgoritmo implements IAlgoritmoHullConvex {
 		
 	}
 
-	protected Punto busquedaPuntoMenorOrdenada(List<Punto> listaPuntos) {
+	public Punto busquedaPuntoMenorOrdenada(List<Punto> listaPuntos) {
 		// TODO Auto-generated method stub
 		Punto ptoInterior = null;
 		for (Iterator<Punto> iterator = listaPuntos.iterator(); iterator.hasNext();) {

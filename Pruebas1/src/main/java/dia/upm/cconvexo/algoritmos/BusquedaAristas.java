@@ -12,7 +12,8 @@ import dia.upm.cconvexo.model.Punto;
 public class BusquedaAristas extends AbstractAlgoritmo {
 
 	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.busqAristas);;
-	
+
+
 public void start(int delay)
 {
 	List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
@@ -160,7 +161,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 }	
 	public BusquedaAristas()
 	{
-		
+        footnote = "sdfootnote46anc";
 	}
 	
 	

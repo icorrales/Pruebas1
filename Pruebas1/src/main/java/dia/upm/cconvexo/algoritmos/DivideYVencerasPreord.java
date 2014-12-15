@@ -16,13 +16,13 @@ import dia.upm.cconvexo.model.Punto;
 
 public class DivideYVencerasPreord extends AbstractAlgoritmo {
 	
-public final static String nombre =  GestorMensajes.getInstancia().getResourceString(R.string.dyvalgorithm);
+    public final static String nombre =  GestorMensajes.getInstancia().getResourceString(R.string.dyvalgorithm);
 
 
 
     public DivideYVencerasPreord() {
 		// TODO Auto-generated constructor stub
-
+        footnote = "sdfootnote116anc";
     }
     	
 	

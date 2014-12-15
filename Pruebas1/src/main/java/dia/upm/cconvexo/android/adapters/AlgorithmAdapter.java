@@ -13,6 +13,7 @@ import dia.upm.cconvexo.algoritmos.EliminacionPtosInteriores;
 import dia.upm.cconvexo.algoritmos.GrahamNuevo;
 import dia.upm.cconvexo.algoritmos.Incremental;
 import dia.upm.cconvexo.algoritmos.Jarvis;
+import dia.upm.cconvexo.algoritmos.MEC;
 import dia.upm.cconvexo.algoritmos.QuickHullNuevo;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 
@@ -21,7 +22,7 @@ import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
  */
 public class AlgorithmAdapter extends ArrayAdapter<String> {
 
-    String[] datos = {BusquedaAristas.nombre, EliminacionPtosInteriores.nombre ,  Jarvis.nombre, QuickHullNuevo.nombre ,Incremental.nombre,  GrahamNuevo.nombre,Andrew.nombre, DivideYVencerasPreord.nombre , AproximacionInferior.nombre, AproximacionSuperior.nombre};
+    String[] datos = {BusquedaAristas.nombre, EliminacionPtosInteriores.nombre ,  Jarvis.nombre, QuickHullNuevo.nombre ,Incremental.nombre,  GrahamNuevo.nombre,Andrew.nombre, DivideYVencerasPreord.nombre , AproximacionInferior.nombre, AproximacionSuperior.nombre, MEC.nombre};
     public AlgorithmAdapter(Context context, int resource) {
         super(context, resource);
         this.addAll(datos);

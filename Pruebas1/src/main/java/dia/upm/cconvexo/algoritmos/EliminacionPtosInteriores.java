@@ -15,8 +15,10 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 	
 	public final static String nombre = GestorMensajes.getInstancia().getResourceString(R.string.eliminacionPtosInteriores);;
 
+
 	public EliminacionPtosInteriores() {
 		// TODO Auto-generated constructor stub
+        footnote = "sdfootnote56anc";
 	}
 	
 
@@ -101,7 +103,10 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
             GestorMensajes.getInstancia().addMessage(R.string.ptoInterior_c_2);
             GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(null);
             Punto centroide = centroide(subconjuntoConvexo.get(0), subconjuntoConvexo.get(1), subconjuntoConvexo.get(2));
-            ordenarAngularmente(subconjuntoConvexo,centroide);
+            Punto puntoInterior = busquedaPuntoMenorOrdenada(subconjuntoConvexo);
+            GestorMensajes.getInstancia().addMessage(R.string.ptoInterior_c_3b);
+            GestorConjuntoConvexo.getInstancia().anadaPuntoSubconjunto(centroide);
+            ordenarAngularmente(subconjuntoConvexo,puntoInterior);
             for (int i = 0; i < subconjuntoConvexo.size() - 1; i++) {
                 GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(i),subconjuntoConvexo.get(i+1)));
             }

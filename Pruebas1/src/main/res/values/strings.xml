@@ -2,17 +2,12 @@
 <resources>
 
     <string name="app_name">ConvexHull Android</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_search">prueba1</string>
-    <string name="action_compose">prueba2</string>
+    <string name="action_settings">Configuración</string>
     <string name="paso_paso">Paso a paso</string>
     <string name="directo">Directo</string>
     <string name="retardo">Retardo</string>
     <string name="tiempoRetardo">Tiempo de retardo</string>
     <string name="action_list">Lista Puntos</string>
-    <string name="dialog_fire_missiles">valor1</string>
-    <string name="fire">fire1</string>
     <string name="cancel">cancel</string>
     <string name="listaPuntos">Lista de Puntos</string>
     <string name="ok">OK</string>
@@ -67,6 +62,15 @@
     <string name="quickhull_c_2">Es triángulo mayor</string>
     <string name="aprox_c_1">Puntos máximos y mínimos</string>
     <string name="cc_c_1">Fin del cierre convexo</string>
-
+    <string name="MEC">Circulo Minimo</string>
+    <string name="mec_1">Circulo Minimo encontrado</string>
+    <string name="mec_2">MEC encontrado pero no minimo</string>
+    <string name="mec_3">Circulo que no contiene todos los puntos</string>
+    <string name="title_web_view">Descripcion Algoritmo</string>
+    <string name="title_activity_descriptionwebview2">Descripción Algoritmo</string>
+    <string name="punto">Punto :</string>
+    <string name="ptoInterior_c_3">Pintamos el punto geografico</string>
+    <string name="ptoInterior_c_3b">centroide</string>
+    <string name="action_help">Ayuda</string>
 
 </resources>
