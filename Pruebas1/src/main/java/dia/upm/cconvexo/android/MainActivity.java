@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ import android.widget.ZoomControls;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 import dia.upm.cconvexo.R;
+import dia.upm.cconvexo.algoritmos.AlgoritmoGeneradorPuntos;
 import dia.upm.cconvexo.android.adapters.AlgorithmAdapter;
 
 import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
@@ -191,20 +193,10 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     {
         GestorConjuntoConvexo.getInstancia().borraListaPuntos();
 
-       Random r=new Random();
+
        int MaxY = imagenDibujo.getHeight() -10;
        int MaxX = imagenDibujo.getWidth() -10;
-       for (int i=0; i<numeroPuntos ; i++)
-       {
-           Punto p = new Punto();
-
-           p.setY(r.nextInt(MaxY)+5);
-           p.setX(r.nextInt(MaxX)+5);
-           GestorConjuntoConvexo.getInstancia().getListaPuntos().add(p);
-
-
-
-       }
+       GestorConjuntoConvexo.getInstancia().setListaPuntos(AlgoritmoGeneradorPuntos.getListaPuntos(GestorConfiguracion.getInstancia().getTipoPuntosAleatorio(),MaxY,MaxX,numeroPuntos));
        imagenDibujo.refreshPuntos();
         
     }
@@ -378,4 +370,5 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         Log.d(MainActivity.class.getName(),"Volvemos al Main");
 
     }
+
 }

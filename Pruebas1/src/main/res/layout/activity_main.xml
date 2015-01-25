@@ -49,10 +49,7 @@
             android:id="@+id/buttonInfo"/>
 
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:id="@+id/descriptionText"/>
+
 
     <FrameLayout
             android:layout_width="fill_parent"

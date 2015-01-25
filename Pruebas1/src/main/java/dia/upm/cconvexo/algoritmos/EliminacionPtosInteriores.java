@@ -63,7 +63,7 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 		
 		for (int j = i+1; j < N - 1; j++) {
 			
-			for (int k = 0; k < N; k++) {
+			for (int k = j+1; k < N; k++) {
 
                 Triangulo triangulo = new Triangulo(cierreConvexo.get(i), cierreConvexo.get(j), cierreConvexo.get(k));
                 super.pinta_triangulo(triangulo);

@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">ConvexHull Android</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_search">prueba1</string>
-    <string name="action_compose">prueba2</string>
     <string name="paso_paso">Step by Step</string>
     <string name="directo">Direct</string>
     <string name="retardo">Delayed</string>
     <string name="tiempoRetardo">Delay time</string>
     <string name="action_list">Points list</string>
-    <string name="dialog_fire_missiles">valor1</string>
-    <string name="fire">fire1</string>
-    <string name="cancel">cancel</string>
+    <string name="cancel">Cancel</string>
     <string name="listaPuntos">Points list</string>
     <string name="ok">OK</string>
     <string name="franjas">Strip number</string>
@@ -43,7 +37,7 @@
     <string name="graham_c_4">Choose internal point</string>
     <string name="graham_c_5">Sort list around internal point</string>
     <string name="graham_c_6">Add final edge</string>
-    <string name="busqueda_c_1">This edge isnt in CH</string>
+    <string name="busqueda_c_1">This edge is not in CH</string>
     <string name="busqueda_c_2">Edge found</string>
     <string name="busqueda_c_3">Two edge found</string>
     <string name="dyv_c_1">Searching left hull</string>
@@ -53,6 +47,8 @@
     <string name="dyv_c_5">Unique point. Hull found</string>
     <string name="ptoInterior_c_1">Point within triagle </string>
     <string name="ptoInterior_c_2">Drawing convex hull</string>
+    <string name="ptoInterior_c_3b">center</string>
+    <string name="ptoInterior_c_3">Drawing geographic point</string>
     <string name="incremental_c_1">List sort by abscissa</string>
     <string name="incremental_c_2">New point</string>
     <string name="incremental_c_3">Add lower tangency</string>
@@ -60,6 +56,7 @@
     <string name="incremental_c_5">Convex Hull updated</string>
     <string name="jarvis_c_1">Selecting leftmost point</string>
     <string name="jarvis_c_2">Next point</string>
+    <string name="jarvis_c_3">Adding edge to CC</string>
     <string name="jarvis_c_4">Searching edge</string>
     <string name="jarvis_c_5">Closing Convex Hull</string>
     <string name="quickhull_c_1">Selected firt CH edge</string>
@@ -69,9 +66,18 @@
     <string name="MEC">Circle Min</string>
     <string name="mec_1">MEC found</string>
     <string name="mec_2">MEC found but it is not minimum</string>
-    <string name="mec_3">Circle that doesnt contain the points</string>
+    <string name="mec_3">Circle that does not contain the points</string>
     <string name="title_web_view">Algorithm description</string>
+    <string name="title_activity_descriptionwebview2">Algorithm Description</string>
     <string name="punto">Point :</string>
-    <string name="ptoInterior_c_3b">center</string>
     <string name="action_help">Help</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_compose">Componer</string>
+    <string name="hello_world">prueba</string>
+    <string name="oncircle">oncircle</string>
+    <string name="onsquare">onsquare</string>
+    <string name="insquare">insquare</string>
+    <string name="incircle">incircle</string>
+    <string name="randomType">Random Type</string>
+    <string name="settings_tittle">Settings</string>
 </resources>

@@ -72,5 +72,14 @@
     <string name="ptoInterior_c_3">Pintamos el punto geografico</string>
     <string name="ptoInterior_c_3b">centroide</string>
     <string name="action_help">Ayuda</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_compose">Componer</string>
+    <string name="hello_world">prueba</string>
+    <string name="oncircle">circulo</string>
+    <string name="onsquare">cuadrado</string>
+    <string name="incircle">circulo int.</string>
+    <string name="insquare">cuadrado int.</string>
+    <string name="randomType">Tipo Aleatorio</string>
+    <string name="settings_tittle">Configuración</string>
 
 </resources>

@@ -19,6 +19,9 @@ public class GestorConfiguracion {
     private int seconds = 5;
     private int franjas;
 
+
+    private int tipoPuntosAleatorio = R.id.insquare;
+
     public boolean isRunning() {
         return running;
     }
@@ -77,4 +80,13 @@ public class GestorConfiguracion {
     public int getFranjas() {
         return franjas;
     }
+
+    public int getTipoPuntosAleatorio() {
+        return tipoPuntosAleatorio;
+    }
+
+    public void setTipoPuntosAleatorio(int tipoPuntosAleatorio) {
+        this.tipoPuntosAleatorio = tipoPuntosAleatorio;
+    }
+
 }

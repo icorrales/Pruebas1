@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dia.upm.cconvexo"
-    android:versionCode="3"
+    android:versionCode="5"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -24,20 +24,22 @@
 
         <activity
             android:name="dia.upm.cconvexo.android.DescriptionwebviewActivity"
-            android:theme="@android:style/Theme.Holo">
+            android:theme="@android:style/Theme.Holo"
+            >
         </activity>
         <activity
             android:name="dia.upm.cconvexo.android.HelpWebViewActivity"
-            android:theme="@android:style/Theme.Holo">
+            android:theme="@android:style/Theme.Holo"
+            >
         </activity>
 
     </application>
 
-    <uses-permission android:name="android.permission.CAMERA" />
+<!--    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" /> -->
 
 </manifest>

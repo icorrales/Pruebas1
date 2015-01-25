@@ -23,7 +23,7 @@ public class HelpWebViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.webview_tmp);
+        setContentView(R.layout.descriptionwebview);
 
         webView = (WebView) findViewById(R.id.webview_parent);
 //        webView.getSettings().setJavaScriptEnabled(true);

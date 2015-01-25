@@ -9,8 +9,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import dia.upm.cconvexo.R;
 import dia.upm.cconvexo.gestores.GestorAlgoritmos;
+import dia.upm.cconvexo.R;
 
 public class DescriptionwebviewActivity extends Activity {
 
@@ -21,7 +21,7 @@ public class DescriptionwebviewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.webview_tmp);
+        setContentView(R.layout.descriptionwebview);
 
         webView = (WebView) findViewById(R.id.webview_parent);
 //        webView.getSettings().setJavaScriptEnabled(true);
