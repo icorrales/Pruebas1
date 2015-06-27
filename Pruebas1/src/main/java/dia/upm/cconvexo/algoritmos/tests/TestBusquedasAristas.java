@@ -5,6 +5,7 @@ import java.util.List;
 
 import dia.upm.cconvexo.algoritmos.BusquedaAristas;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
+import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 public class TestBusquedasAristas extends TestAbstract {
@@ -45,4 +46,25 @@ public class TestBusquedasAristas extends TestAbstract {
 		List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
 		compruebaCierreConvexoPorAristas(listaAristas);
 	}
+
+    public void testUnitario() throws Exception
+    {
+        initUnitarioAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(1,listPuntos.size());
+        assertEquals(1,listaAristas.size());
+    }
+
+    public void test2Puntos() throws Exception
+    {
+        init2PuntosAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(2,listPuntos.size());
+        assertEquals(2,listaAristas.size());
+        assertTrue(listaAristas.contains(new Arista(list.get(1),list.get(0))));
+    }
 }

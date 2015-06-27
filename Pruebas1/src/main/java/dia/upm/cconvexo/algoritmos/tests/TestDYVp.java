@@ -92,10 +92,32 @@ public class TestDYVp extends TestAbstract {
 		List<Punto> cierreConvexo = new LinkedList<Punto>();
 		algoritmo.divideyvenceras(list, cierreConvexo);
 		compruebaCierreConvexo(cierreConvexo);
-		compruebaCierreConvexoPorAristas(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
+//		compruebaCierreConvexoPorAristas(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
 	}
-	
-	
-	
+
+    public void testUnitario() throws Exception
+    {
+        initUnitarioAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(1,listPuntos.size());
+        assertEquals(1,listaAristas.size());
+    }
+
+    public void test2Puntos() throws Exception
+    {
+        init2PuntosAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(2,listPuntos.size());
+        assertEquals(2,listaAristas.size());
+        assertTrue(listaAristas.contains(new Arista(list.get(1),list.get(0))));
+    }
+
+
+
+
 
 }

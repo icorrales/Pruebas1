@@ -38,7 +38,7 @@ public class TestIncremental extends TestAbstract {
 		assertEquals(list, listOrdenadaAbscisas);
 	}
 	
-	public void test2() throws Exception
+/*	public void test2() throws Exception
 	{
 		algoritmo.ordenacion_abscisas(list);
 		List<Punto> c_convexo = new LinkedList<Punto>();
@@ -69,7 +69,7 @@ public class TestIncremental extends TestAbstract {
 		puntoSoporte = algoritmo.soporte_inferior(c_convexo, list.get(6), list.get(7));
 		assertEquals(list.get(1), puntoSoporte);		
 		
-	}
+	} */
 	
 	public void test4() throws Exception
 	{
@@ -78,8 +78,30 @@ public class TestIncremental extends TestAbstract {
 		List<Arista> conjuntoConvexo = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
 		assertNotNull(conjuntoConvexo);
 	}
-	
-	private void initListaOrdenada(List<Punto> list) {
+
+    public void testUnitario() throws Exception
+    {
+        initUnitarioAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(1,listPuntos.size());
+        assertEquals(1,listaAristas.size());
+    }
+
+    public void test2Puntos() throws Exception
+    {
+        init2PuntosAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(2,listPuntos.size());
+        assertEquals(2,listaAristas.size());
+        assertTrue(listaAristas.contains(new Arista(list.get(1),list.get(0))));
+    }
+
+
+    private void initListaOrdenada(List<Punto> list) {
 		// TODO Auto-generated method stub
 		intoDataList(72,247,list);
 		intoDataList(94,392,list);

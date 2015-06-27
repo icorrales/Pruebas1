@@ -15,6 +15,7 @@ import dia.upm.cconvexo.algoritmos.Incremental;
 import dia.upm.cconvexo.algoritmos.Jarvis;
 import dia.upm.cconvexo.algoritmos.MEC;
 import dia.upm.cconvexo.algoritmos.QuickHullNuevo;
+import dia.upm.cconvexo.android.gestores.GestorConfiguracion;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
 
 /**
@@ -33,7 +34,7 @@ public class AlgorithmAdapter extends ArrayAdapter<String> {
     public boolean areAllItemsEnabled()
     {
 
-        boolean respuesta = ! GestorConjuntoConvexo.getInstancia().getListaPuntos().isEmpty();
+        boolean respuesta = ! GestorConjuntoConvexo.getInstancia().getListaPuntos().isEmpty() && GestorConfiguracion.getInstancia().isRunning() == false;
         Log.d("areAllItemsEnabled " + respuesta, this.getClass().getName());
         return respuesta;
     }
@@ -41,7 +42,7 @@ public class AlgorithmAdapter extends ArrayAdapter<String> {
     @Override
     public  boolean isEnabled(int position)
     {
-        boolean respuesta = ! GestorConjuntoConvexo.getInstancia().getListaPuntos().isEmpty();
+        boolean respuesta = ! GestorConjuntoConvexo.getInstancia().getListaPuntos().isEmpty() && GestorConfiguracion.getInstancia().isRunning() == false;;
         Log.d("isEnabled " + respuesta, this.getClass().getName());
         return respuesta;
     }

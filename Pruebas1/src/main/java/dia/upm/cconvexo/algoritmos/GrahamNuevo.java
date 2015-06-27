@@ -22,8 +22,13 @@ public class GrahamNuevo extends DerivadosGraham {
 	public void start(int delay) {
 		// TODO Auto-generated method stub
 		List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
-		if (listaPuntos.size() > 1)
-		{			
+		if (listaPuntos.size() < 3)
+        {
+            if (listaPuntos.size() == 2)
+            {
+               GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(listaPuntos.get(0),listaPuntos.get(1)));
+            }
+        } else {
 			if (alineados (listaPuntos))
 			{
 				// pinta los dos vertices mas alejados.

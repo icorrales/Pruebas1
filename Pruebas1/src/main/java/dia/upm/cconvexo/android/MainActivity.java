@@ -10,6 +10,7 @@ import android.hardware.Camera;
 import android.location.Address;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -56,7 +57,7 @@ import dia.upm.cconvexo.interfaces.IMessage;
 import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
-public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener, IDelegatePaint {
+public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     ImageButton button;
     EditText textoPuntos;
@@ -64,12 +65,10 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     PanelPuntos imagenDibujo;
 
     Spinner listaExpandible;
-    ZoomControls zoomControls;
-    Camera mCamera = null;
-    private FrameLayout frame;
     private Intent descriptionIntent;
     private ImageButton algDescription;
     final Context context = this;
+    private FrameLayout frame;
 
 
     @Override
@@ -95,63 +94,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         // Lista de Algoritmos.
         listaExpandible = (Spinner) findViewById(R.id.expandableListView);
 //        descriptionText = (TextView) findViewById(R.id.descriptionText);
-
-        initZoom();
         init();
-
-    }
-
-    private void initZoom() {
-        zoomControls = new ZoomControls(this);
-        zoomControls.setVisibility(View.INVISIBLE);
-        zoomControls.setIsZoomInEnabled(true);
-        zoomControls.setIsZoomOutEnabled(true);
-        zoomControls.setOnZoomInClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                zoomCamera(false);
-
-            }
-        });
-        zoomControls.setOnZoomOutClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                zoomCamera(true);
-            }
-        });
-    }
-
-    /**
-     * Enables zoom feature in native camera .  Called from listener of the view
-     * used for zoom in  and zoom out.
-     *
-     *
-     * @param zoomInOrOut  "false" for zoom in and "true" for zoom out
-     */
-    public void zoomCamera(boolean zoomInOrOut) {
-        if(mCamera!=null) {
-            android.hardware.Camera.Parameters parameter = mCamera.getParameters();
-
-            if(parameter.isZoomSupported()) {
-                int MAX_ZOOM = parameter.getMaxZoom();
-                int currnetZoom = parameter.getZoom();
-                if(zoomInOrOut && (currnetZoom <MAX_ZOOM && currnetZoom >=0)) {
-                    parameter.setZoom(++currnetZoom);
-                }
-                else if(!zoomInOrOut && (currnetZoom <=MAX_ZOOM && currnetZoom >0)) {
-                    parameter.setZoom(--currnetZoom);
-                }
-            }
-            else
-                Toast.makeText(this, "Zoom Not Avaliable", Toast.LENGTH_LONG).show();
-
-            mCamera.setParameters(parameter);
-        }
     }
 
     private void init() {
@@ -164,9 +107,6 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         listaExpandible.setAdapter(adapter);
         listaExpandible.setOnItemSelectedListener(this);
         descriptionIntent = new Intent(getApplicationContext(),DescriptionwebviewActivity.class);
-
-
-
 
     }
 
@@ -192,8 +132,6 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     private void dibujaPuntos (Integer numeroPuntos, PanelPuntos imagenDibujo)
     {
         GestorConjuntoConvexo.getInstancia().borraListaPuntos();
-
-
        int MaxY = imagenDibujo.getHeight() -10;
        int MaxX = imagenDibujo.getWidth() -10;
        GestorConjuntoConvexo.getInstancia().setListaPuntos(AlgoritmoGeneradorPuntos.getListaPuntos(GestorConfiguracion.getInstancia().getTipoPuntosAleatorio(),MaxY,MaxX,numeroPuntos));
@@ -250,7 +188,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
         LayoutInflater inflater = getLayoutInflater();
         View convertView = (View) inflater.inflate(R.layout.custom, null);
         alertDialog.setView(convertView);
-        alertDialog.setTitle("Lista Puntos");
+        alertDialog.setTitle(getString(R.string.pointListTitle));
         ListView lv = (ListView) convertView.findViewById(R.id.listView1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
         for (int i = 0; i < listaPuntos.size(); i++) {
@@ -266,8 +204,12 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        final IAlgoritmoHullConvex algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
+        final IAlgoritmoHullConvex algoritmo;
+        algoritmo = GestorAlgoritmos.getInstancia().getAlgoritmo((String)adapterView.getAdapter().getItem(i));
+        executeAlgorithm(algoritmo);
+    }
 
+    public void executeAlgorithm(final IAlgoritmoHullConvex algoritmo) {
         if (GestorConfiguracion.getInstancia().isRunning() == false)
         {
 
@@ -284,63 +226,12 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
             };
             newThread.start();
         }
-
-
-
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 
-    @Override
-    public void paintPuntos() {
-  //     this.updateHandler.sendEmptyMessage(9);
-    }
-
-    @Override
-    public void paintPunto(Punto pto) {
-
-    }
-
-    @Override
-    public void paintArista(Arista a1) {
- //       this.updateHandler.sendEmptyMessage(9);
-
-        imagenDibujo.refresh();
-
-    }
-
-    @Override
-    public void paintArista(Arista a1, int color) {
- //       this.updateHandler.sendEmptyMessage(0);
-        imagenDibujo.refresh();
-
-    }
-
-    @Override
-    public void borraRecta(Arista a1) {
-        imagenDibujo.refresh();
-    }
-
-    @Override
-    public void borraPuntos() {
-
-    }
-
-    @Override
-    public void borraPuntoSubconjunto(Punto p) {
-
-    }
-
-    @Override
-    public void mensajeDescripcion(String texto) {
-
-        // descriptionText.setText(texto);
-
-
-    }
 
 
     private View.OnClickListener webViewAction = new View.OnClickListener() {
@@ -359,7 +250,14 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     {
         Log.d(MainActivity.class.getName(),"Pasamos a la pausa");
         super.onPause();
-        imagenDibujo.thread.setRunning(false);
+
+        // Detectamos si el pause es por bloqueo de pantalla.
+        PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
+        boolean isScreenOn = powerManager.isScreenOn();
+
+        if (isScreenOn) {
+            imagenDibujo.thread.setRunning(false);
+        }
 
     }
 
@@ -368,6 +266,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Adap
     {
         super.onResume();
         Log.d(MainActivity.class.getName(),"Volvemos al Main");
+        // Esto es para cuando bloqueamos la pantalla con el botón y mueren todos los hilos.
 
     }
 

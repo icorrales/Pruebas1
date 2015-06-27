@@ -27,7 +27,6 @@ public class GestorConjuntoConvexo {
 
 
     private Punto selected = null;
-    private List<Punto> conjuntoConvexoPuntos;
     private Circle circleTmp = null;
     private Circle MEC = null;
 

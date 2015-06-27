@@ -66,6 +66,7 @@ public class OpcionesProvider extends ActionProvider implements MenuItem.OnMenuI
         GestorConfiguracion.getInstancia().setTipoEjecucion(item.getItemId());
         // Toast.makeText(mcontext, mcontext.getString(item.getItemId()), Toast.LENGTH_SHORT).show();
 
+        item.setChecked(true);
         return true;
     }
 }

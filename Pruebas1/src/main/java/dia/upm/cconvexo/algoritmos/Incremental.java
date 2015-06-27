@@ -45,6 +45,14 @@ public class Incremental extends AbstractAlgoritmo {
 	public void start(int delay)
 	{
 		List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
+        if (listaPuntos.size() == 1)
+        {
+            // Devolvemos el punto como conjunto convexo sin aristas.
+            GestorConjuntoConvexo.getInstancia().getConjuntoConvexo().add(new Arista(listaPuntos.get(0),listaPuntos.get(0)));
+
+        }
+        else
+        {
 		List<Punto> listaPuntosCopia = (List<Punto>) ((LinkedList<Punto>) listaPuntos).clone();
 		ordenacion_abscisas(listaPuntosCopia);		
 		Iterator<Punto> iterator = listaPuntosCopia.iterator();
@@ -132,7 +140,7 @@ public class Incremental extends AbstractAlgoritmo {
 
 			vertice_derecho = punto;
 		}
-		
+        }
 		
 		
 		

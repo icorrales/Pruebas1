@@ -17,11 +17,13 @@ public class BusquedaAristas extends AbstractAlgoritmo {
 public void start(int delay)
 {
 	List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
-	if (listaPuntos.size() != 1)
+	if (listaPuntos.size() == 1)
 	{
-		List<Arista> aristas = new LinkedList<Arista>();
+        Punto pUnico = listaPuntos.get(0);
+	    GestorConjuntoConvexo.getInstancia().getConjuntoConvexo().add(new Arista(pUnico,pUnico));
 		
 	}
+    else {
 
 /*	c_convexo := lista_circular_vacia;
 if N=1 then
@@ -157,6 +159,7 @@ k:=1; es_arista:=true; pto_izq:=false; pto_dcha:=false;
 		}
 		
 	}
+    }
  
 }	
 	public BusquedaAristas()

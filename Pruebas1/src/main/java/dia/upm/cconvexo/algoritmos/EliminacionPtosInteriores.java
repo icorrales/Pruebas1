@@ -35,7 +35,7 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
 		int N = cierreConvexo.size();
 		if (N>=3)
 		{
-			
+
 		
 
 /* 
@@ -110,11 +110,12 @@ public class EliminacionPtosInteriores extends AbstractAlgoritmo {
             for (int i = 0; i < subconjuntoConvexo.size() - 1; i++) {
                 GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(i),subconjuntoConvexo.get(i+1)));
             }
-            GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(subconjuntoConvexo.size() -1 ),subconjuntoConvexo.get(0)));
+
 
 
 
     }
+    GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(subconjuntoConvexo.get(subconjuntoConvexo.size() -1 ),subconjuntoConvexo.get(0)));
 
 	}
 

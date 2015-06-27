@@ -2,17 +2,30 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/settings_text4"
+        android:text="@string/settings_tittle"
+        style="@android:style/TextAppearance.Holo.DialogWindowTitle"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:id="@+id/settings_text3"
-        android:text="@string/randomType"/>
+        android:text="@string/randomType"
+        style="@android:style/TextAppearance.Holo.Widget.TextView"
+        android:layout_marginLeft="5dp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -37,33 +50,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
          <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:textAlignment="center"
+            android:gravity="center_vertical"
             android:id="@+id/settings_text1"
-            android:text="@string/tiempoRetardo"/>
+            android:text="@string/tiempoRetardo"
+            style="@android:style/TextAppearance.Holo.Widget.TextView"/>
         <NumberPicker
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:width="100dip"
+            android:layout_margin="20dp"
             android:id="@+id/settings_pick1"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
             android:id="@+id/settings_text2"
-            android:text="@string/franjas"/>
+            android:text="@string/franjas"
+            style="@android:style/TextAppearance.Holo.Widget.TextView"/>
         <NumberPicker
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
             android:width="100dip"
+            android:layout_margin="20dp"
             android:id="@+id/settings_pick2"
             />
     </LinearLayout>

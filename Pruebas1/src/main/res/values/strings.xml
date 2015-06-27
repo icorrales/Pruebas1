@@ -81,5 +81,6 @@
     <string name="insquare">cuadrado int.</string>
     <string name="randomType">Tipo Aleatorio</string>
     <string name="settings_tittle">Configuración</string>
+    <string name="pointListTitle">Lista de Puntos</string>
 
 </resources>

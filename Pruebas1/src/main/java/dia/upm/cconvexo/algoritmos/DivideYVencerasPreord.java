@@ -31,13 +31,23 @@ public class DivideYVencerasPreord extends AbstractAlgoritmo {
         Log.d("DivideYVencerasPreord","Inicio Start ");
 		List<Punto> listaPuntos = GestorConjuntoConvexo.getInstancia().getListaPuntos();
 		assert listaPuntos != null && listaPuntos.size() > 0;
-		List<Punto> listaPuntosCopia = new LinkedList<Punto>(listaPuntos);
-		Collections.sort(listaPuntosCopia,new ComparadorAbscisas());
-		List<Punto> cierreConvexo = new LinkedList<Punto> ();
-        Log.d("DivideYVencerasPreord","Inicio dyv");
-		divideyvenceras(listaPuntosCopia,cierreConvexo);
-        Log.d("DivideYVencerasPreord","cierre convexo:" + GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
-		GestorConjuntoConvexo.getInstancia().pintaCierreConvexo();
+        if ( listaPuntos.size() == 1)
+        {
+            GestorMensajes.getInstancia().addMessage(R.string.dyv_c_5);
+            GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(null);
+            Punto pUnico = listaPuntos.get(0);
+            GestorConjuntoConvexo.getInstancia().getConjuntoConvexo().add(new Arista(pUnico,pUnico));
+        }
+        else {
+
+            List<Punto> listaPuntosCopia = new LinkedList<Punto>(listaPuntos);
+            Collections.sort(listaPuntosCopia,new ComparadorAbscisas());
+            List<Punto> cierreConvexo = new LinkedList<Punto> ();
+            Log.d("DivideYVencerasPreord","Inicio dyv");
+            divideyvenceras(listaPuntosCopia,cierreConvexo);
+            Log.d("DivideYVencerasPreord","cierre convexo:" + GestorConjuntoConvexo.getInstancia().getConjuntoConvexo());
+            GestorConjuntoConvexo.getInstancia().pintaCierreConvexo();
+        }
 	}
 
 
@@ -47,7 +57,8 @@ public class DivideYVencerasPreord extends AbstractAlgoritmo {
 		{
             GestorMensajes.getInstancia().addMessage(R.string.dyv_c_5);
             GestorConjuntoConvexo.getInstancia().anadePuntoGrafico(null);
-			cierreConvexo.add(listaPuntosCopia.get(0));
+            Punto pUnico = listaPuntosCopia.get(0);
+			cierreConvexo.add(pUnico);
 		}
 		else
 		{
@@ -100,17 +111,41 @@ public class DivideYVencerasPreord extends AbstractAlgoritmo {
 	private void borraAristasCierre(List<Punto> cierreDcho, Punto infDcho,
 			Punto supDcha) {
 		Punto vertice = supDcha;
-		while (vertice != infDcho)
-		{
-			Arista a1 = new Arista(vertice,siguiente(vertice, cierreDcho));
-            Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
-			GestorConjuntoConvexo.getInstancia().borraArista(a1);
-            //Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
-			//a1 = new Arista(siguiente(vertice, cierreDcho),vertice);
-			//GestorConjuntoConvexo.getInstancia().borraArista(a1);
-			vertice = siguiente(vertice, cierreDcho);
-		}
-	}
+        if (vertice == infDcho)
+        {
+            // hay que borrar todas las intancias del cierre.
+            while (siguiente(vertice,cierreDcho) != infDcho)
+            {
+                Arista a1 = new Arista(vertice,siguiente(vertice, cierreDcho));
+                Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
+                GestorConjuntoConvexo.getInstancia().borraArista(a1);
+                a1 = new Arista(siguiente(vertice, cierreDcho),vertice);
+                GestorConjuntoConvexo.getInstancia().borraArista(a1);
+                vertice = siguiente(vertice, cierreDcho);
+            }
+            //Borramos el último vertice del triangulo.
+            if (vertice != infDcho)
+            {
+                Arista a1 = new Arista(vertice,siguiente(vertice, cierreDcho));
+                Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
+                GestorConjuntoConvexo.getInstancia().borraArista(a1);
+            }
+
+        }
+        else
+        {
+		    while (vertice != infDcho)
+		    {
+                Arista a1 = new Arista(vertice,siguiente(vertice, cierreDcho));
+                Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
+                GestorConjuntoConvexo.getInstancia().borraArista(a1);
+                //Log.d("DivideYVencerasPreord","Borra arista " + a1.toString());
+                //a1 = new Arista(siguiente(vertice, cierreDcho),vertice);
+                //GestorConjuntoConvexo.getInstancia().borraArista(a1);
+                vertice = siguiente(vertice, cierreDcho);
+    		}
+	    }
+    }
 
 
 	private void anadePuntosCierre(List<Punto> cierreDcho,

@@ -108,6 +108,15 @@ public class PanelPuntos extends SurfaceView implements SurfaceHolder.Callback, 
                     crouton.setConfiguration(new Configuration.Builder().setDuration(GestorConfiguracion.getInstancia().getSeconds() * 50).build());
                     crouton.show();
                 }
+                else
+                {
+                    if (GestorConfiguracion.getInstancia().getTipoEjecucion() == R.string.paso_paso)
+                    {
+                        Crouton crouton = Crouton.makeText((Activity) getContext(), R.string.nextStep, Style.INFO);
+                        crouton.setConfiguration(new Configuration.Builder().setDuration(GestorConfiguracion.getInstancia().getSeconds() * 50).build());
+                        crouton.show();
+                    }
+                }
             }
 
         };

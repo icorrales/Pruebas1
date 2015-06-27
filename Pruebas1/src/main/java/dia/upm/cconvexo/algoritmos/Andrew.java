@@ -31,9 +31,9 @@ public class Andrew extends DerivadosGraham {
 
 
 	public void algoritmoAndrew(int delay, List<Punto> listaPuntos) {
-		if (listaPuntos.size() <= 1)
+        assert listaPuntos != null && listaPuntos.size() > 0;
+		if (listaPuntos.size() == 1)
 		{
-			
 		}
 		else
 		{			
@@ -64,7 +64,11 @@ public class Andrew extends DerivadosGraham {
 				scanSubconjunto(delay, subconjuntoInferior, 
 						pDerecha,pIzquierda);
 			}
-			
+
+            if (subconjuntoInferior.size() == 0 || subconjuntoSuperior.size() == 0)
+            {
+                GestorConjuntoConvexo.getInstancia().anadeArista(new Arista(pIzquierda, pDerecha));
+            }
 		}
 	}
 

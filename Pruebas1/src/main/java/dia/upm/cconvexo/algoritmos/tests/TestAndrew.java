@@ -7,6 +7,7 @@ import java.util.List;
 import dia.upm.cconvexo.algoritmos.Andrew;
 import dia.upm.cconvexo.algoritmos.DerivadosGraham;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
+import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 /**
@@ -77,16 +78,39 @@ public class TestAndrew extends TestAbstract {
 	}
 	
 	// Test que comprueba el conjunto convexo por aristas ordenado, de 20 elemenetos.
-		public void test5() throws Exception
-		{
-			initPuntos20();
-			initCierreConvexoReal20();
-			GestorConjuntoConvexo.getInstancia().setListaPuntos(this.list);
-			algoritmo.start(0);
-			super.compruebaCierreConvexoPorAristasGenerico(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo(), this.cierreConvexoReal20);
-			
-			
-		}
+    public void test5() throws Exception
+    {
+        initPuntos20();
+        initCierreConvexoReal20();
+        GestorConjuntoConvexo.getInstancia().setListaPuntos(this.list);
+        algoritmo.start(0);
+        super.compruebaCierreConvexoPorAristasGenerico(GestorConjuntoConvexo.getInstancia().getConjuntoConvexo(), this.cierreConvexoReal20);
+
+
+    }
+
+    public void testUnitario() throws Exception
+    {
+        initUnitarioAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(0,listPuntos.size());
+        assertEquals(0,listaAristas.size());
+    }
+
+    public void test2Puntos() throws Exception
+    {
+        init2PuntosAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        List listPuntos = GestorConjuntoConvexo.getInstancia().getConjuntoConvexoPuntos();
+        assertEquals(2,listPuntos.size());
+        assertEquals(1,listaAristas.size());
+        Arista aDirecta = new Arista(list.get(0),list.get(1));
+        Arista aInversa = new Arista(list.get(1),list.get(0));
+        assertTrue(listaAristas.contains( aDirecta) || listaAristas.contains(aInversa));
+    }
 
 	private void initListaOrdenada(List<Punto> list) {
 		// TODO Auto-generated method stub

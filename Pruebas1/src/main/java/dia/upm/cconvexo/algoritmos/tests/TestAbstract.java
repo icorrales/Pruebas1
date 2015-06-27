@@ -51,7 +51,7 @@ public abstract class TestAbstract extends TestCase {
 	} 
 	
 	public void initPuntos20() {
-		
+
 		list.clear();
 		
 		intoDataList(242,429,list);
@@ -80,11 +80,37 @@ public abstract class TestAbstract extends TestCase {
 		intoDataList(320,4,list);
 	}
 	
-	
-	
-	
-	
-	public void initCierreConvexoReal20()	
+	public void initPuntos1() {
+        list.clear();
+        intoDataList(242,429,list);
+
+    }
+
+    public void initCierreConvexoReal1()
+    {
+        cierreConvexoReal.clear();
+
+    }
+
+
+    public void initPuntos2() {
+        list.clear();
+        intoDataList(242,429,list);
+        intoDataList(320,7,list);
+    }
+
+    public void initCierreConvexoReal2()
+    {
+        cierreConvexoReal.clear();
+        cierreConvexoReal.add(list.get(0));
+        cierreConvexoReal.add(list.get(1));
+
+    }
+
+
+
+
+    public void initCierreConvexoReal20()
 	{
 		cierreConvexoReal20.clear();
 		cierreConvexoReal20.add(list.get(18));
@@ -192,4 +218,19 @@ public abstract class TestAbstract extends TestCase {
 		System.out.println("Aristas Obtenidas:" + aristas.toString());
 		
 	}
+
+    public void init2PuntosAbst() {
+        initPuntos2();
+        initCierreConvexoReal2();
+        GestorConjuntoConvexo.getInstancia().borraListaPuntos();
+        GestorConjuntoConvexo.getInstancia().setListaPuntos(list);
+
+    }
+
+    public void initUnitarioAbst() {
+        initPuntos1();
+        initCierreConvexoReal1();
+        GestorConjuntoConvexo.getInstancia().borraListaPuntos();
+        GestorConjuntoConvexo.getInstancia().setListaPuntos(list);
+    }
 }

@@ -60,11 +60,16 @@ public class Circle {
     }
 
     public Circle(Punto p1, Punto p2) {
+        assert p1 != null;
+        assert p2 != null;
+        initCircle2Points(p1,p2);
+    }
 
-        centro.x = 0.5*(p1.x + p2.x);
-        centro.y = 0.5*(p1.y + p2.y);
+    private void initCircle2Points(Punto p1, Punto p2) {
+        double centro_x = 0.5*(p1.x + p2.x);
+        double centro_y = 0.5*(p1.y + p2.y);
+        centro = new Punto(centro_x,centro_y);
         radius = centro.distance(p1);
-
     }
 
 }

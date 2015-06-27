@@ -6,6 +6,7 @@ import java.util.List;
 import dia.upm.cconvexo.algoritmos.EliminacionPtosInteriores;
 import dia.upm.cconvexo.algoritmos.Jarvis;
 import dia.upm.cconvexo.gestores.GestorConjuntoConvexo;
+import dia.upm.cconvexo.model.Arista;
 import dia.upm.cconvexo.model.Punto;
 
 /**
@@ -54,7 +55,7 @@ public class TestPuntosInternos extends TestAbstract {
         initCierreConvexoReal20();
         GestorConjuntoConvexo.getInstancia().borraListaPuntos();
         GestorConjuntoConvexo.getInstancia().setListaPuntos(list);
-        List<Punto> cierreConvexo = new LinkedList<Punto>();
+
         algoritmo.start(0);
         //List listaCC= GestorConjuntoConvexo.getInstancia().getListaPuntos();
         //compruebaCierreConvexo(listaCC);
@@ -79,9 +80,27 @@ public class TestPuntosInternos extends TestAbstract {
         initConjuntoPuntosComparador();
         Punto pFinal = new Punto(list.get(1).getX(),list.get(1).getY());
         Punto centroide = algoritmo.busquedaPuntoMenorOrdenada(list);
-        algoritmo.ordenarAngularmente(list,centroide);
-        assertTrue(list.get(list.size() -1).equals(pFinal));
+        algoritmo.ordenarAngularmente(list, centroide);
+        assertTrue(list.get(list.size() - 1).equals(pFinal));
 
     }
+
+    public void testUnitario() throws Exception
+    {
+        initUnitarioAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+         assertTrue(listaAristas.size() == 1);
+    }
+
+    public void test2Puntos() throws Exception
+    {
+        init2PuntosAbst();
+        algoritmo.start(0);
+        List listaAristas = GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
+        assertTrue(listaAristas.size() == 1);
+        assertTrue(listaAristas.contains(new Arista(list.get(1),list.get(0))));
+    }
+
 
 }

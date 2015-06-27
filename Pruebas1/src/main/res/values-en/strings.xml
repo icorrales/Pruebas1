@@ -80,4 +80,5 @@
     <string name="incircle">incircle</string>
     <string name="randomType">Random Type</string>
     <string name="settings_tittle">Settings</string>
+    <string name="pointListTitle">Point List</string>
 </resources>

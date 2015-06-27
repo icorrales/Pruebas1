@@ -33,7 +33,7 @@ public class MEC implements IAlgoritmoHullConvex {
         Circle circleMin = null;
         List<Arista> cconvexo= GestorConjuntoConvexo.getInstancia().getConjuntoConvexo();
 
-        if (cconvexo.size() == 1)
+        if (cconvexo.size() <=2)
         {
             Arista a1 = cconvexo.get(0);
             circleMin = new Circle(a1.getDestino(),a1.getOrigen());

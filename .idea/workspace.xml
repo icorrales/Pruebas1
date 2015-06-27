@@ -14,9 +14,7 @@
   </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
-      <GlobalState>
-        <option name="visible" value="false" />
-      </GlobalState>
+      <GlobalState />
     </option>
   </component>
   <component name="AndroidLayouts">
@@ -30,8 +28,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2db6308-3f41-4005-9793-60d1feb442fb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" afterPath="$PROJECT_DIR$/Pruebas1/Pruebas1.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/acciones/StartAlgoritmoAction.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/AlgorithmAdapter.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/AlgorithmAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Andrew.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Andrew.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/model/Circle.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/model/Circle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/OpcionesProvider.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/OpcionesProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAlgorithmSuite.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAlgorithmSuite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestBusquedasAristas.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestBusquedasAristas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestJarvis.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestJarvis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java" afterPath="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/build.gradle" afterPath="$PROJECT_DIR$/Pruebas1/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/settings.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/res/layout/settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pruebas1/src/main/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/Pruebas1/src/main/res/values-en/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pruebas1.iws" />
@@ -93,7 +120,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/ConvexHullGestureListener.java" line="102" class="dia.upm.cconvexo.android.adapters.ConvexHullGestureListener" package="dia.upm.cconvexo.android.adapters">
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGeneracionPuntos.java" line="48" class="dia.upm.cconvexo.algoritmos.tests.TestGeneracionPuntos" package="dia.upm.cconvexo.algoritmos.tests">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -108,7 +135,127 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" line="82" class="dia.upm.cconvexo.algoritmos.tests.TestPuntosInternos" package="dia.upm.cconvexo.algoritmos.tests">
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGeneracionPuntos.java" line="26" class="dia.upm.cconvexo.algoritmos.tests.TestGeneracionPuntos" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AlgoritmoGeneradorPuntos.java" line="57" class="dia.upm.cconvexo.algoritmos.AlgoritmoGeneradorPuntos" package="dia.upm.cconvexo.algoritmos">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" line="92" class="dia.upm.cconvexo.algoritmos.tests.TestPuntosInternos" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" line="97" class="dia.upm.cconvexo.algoritmos.tests.TestPuntosInternos" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" line="101" class="dia.upm.cconvexo.algoritmos.tests.TestPuntosInternos" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" line="87" class="dia.upm.cconvexo.algoritmos.tests.TestIncremental" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" line="103" class="dia.upm.cconvexo.algoritmos.tests.TestAndrew" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" line="78" class="dia.upm.cconvexo.algoritmos.tests.TestGraham" package="dia.upm.cconvexo.algoritmos.tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java" line="109" class="dia.upm.cconvexo.android.view.PanelPuntos$2" package="dia.upm.cconvexo.android.view">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -141,8 +288,34 @@
       <file leaf-file-name="Jarvis.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Jarvis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="37" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1815">
-              <folding />
+            <state line="73" column="46" selection-start="2315" selection-end="2315" vertical-scroll-proportion="0.0" vertical-offset="1300" max-vertical-offset="1695">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#471#486#0" expanded="false" />
+                <element signature="e#1184#1191#0" expanded="false" />
+                <element signature="e#1323#1342#0" expanded="false" />
+                <element signature="e#1577#1596#0" expanded="false" />
+                <element signature="e#1956#1975#0" expanded="false" />
+                <element signature="e#2145#2164#0" expanded="false" />
+                <element signature="e#3239#3258#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MEC.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="9" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#553#565#0" expanded="false" />
+                <element signature="e#1199#1213#0" expanded="false" />
+                <element signature="e#2122#2136#0" expanded="false" />
+                <element signature="e#2584#2598#0" expanded="false" />
+                <element signature="e#2855#2869#0" expanded="false" />
+                <element signature="e#3157#3171#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,75 +323,52 @@
       <file leaf-file-name="QuickHullNuevo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/QuickHullNuevo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="37" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1950">
+            <state line="100" column="65" selection-start="3032" selection-end="3032" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1815">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#522#540#0" expanded="false" />
+                <element signature="e#702#709#0" expanded="false" />
+                <element signature="e#1284#1306#0" expanded="false" />
+                <element signature="e#2192#2214#0" expanded="false" />
+                <element signature="e#2451#2473#0" expanded="false" />
+                <element signature="e#2965#2972#0" expanded="false" />
+                <element signature="e#3022#3029#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DivideYVencerasPreord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="55" selection-start="5144" selection-end="5144" vertical-scroll-proportion="0.0" vertical-offset="1628" max-vertical-offset="3285">
+              <folding>
+                <element signature="e#606#627#0" expanded="true" />
+                <element signature="e#1094#1110#0" expanded="true" />
+                <element signature="e#2124#2140#0" expanded="true" />
+                <element signature="e#2754#2770#0" expanded="true" />
+                <element signature="e#3028#3044#0" expanded="true" />
+                <element signature="e#4023#4039#0" expanded="true" />
+                <element signature="e#4152#4168#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestAlgorithmSuite.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAlgorithmSuite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DescriptionwebviewActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/DescriptionwebviewActivity.java">
+      <file leaf-file-name="TestDYVp.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="404" selection-end="2598" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+            <state line="14" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="-3.372093" vertical-offset="1395" max-vertical-offset="1815">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ayuda_usuario.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/assets/ayuda_usuario.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="4" selection-start="945" selection-end="945" vertical-scroll-proportion="-4.25" vertical-offset="303" max-vertical-offset="1260">
-              <folding>
-                <element signature="n#STYLE#0;n#P#0;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#1;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#2;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#4;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#5;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#7;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#8;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#9;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#10;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#11;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#12;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-                <element signature="n#STYLE#0;n#P#13;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpWebViewActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/HelpWebViewActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1102#1119#0" expanded="true" />
-                <element signature="e#1182#1395#0" expanded="true" />
-                <element signature="e#1384#1385#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="43" selection-start="8310" selection-end="8310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5505">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="52" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="735">
-              <folding>
-                <element signature="e#409#427#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -226,29 +376,46 @@
       <file leaf-file-name="ConvexHullGestureListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/ConvexHullGestureListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="0" selection-start="5769" selection-end="5769" vertical-scroll-proportion="0.0" vertical-offset="2888" max-vertical-offset="3135">
+            <state line="104" column="32" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="3135">
               <folding>
-                <element signature="e#5943#5959#0" expanded="true" />
-                <element signature="e#6054#6082#0" expanded="true" />
-                <element signature="e#6085#6114#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2479#2497#0" expanded="false" />
+                <element signature="e#2592#2620#0" expanded="false" />
+                <element signature="e#2623#2654#0" expanded="false" />
+                <element signature="e#3664#3691#0" expanded="false" />
+                <element signature="e#5943#5959#0" expanded="false" />
+                <element signature="e#6054#6082#0" expanded="false" />
+                <element signature="e#6085#6114#0" expanded="false" />
+                <element signature="e#6499#6515#0" expanded="false" />
+                <element signature="e#6610#6638#0" expanded="false" />
+                <element signature="e#6641#6670#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values/strings.xml">
+      <file leaf-file-name="AbstractAlgoritmo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="2730" selection-end="2730" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1230">
+            <state line="185" column="20" selection-start="4950" selection-end="4950" vertical-scroll-proportion="0.0" vertical-offset="2542" max-vertical-offset="4665">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values-en/strings.xml">
+      <file leaf-file-name="GestorConjuntoConvexo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="44" selection-start="3630" selection-end="3630" vertical-scroll-proportion="0.8192308" vertical-offset="792" max-vertical-offset="1245">
+            <state line="24" column="13" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="6229" max-vertical-offset="6525">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Incremental.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="13" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="3990">
               <folding />
             </state>
           </provider>
@@ -262,8 +429,8 @@
     </FindUsagesManager>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/Pruebas1/build/release-keystore.jks" />
-    <option name="KEY_ALIAS" value="release-prueba-keystore" />
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/Pruebas1/build/release-keystore_test.jks" />
+    <option name="KEY_ALIAS" value="release-test" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
@@ -280,7 +447,7 @@
         <entry key="" value="true" />
         <entry key=":Pruebas1/Pruebas1Project/" value="true" />
         <entry key="Pruebas1/Pruebas1Project/" value="true" />
-        <entry key="Pruebas1Project/" value="false" />
+        <entry key="Pruebas1Project/" value="true" />
       </map>
     </option>
     <option name="recentTasks">
@@ -294,6 +461,48 @@
               <option name="taskNames">
                 <list>
                   <option value="assembleRelease" />
+                </list>
+              </option>
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="assembleRelease_test" />
+                </list>
+              </option>
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="assembleDebug" />
+                </list>
+              </option>
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="assemble" />
                 </list>
               </option>
             </ExternalSystemSettings>
@@ -367,6 +576,11 @@
                 <option name="name" value="assembleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release_test builds" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="assembleRelease_test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="build" />
@@ -393,6 +607,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="checkRelease_testManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Deletes the build directory." />
@@ -452,6 +670,22 @@
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="compileRelease_testAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="compileRelease_testJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="compileRelease_testNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="compileRelease_testRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks on currently connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="connectedCheck" />
@@ -477,6 +711,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="dexRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="dexRelease_test" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
@@ -527,6 +765,22 @@
                 <option name="name" value="generateReleaseSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="generateRelease_testBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="generateRelease_testResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="generateRelease_testResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="generateRelease_testSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Installs the Debug build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="installDebug" />
@@ -540,6 +794,11 @@
                 <option name="description" value="Installs the Release build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="installRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the Release_test build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="installRelease_test" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
@@ -557,9 +816,19 @@
                 <option name="name" value="lintRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Release_test build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="lintRelease_test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs lint on just the fatal issues in the Release build" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on just the fatal issues in the Release_test build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="lintVitalRelease_test" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
@@ -587,6 +856,14 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="mergeRelease_testAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="mergeRelease_testResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="packageDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -596,6 +873,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="packageRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="packageRelease_test" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
@@ -623,7 +904,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="preDexRelease_test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="preReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="preRelease_testBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:appcompat-v7:19.1.0" />
@@ -641,6 +930,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="prepareReleaseDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="prepareRelease_testDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
@@ -679,6 +972,18 @@
                 <option name="name" value="processReleaseResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="processRelease_testJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="processRelease_testManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="processRelease_testResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the signing info for each variant" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="signingReport" />
@@ -704,6 +1009,11 @@
                 <option name="name" value="uninstallRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the Release_test build" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="uninstallRelease_test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="validateDebugSigning" />
               </ExternalTaskPojo>
@@ -713,7 +1023,15 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="validateRelease_testSigning" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
                 <option name="name" value="zipalignRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Pruebas1" />
+                <option name="name" value="zipalignRelease_test" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -722,7 +1040,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1377937747639" />
+        <entry key="$PROJECT_DIR$" value="1425840785862" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -735,6 +1053,42 @@
                   <entry key="$PROJECT_DIR$">
                     <value>
                       <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.8.3/6ec4ee59a1de83749cfd3d112e9d987982cc3754/gradle-0.8.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/ed727a8d9f247e2050281cb083f1c77b09dcb5cd/guava-15.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/22.5.3/53a1de01737be1d06586dcd18ce2215815431a5f/common-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.8.3/c84f71c379a7f56f3842806875329ea793164b6e/builder-model-0.8.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/22.5.3/3e1fe8f13d18ac50f062f4dea84b25d7ee83d8e/dvlib-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.1/33fc26c02f8043ab0ede19eadc8c9885386b255c/httpcore-4.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/4216af16d38465bbab0f3dff8efa14204f7a399a/commons-codec-1.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/3d1d918f32709e33ba7ddb2c4e8d1c543ebe713e/httpclient-4.1.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/9ba2dcdf94ce35c8a8e9bff242db0618ca932e92/httpmime-4.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/22.5.3/f62adac92d02b5e3d09b3cc859031bb1ec24197a/layoutlib-api-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.0/995ae384a0b1e2c66269e6bc5198db8561fb45a2/commons-compress-1.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/22.5.3/ef717702bae70741d0fe5182d38299935d6babde/sdklib-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/22.5.3/4834f73524a3510330dd3e48a01cfad8fbdc3c7f/sdk-common-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/659add6efc75a4715d738e73f07505246edf4d66/asm-4.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.lombok/lombok-ast/0.2.2/57e560b535ceaa14fb6f15422d74594acd6c5b64/lombok-ast-0.2.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/4.0/67bd266cd17adcee486b76952ece4cc85fe248b8/asm-tree-4.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/22.5.3/68319bca3727671d57545d86bb5ffc230212b06e/lint-api-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/1c45d52b6f6c638db13cf3ac12adeb56b254cdd7/asm-analysis-4.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/22.5.3/8af45f7eae848bb02dd763ae7e5d53856d2e1b98/lint-checks-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/d9fd79499c664bccaf24dbe04be417de6c6af64a/ecj-4.2.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/22.5.3/bb9d94887e3ec31fa00bcb3c4e5bfd8e8e4245ff/lint-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/22.5.3/7559548b8626c7362c7a14888f27e93965036d18/ddmlib-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.2.1/d6dac1da0b24ab9ea9a6b5d49c2586d85f17e597/javawriter-2.2.1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/22.5.3/d2054b63f44498f1d6b2166f3d318ae99e4cdaa5/manifest-merger-22.5.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.8.3/cf2f2637027455eba88f718e7ab7cd5ef2d85a9f/builder-test-api-0.8.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/960dea7c9181ba0b17e8bab0c06a43f0a5f04e65/bcprov-jdk15on-1.48.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/28b7614b908a47844bb27e3c94b45b6893656265/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.8.3/738346f40d4f2ec963d88b826ee54fce7975b219/builder-0.8.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.10/46e891272ae0338af3f5de5e14d8d2641edefc2c/proguard-base-4.10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.10/edad1b6af1c08c54a58fb39da9fa48e03bc6678d/proguard-gradle-4.10.jar" />
+                          </list>
+                        </option>
                         <option name="path" value="$PROJECT_DIR$" />
                       </ExternalModuleBuildClasspathPojo>
                     </value>
@@ -744,69 +1098,37 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.8.3/5a6c951316966332ccde24900fb08bb8be47a407/gradle-0.8.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/0.8.3/6ec4ee59a1de83749cfd3d112e9d987982cc3754/gradle-0.8.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/36b6a585c0f0c63bd85fb04db0dcb7b217298956/guava-15.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/ed727a8d9f247e2050281cb083f1c77b09dcb5cd/guava-15.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/22.5.3/3a7c6f0f932c8b3a129e04e8dbf6ad3755765aff/common-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/22.5.3/53a1de01737be1d06586dcd18ce2215815431a5f/common-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.8.3/d90043494d8e2b308a64a0852c7f26dd83747e99/builder-model-0.8.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/0.8.3/c84f71c379a7f56f3842806875329ea793164b6e/builder-model-0.8.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/22.5.3/8d69a3d0b76b4cb1bed4f3e22ad3c7c5faf1973a/dvlib-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/22.5.3/3e1fe8f13d18ac50f062f4dea84b25d7ee83d8e/dvlib-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.1/1fdf61e5ba87e0e4676c22677e0b2fe3a05c2fd8/httpcore-4.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.1/33fc26c02f8043ab0ede19eadc8c9885386b255c/httpcore-4.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/commons-logging-1.1.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/5310da9f90e843883309e9e0bf5950faa79882a0/commons-codec-1.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/4216af16d38465bbab0f3dff8efa14204f7a399a/commons-codec-1.4.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/42f6189003f355107f53b937770092517de69710/httpclient-4.1.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/3d1d918f32709e33ba7ddb2c4e8d1c543ebe713e/httpclient-4.1.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/3ac83213baeab2b21fde6c0bf47ed68ea3e6a8da/httpmime-4.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/9ba2dcdf94ce35c8a8e9bff242db0618ca932e92/httpmime-4.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/309cd2cff7260e465792fda3dcbb063b730d8050/kxml2-2.3.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/22.5.3/64c7e50ba4e96d2fddc58cdb43ea345ba27de6f/layoutlib-api-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/22.5.3/f62adac92d02b5e3d09b3cc859031bb1ec24197a/layoutlib-api-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.0/913e9963c558d36bdfdc19bab739a282999d08eb/commons-compress-1.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.0/995ae384a0b1e2c66269e6bc5198db8561fb45a2/commons-compress-1.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/22.5.3/bd15bbd26bd4fd93db1e04a430cdc9401b5757b/sdklib-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/22.5.3/ef717702bae70741d0fe5182d38299935d6babde/sdklib-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/22.5.3/7e58d1c88c532bdb70d80ac1a411b31a00715ece/sdk-common-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/22.5.3/4834f73524a3510330dd3e48a01cfad8fbdc3c7f/sdk-common-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/659add6efc75a4715d738e73f07505246edf4d66/asm-4.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.lombok/lombok-ast/0.2.2/47ebe619db7def288aad08bd65d26eea6d67f8ee/lombok-ast-0.2.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.lombok/lombok-ast/0.2.2/57e560b535ceaa14fb6f15422d74594acd6c5b64/lombok-ast-0.2.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-tree-4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/4.0/67bd266cd17adcee486b76952ece4cc85fe248b8/asm-tree-4.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/22.5.3/e8440eefd7f90732613442b574f81ca60b776728/lint-api-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/22.5.3/68319bca3727671d57545d86bb5ffc230212b06e/lint-api-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/4a33d6206d6d442446a8edbd2b0798ecfaebc229/asm-analysis-4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/1c45d52b6f6c638db13cf3ac12adeb56b254cdd7/asm-analysis-4.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/22.5.3/9bcb41221a64f938bec0f87c61e6054dbda84943/lint-checks-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/22.5.3/8af45f7eae848bb02dd763ae7e5d53856d2e1b98/lint-checks-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/fb9dc21349d06dd00b395af5c42f299df828f9da/ecj-4.2.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/d9fd79499c664bccaf24dbe04be417de6c6af64a/ecj-4.2.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/22.5.3/3dd2f99c55620b697d6997c9b702f7d3c6ea26e0/lint-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/22.5.3/bb9d94887e3ec31fa00bcb3c4e5bfd8e8e4245ff/lint-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/22.5.3/7696f046c23e6226e7bbcc904195df6130c416d3/ddmlib-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/22.5.3/7559548b8626c7362c7a14888f27e93965036d18/ddmlib-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.2.1/9476a897088c64437ddba17bedbbdb2272499d63/javawriter-2.2.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.2.1/d6dac1da0b24ab9ea9a6b5d49c2586d85f17e597/javawriter-2.2.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/22.5.3/dbf6b89cca2e25c7e3dbeb615420a959db906411/manifest-merger-22.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/22.5.3/d2054b63f44498f1d6b2166f3d318ae99e4cdaa5/manifest-merger-22.5.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.8.3/6262ae8a1aa041298b3d58dfdf7e297ba08ccc88/builder-test-api-0.8.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/0.8.3/cf2f2637027455eba88f718e7ab7cd5ef2d85a9f/builder-test-api-0.8.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/3824866f059053c43b118eb5a067ea1800d8c913/bcprov-jdk15on-1.48-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/960dea7c9181ba0b17e8bab0c06a43f0a5f04e65/bcprov-jdk15on-1.48.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/8cff777fce5ef53cc35fa569faa8d12faaf34a78/bcpkix-jdk15on-1.48-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/28b7614b908a47844bb27e3c94b45b6893656265/bcpkix-jdk15on-1.48.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.8.3/2eca3955b9b54deb5bf3a1b3837b424acd174d6b/builder-0.8.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/0.8.3/738346f40d4f2ec963d88b826ee54fce7975b219/builder-0.8.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.10/2e69a382547b042b3d2d03440687fb1e2ac06af2/proguard-base-4.10-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/4.10/46e891272ae0338af3f5de5e14d8d2641edefc2c/proguard-base-4.10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.10/9ed4b7b34d522f36aa61b5142576fa5e8cc733b8/proguard-gradle-4.10-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/4.10/edad1b6af1c08c54a58fb39da9fa48e03bc6678d/proguard-gradle-4.10.jar" />
                           </list>
                         </option>
@@ -912,57 +1234,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/gestores/GestorPuntos.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/test/TestPuntos.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/gestores/GestorConfiguracion.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/interfaces/IMessage.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/ListaPuntosView.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DerivadosGraham.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionGeneral.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/AlgorithmAdapter.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/model/Arista.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/model/Circle.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/ActionBarActivity.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/assets/index.html" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/Descriptionwebview2Activity.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/gestores/GestorMensajes.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAproximacionSuperior.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAlgorithmSuite.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/model/Punto.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/global/ComparadorAngulos.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/DescriptionWebView.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/menu/main_activity_actions.xml" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/HelpFragment.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/webview_tmp.xml" />
-        <option value="$PROJECT_DIR$/Pruebas1/build.gradle" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/descriptionwebview.xml" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/MySurfaceThread.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorAlgoritmos.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/interfaces/IAlgoritmoHullConvex.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/DescriptionwebviewActivity.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Andrew.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionInferior.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionSuperior.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Jarvis.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/QuickHullNuevo.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/assets/ayuda_usuario.html" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/HelpWebViewActivity.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/ConvexHullGestureListener.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/R.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/descriptionwebview.xml" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/DescriptionwebviewActivity.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/HelpWebViewActivity.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/menu/main_activity_actions.xml" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/gestores/GestorConfiguracion.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGeneracionPuntos.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AlgoritmoGeneradorPuntos.java" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/SettingsFrament.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAlgorithmSuite.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAbstract.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestPuntosInternos.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestJarvis.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestIncremental.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestBusquedasAristas.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/BusquedaAristas.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestQuickHull.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAndrew.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Andrew.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestGraham.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/GrahamNuevo.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/Pruebas1/build.gradle" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/model/Circle.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Jarvis.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/AlgorithmAdapter.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/res/layout/settings.xml" />
         <option value="$PROJECT_DIR$/Pruebas1/src/main/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/OpcionesProvider.java" />
+        <option value="$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java" />
       </list>
     </option>
   </component>
@@ -1017,10 +1339,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Tests" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1077,6 +1395,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1089,7 +1411,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pruebas1/libs/crouton-1.8.5.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pruebas1/build/release-keystore_test.jks" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="177" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="pruebas1" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -1103,7 +1425,7 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Pruebas1/src/main/java/com/example/pruebas1" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
-    <property name="options.lastSelected" value="MavenSettings" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
@@ -1130,7 +1452,7 @@
     <property name="DEBUGGABLE_DEVICE" value="emulator-5554 (tester1)" />
     <property name="DEBUGGABLE_PROCESS" value="com.example.pruebas1" />
     <property name="SHOW_ALL_PROCESSES" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
+    <property name="extract.method.default.visibility" value="public" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="237" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -1145,27 +1467,28 @@
       <recent name="$PROJECT_DIR$/Pruebas1/src/main/res/values-en" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="dia.upm.cconvexo.android" />
       <recent name="dia.upm.cconvexo.android.view" />
       <recent name="dia.upm.cconvexo.interfaces" />
       <recent name="dia.upm.cconvexo.android.adapters" />
       <recent name="com.example.pruebas1.view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Pruebas1/src/main/assets" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dia.upm.cconvexo.android.test" />
       <recent name="dia.upm.cconvexo.android" />
       <recent name="dia.upm.cconvexo.android.adapters" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Pruebas1/src/main/assets" />
-    </key>
   </component>
-  <component name="RunManager" selected="Android Application.Pruebas1">
-    <configuration default="false" name="TestJarvis" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Android Tests.TestAlgorithmSuite">
+    <configuration default="false" name="TestBusquedasAristas..." type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="Pruebas1" />
       <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestJarvis" />
+      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestBusquedasAristas" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="true" />
@@ -1206,28 +1529,12 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="TestAlgorithmSuite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestAlgorithmSuite" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Pruebas1" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestPuntosInternos" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestAndrew" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="Pruebas1" />
       <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestPuntosInternos" />
+      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestAndrew" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="true" />
@@ -1245,12 +1552,35 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="testComparador()" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestGraham" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="Pruebas1" />
-      <option name="TESTING_TYPE" value="3" />
+      <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="testComparador" />
-      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestPuntosInternos" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestGraham" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestAlgorithmSuite" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="Pruebas1" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestAlgorithmSuite" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="true" />
@@ -1445,6 +1775,29 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="false" name="TestGeneracionPuntos..." type="AndroidTestRunConfigurationType" factoryName="Android Tests" nameIsGenerated="true">
+      <module name="Pruebas1" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="dia.upm.cconvexo.algoritmos.tests.TestGeneracionPuntos" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="Pruebas1" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="Pruebas1" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1467,21 +1820,22 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.Pruebas1" />
-      <item index="1" class="java.lang.String" itemvalue="Android Tests.TestJarvis" />
-      <item index="2" class="java.lang.String" itemvalue="Android Tests.TestQuickHull" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TestAlgorithmSuite" />
-      <item index="4" class="java.lang.String" itemvalue="Android Tests.TestPuntosInternos" />
-      <item index="5" class="java.lang.String" itemvalue="Android Tests.testComparador()" />
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Android Tests.TestGeneracionPuntos..." />
+      <item index="1" class="java.lang.String" itemvalue="Android Application.Pruebas1" />
+      <item index="2" class="java.lang.String" itemvalue="Android Tests.TestBusquedasAristas..." />
+      <item index="3" class="java.lang.String" itemvalue="Android Tests.TestQuickHull" />
+      <item index="4" class="java.lang.String" itemvalue="Android Tests.TestAndrew" />
+      <item index="5" class="java.lang.String" itemvalue="Android Tests.TestGraham" />
+      <item index="6" class="java.lang.String" itemvalue="Android Tests.TestAlgorithmSuite" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.TestPuntosInternos" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.testComparador()" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestAlgorithmSuite" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.TestAlgorithmSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.TestGraham" />
+        <item index="2" class="java.lang.String" itemvalue="Android Tests.TestAndrew" />
         <item index="3" class="java.lang.String" itemvalue="Android Tests.TestQuickHull" />
-        <item index="4" class="java.lang.String" itemvalue="Android Tests.TestJarvis" />
+        <item index="4" class="java.lang.String" itemvalue="Android Tests.TestBusquedasAristas..." />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -1642,7 +1996,15 @@
       <created>1418669925593</created>
       <updated>1418669925593</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="15 diciembre&#10;&#10;Mover puntos con doble click.(hecho)&#10;Borrar puntos con gesto ( heho )&#10;Aleatorios con circulo&#10;Puntos internos (hecho)&#10;arreglar bugs de nuevos puntos ( hecho simplemente no lanzar nada cuando no is running )&#10;Meter splash de instrucciones (hecho)&#10;Hacer que funcionen los tests (hecho)&#10;Algoritmos para casos individuales&#10;Meter teoria por algoritmo (hecho)&#10;Introducir html con ayuda ( hecho )&#10;">
+      <created>1418670026430</created>
+      <updated>1418670026430</updated>
+    </task>
+    <task id="LOCAL-00032" summary="25 Enero&#10;&#10;Correccion de errores.&#10;Pagina de teoria">
+      <created>1422209047813</created>
+      <updated>1422209047813</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1673,61 +2035,61 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.64733917" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2982456" sideWeight="0.17871326" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.54226476" sideWeight="0.7370929" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4433812" sideWeight="0.2621128" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35980937" sideWeight="0.260745" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2982456" sideWeight="0.3669579" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.65687054" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4848485" sideWeight="0.7366746" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4433812" sideWeight="0.26290706" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26846704" sideWeight="0.23933649" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5149885" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.5307692" sideWeight="0.2859339" order="0" side_tool="true" content_ui="tabs" x="537" y="335" width="365" height="345" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24781573" sideWeight="0.23222749" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.4988086" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.5307692" sideWeight="0.2859339" order="0" side_tool="true" content_ui="tabs" x="536" y="225" width="365" height="345" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26846704" sideWeight="0.23970944" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33811802" sideWeight="0.4988086" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4433812" sideWeight="0.7370929" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.6723869" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24543288" sideWeight="0.6723869" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24702145" sideWeight="0.67" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24661893" sideWeight="0.67" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.6714976" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883242" sideWeight="0.6714976" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35980937" sideWeight="0.739255" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36682615" sideWeight="0.7283558" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="131" y="447" width="1101" height="544" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26767275" sideWeight="0.76029056" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33971292" sideWeight="0.7243844" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="208" y="669" width="1101" height="544" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32856005" sideWeight="0.5294118" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.6571201" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803813" sideWeight="0.5294118" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="124" y="251" width="1101" height="544" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="204" y="557" width="1101" height="544" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.64733917" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.523126" sideWeight="0.26290706" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24781573" sideWeight="0.23222749" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.5307692" sideWeight="0.2859339" order="0" side_tool="true" content_ui="tabs" x="537" y="335" width="365" height="345" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6347687" sideWeight="0.27561557" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26846704" sideWeight="0.23933649" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.5307692" sideWeight="0.2859339" order="0" side_tool="true" content_ui="tabs" x="536" y="225" width="365" height="345" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5149885" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24622716" sideWeight="0.6723869" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.6723869" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35980937" sideWeight="0.739255" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26846704" sideWeight="0.7606635" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6347687" sideWeight="0.7243844" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36682615" sideWeight="0.7283558" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2982456" sideWeight="0.17871326" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32856005" sideWeight="0.5294118" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2982456" sideWeight="0.3669579" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.6571201" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54385966" sideWeight="0.7370929" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35980937" sideWeight="0.260745" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.4988086" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4433812" sideWeight="0.7394758" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14513557" sideWeight="0.7370929" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26846704" sideWeight="0.23933649" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33811802" sideWeight="0.4988086" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4433812" sideWeight="0.7370929" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24702145" sideWeight="0.67" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933652" sideWeight="0.6714976" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883242" sideWeight="0.6714976" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1757,7 +2119,8 @@
     <MESSAGE value="18 Noviembre&#10;&#10;Paso a paso terminado&#10;Mejoras en la animacion de los algoritmos.&#10;Se pueden añadir y mover puntos manualmente." />
     <MESSAGE value="21 Noviembre&#10;&#10;Se implementa la localizacion para traducir al ingles la app" />
     <MESSAGE value="15 diciembre&#10;&#10;Mover puntos con doble click.(hecho)&#10;Borrar puntos con gesto ( heho )&#10;Aleatorios con circulo&#10;Puntos internos (hecho)&#10;arreglar bugs de nuevos puntos ( hecho simplemente no lanzar nada cuando no is running )&#10;Meter splash de instrucciones (hecho)&#10;Hacer que funcionen los tests (hecho)&#10;Algoritmos para casos individuales&#10;Meter teoria por algoritmo (hecho)&#10;Introducir html con ayuda ( hecho )&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="15 diciembre&#10;&#10;Mover puntos con doble click.(hecho)&#10;Borrar puntos con gesto ( heho )&#10;Aleatorios con circulo&#10;Puntos internos (hecho)&#10;arreglar bugs de nuevos puntos ( hecho simplemente no lanzar nada cuando no is running )&#10;Meter splash de instrucciones (hecho)&#10;Hacer que funcionen los tests (hecho)&#10;Algoritmos para casos individuales&#10;Meter teoria por algoritmo (hecho)&#10;Introducir html con ayuda ( hecho )&#10;" />
+    <MESSAGE value="25 Enero&#10;&#10;Correccion de errores.&#10;Pagina de teoria" />
+    <option name="LAST_COMMIT_MESSAGE" value="25 Enero&#10;&#10;Correccion de errores.&#10;Pagina de teoria" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1767,401 +2130,434 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/android/os/MessageQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/menu/descriptionwebview2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="395">
-          <folding>
-            <element signature="e#318#343#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="395">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/menu/main_activity_actions.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="42" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="e#225#248#0" expanded="false" />
-            <element signature="e#441#466#0" expanded="false" />
-            <element signature="e#612#633#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/SettingsFrament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/HelpFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="76" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="810">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/webview_tmp.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="35" selection-start="220" selection-end="220" vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1Project.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module_pruebas1project.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.9260564" vertical-offset="547" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="259">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/xml/preferences.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/descriptionwebview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="469" selection-end="469" vertical-scroll-proportion="-6.923077" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2563" selection-end="2563" vertical-scroll-proportion="-7.923077" vertical-offset="859" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="440" column="29" selection-start="18962" selection-end="18962" vertical-scroll-proportion="0.0" vertical-offset="6011" max-vertical-offset="6270" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="840" column="0" selection-start="28253" selection-end="28253" vertical-scroll-proportion="0.0" vertical-offset="11813" max-vertical-offset="18510" />
+        <state line="53" column="31" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.0" vertical-offset="436" max-vertical-offset="8205" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/java/lang/VMThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="999" selection-end="999" vertical-scroll-proportion="0.44787645" vertical-offset="154" max-vertical-offset="1035" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/android/os/MessageQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="31" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.33204633" vertical-offset="439" max-vertical-offset="8205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/android/webkit/WebChromeClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="373" column="13" selection-start="17346" selection-end="17346" vertical-scroll-proportion="0.0" vertical-offset="5310" max-vertical-offset="5760" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/com/android/internal/os/ZygoteInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="739" column="0" selection-start="25734" selection-end="25734" vertical-scroll-proportion="0.0" vertical-offset="10343" max-vertical-offset="11325" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5143" column="45" selection-start="217605" selection-end="217605" vertical-scroll-proportion="0.0" vertical-offset="75204" max-vertical-offset="80130">
-          <folding />
-        </state>
+        <state line="30" column="23" selection-start="910" selection-end="910" vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="1035" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/MySurfaceThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1170">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1170" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionGeneral.java">
+    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/android/view/SurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+        <state line="205" column="25" selection-start="7647" selection-end="7647" vertical-scroll-proportion="0.33208954" vertical-offset="2311" max-vertical-offset="12255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorAlgoritmos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="5" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0" vertical-offset="677" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/interfaces/IAlgoritmoHullConvex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="178" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+        <state line="2" column="17" selection-start="55" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/acciones/InicioAccionesAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/acciones/ListarPuntosAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/acciones/GenerarPuntosAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/OnSwipeTouchListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="1" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/ThreadManageEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/prueba2.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/AlgorithmAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/opcionesprovider.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorAlgoritmos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="8" selection-start="3221" selection-end="3221" vertical-scroll-proportion="0.0" vertical-offset="1313" max-vertical-offset="1635">
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/custom.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="17" selection-start="3768" selection-end="3768" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1740">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#553#565#0" expanded="false" />
-            <element signature="e#1200#1214#0" expanded="false" />
-            <element signature="e#2123#2137#0" expanded="false" />
-            <element signature="e#2585#2599#0" expanded="false" />
-            <element signature="e#2856#2870#0" expanded="false" />
-            <element signature="e#3158#3172#0" expanded="false" />
-          </folding>
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java">
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/ListaPuntosView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.0" vertical-offset="647" max-vertical-offset="5910">
+        <state line="14" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/descriptionwebview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="356">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="4665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Andrew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1485">
-          <folding>
-            <element signature="e#520#535#0" expanded="false" />
-            <element signature="e#1449#1468#0" expanded="false" />
-            <element signature="e#1683#1702#0" expanded="false" />
-            <element signature="e#1906#1925#0" expanded="false" />
-            <element signature="e#2115#2134#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionInferior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="38" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="1035">
-          <folding>
-            <element signature="e#523#545#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionSuperior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="38" selection-start="5156" selection-end="5156" vertical-scroll-proportion="0.0" vertical-offset="1931" max-vertical-offset="2355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/BusquedaAristas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="37" selection-start="4421" selection-end="4421" vertical-scroll-proportion="0.0" vertical-offset="2201" max-vertical-offset="2520">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="37" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1830">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/GrahamNuevo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="37" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Jarvis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="37" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/QuickHullNuevo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="37" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1815">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/assets/ayuda_usuario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="945" selection-end="945" vertical-scroll-proportion="-4.25" vertical-offset="303" max-vertical-offset="1260">
-          <folding>
-            <element signature="n#STYLE#0;n#P#0;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#1;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#2;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#4;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#5;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#7;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#8;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#9;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#10;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#11;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#12;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-            <element signature="n#STYLE#0;n#P#13;n#BODY#0;n#HTML#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/DescriptionwebviewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="404" selection-end="2598" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/HelpWebViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1102#1119#0" expanded="true" />
-            <element signature="e#1182#1395#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-          </folding>
+        <state line="51" column="5" selection-start="496" selection-end="1510" vertical-scroll-proportion="0.0" vertical-offset="175" max-vertical-offset="630">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values/opcionesEjecucion.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="43" selection-start="8310" selection-end="8310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5505">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="395">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="52" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="735">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/gestores/GestorConfiguracion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.58666664" vertical-offset="233" max-vertical-offset="1245">
           <folding>
-            <element signature="e#409#427#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#386#402#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#575#576#0" expanded="false" />
+            <element signature="e#626#627#0" expanded="false" />
+            <element signature="e#664#665#0" expanded="false" />
+            <element signature="e#1684#1685#0" expanded="false" />
+            <element signature="e#1722#1723#0" expanded="false" />
+            <element signature="e#1753#1754#0" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
+            <element signature="e#1826#1827#0" expanded="false" />
+            <element signature="e#1868#1869#0" expanded="false" />
+            <element signature="e#1935#1936#0" expanded="false" />
+            <element signature="e#1997#1998#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/ConvexHullGestureListener.java">
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/AlgorithmAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="0" selection-start="5769" selection-end="5769" vertical-scroll-proportion="0.0" vertical-offset="2888" max-vertical-offset="3135">
+        <state line="44" column="153" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/SettingsFrament.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="38" selection-start="900" selection-end="900" vertical-scroll-proportion="-9.730769" vertical-offset="47" max-vertical-offset="1485">
           <folding>
-            <element signature="e#5943#5959#0" expanded="true" />
-            <element signature="e#6054#6082#0" expanded="true" />
-            <element signature="e#6085#6114#0" expanded="true" />
+            <element signature="e#473#498#0" expanded="false" />
+            <element signature="e#774#794#0" expanded="false" />
+            <element signature="e#1550#1568#0" expanded="false" />
+            <element signature="e#1774#1792#0" expanded="false" />
+            <element signature="e#1998#2016#0" expanded="false" />
+            <element signature="e#2582#2605#0" expanded="false" />
+            <element signature="e#3405#3422#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/listapuntosview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2730" selection-end="2730" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1230">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/values-en/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="44" selection-start="3630" selection-end="3630" vertical-scroll-proportion="0.8192308" vertical-offset="792" max-vertical-offset="1245">
+        <state line="75" column="46" selection-start="4180" selection-end="4180" vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="32" selection-start="484" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="657" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/PanelPuntos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="431" column="5" selection-start="13455" selection-end="13455" vertical-scroll-proportion="0.0" vertical-offset="5762" max-vertical-offset="6045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/menu/descriptionwebview2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="283">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="24" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="42" selection-start="5326" selection-end="5326" vertical-scroll-proportion="0.0" vertical-offset="1082" max-vertical-offset="3225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/res/menu/main_activity_actions.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/andorid/android-studio/sdk/sources/android-19/android/view/ActionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/view/OpcionesProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="5" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AproximacionGeneral.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Andrew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="1150" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/BusquedaAristas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="40" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="2565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/EliminacionPtosInteriores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="1845">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#530#564#0" expanded="false" />
+            <element signature="e#2588#2612#0" expanded="false" />
+            <element signature="e#3092#3116#0" expanded="false" />
+            <element signature="e#3450#3475#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/GrahamNuevo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="27" selection-start="2318" selection-end="2326" vertical-scroll-proportion="-18.62963" vertical-offset="247" max-vertical-offset="930">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#445#460#0" expanded="false" />
+            <element signature="e#541#571#0" expanded="false" />
+            <element signature="e#1411#1430#0" expanded="false" />
+            <element signature="e#1652#1671#0" expanded="false" />
+            <element signature="e#2120#2139#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Incremental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="3990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/Jarvis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="46" selection-start="2315" selection-end="2315" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1695">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#471#486#0" expanded="false" />
+            <element signature="e#1184#1191#0" expanded="false" />
+            <element signature="e#1323#1342#0" expanded="false" />
+            <element signature="e#1577#1596#0" expanded="false" />
+            <element signature="e#1956#1975#0" expanded="false" />
+            <element signature="e#2145#2164#0" expanded="false" />
+            <element signature="e#3239#3258#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/MEC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="9" selection-start="3327" selection-end="3327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#553#565#0" expanded="false" />
+            <element signature="e#1199#1213#0" expanded="false" />
+            <element signature="e#2122#2136#0" expanded="false" />
+            <element signature="e#2584#2598#0" expanded="false" />
+            <element signature="e#2855#2869#0" expanded="false" />
+            <element signature="e#3157#3171#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/QuickHullNuevo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="65" selection-start="3032" selection-end="3032" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1815">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#522#540#0" expanded="false" />
+            <element signature="e#702#709#0" expanded="false" />
+            <element signature="e#1284#1306#0" expanded="false" />
+            <element signature="e#2192#2214#0" expanded="false" />
+            <element signature="e#2451#2473#0" expanded="false" />
+            <element signature="e#2965#2972#0" expanded="false" />
+            <element signature="e#3022#3029#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/AbstractAlgoritmo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="20" selection-start="4950" selection-end="4950" vertical-scroll-proportion="0.0" vertical-offset="2542" max-vertical-offset="4665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/gestores/GestorConjuntoConvexo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="6229" max-vertical-offset="6525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/android/adapters/ConvexHullGestureListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="32" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="3135">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2479#2497#0" expanded="false" />
+            <element signature="e#2592#2620#0" expanded="false" />
+            <element signature="e#2623#2654#0" expanded="false" />
+            <element signature="e#3664#3691#0" expanded="false" />
+            <element signature="e#5943#5959#0" expanded="false" />
+            <element signature="e#6054#6082#0" expanded="false" />
+            <element signature="e#6085#6114#0" expanded="false" />
+            <element signature="e#6499#6515#0" expanded="false" />
+            <element signature="e#6610#6638#0" expanded="false" />
+            <element signature="e#6641#6670#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/DivideYVencerasPreord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="55" selection-start="5144" selection-end="5144" vertical-scroll-proportion="0.0" vertical-offset="1628" max-vertical-offset="3285">
+          <folding>
+            <element signature="e#606#627#0" expanded="true" />
+            <element signature="e#1094#1110#0" expanded="true" />
+            <element signature="e#2124#2140#0" expanded="true" />
+            <element signature="e#2754#2770#0" expanded="true" />
+            <element signature="e#3028#3044#0" expanded="true" />
+            <element signature="e#4023#4039#0" expanded="true" />
+            <element signature="e#4152#4168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestAlgorithmSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pruebas1/src/main/java/dia/upm/cconvexo/algoritmos/tests/TestDYVp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="-3.372093" vertical-offset="1395" max-vertical-offset="1815">
           <folding />
         </state>
       </provider>
